@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UIUX</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/grid.css">
+        <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
+        <link rel="stylesheet" href="./assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app">
+            <!-- intro page -->
+            <header class="intro-header">
+                <nav class="intro-header__navbar">
+                    <ul class="intro-header__navbar-list">
+                        <li class="intro-header__navbar-item intro-header-logo">
+                            <!-- intro logo -->
+                            <a href="" class="intro-header-link">
+                                <img src="./assets/img/intro_logo2.svg" alt="" class="intro-header-img">
+                            </a> 
+                            <span>COOK IT</span>
+                        </li>
+                        <!-- <li class="intro-header__navbar-item">COOK IT</li> -->
+                    </ul>
+                    <ul class="intro-header__navbar-list">
+                        <li class="intro-header__navbar-item">Home</li>
+                        <li class="intro-header__navbar-item">Product</li>
+                        <li class="intro-header__navbar-item">Applications</li>
+                        <li class="intro-header__navbar-item">Service</li>
+                        <li class="intro-header__navbar-item">About</li>
+                    </ul>
+                    <ul class="intro-header__navbar-list">
+                        <li class="intro-header__navbar-item btn-intro js-login">Login</li>
+                        <li class="header__navbar-item--separate">|</li>
+                        <li class="intro-header__navbar-item btn-intro js-signup">Sign up</li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="intro-header-slider"></div>
+            <div class="modal js-modal close">
+                <div class="modal-container js-modal-container">
+                    <!-- register form -->
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <i class="fa-solid fa-xmark auth-form__close js-auth-form__close"></i>
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__header-text">Đăng Ký</h3>
+                            </div>
+                            <!-- form điền thông tin -->
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="email" class="auth-form__input" placeholder="Nhập email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Xác nhận mật khẩu">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__outside">
+                                <p class="auth-form__outside-text">
+                                    Bằng việc đăng ký, bạn đã đồng ý
+                                    <a href="" class="auth-form__outside-text-link">Điều khoản dịch vụ</a> & 
+                                    <a href="" class="auth-form__outside-text-link">Chính sách bảo mật</a> của chúng tôi
+                                </p>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal auth-form__controls-back js-auth-form__close">Thoát</button>
+                                <button class="btn btn--primary">Đăng ký</button>
+                            </div>
+
+                            
+                        </div>
+                        <div class="auth-form__socials">
+                            <a href="" class="auth-form__socials--fb btn btn--size-s">
+                                <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
+                                <span class="auth-form__socials-title">Kết nối với Facbook</span>
+                            </a>
+                            <a href="" class="auth-form__socials--gg btn btn--size-s">
+                                <img src="./assets/img/gg.jfif" alt="" class="auth-form__socials-img">
+                                <span class="auth-form__socials-title">Kết nối với Google</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <i class="fa-solid fa-xmark auth-form__close js-auth-form__close"></i>
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__header-text">Đăng Nhập</h3>
+                            </div>
+                            <!-- form điền thông tin -->
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="email" class="auth-form__input" placeholder="Nhập email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__outside">
+                                <p class="auth-form__help">
+                                    <a href="" class="auth-form__help-forgot">Quên mật khẩu?</a> 
+                                </p>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal auth-form__controls-back js-auth-form__close">Thoát</button>
+                                <button class="btn btn--primary">Đăng nhập</button>
+                            </div>
+
+                            <div class="auth-form__sign-in">
+                                <p class="">Bạn chưa có tài khoản? 
+                                    <a href="" class="auth-form__sign-in-link"> Đăng ký ngay</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="auth-form__socials">
+                            <a href="" class="auth-form__socials--fb btn btn--size-s">
+                                <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
+                                <span class="auth-form__socials-title">Kết nối với Facbook</span>
+                            </a>
+                            <a href="" class="auth-form__socials--gg btn btn--size-s">
+                                <img src="./assets/img/gg.jfif" alt="" class="auth-form__socials-img">
+                                <span class="auth-form__socials-title">Kết nối với Google</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>

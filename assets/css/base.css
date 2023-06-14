@@ -1,0 +1,126 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --primary-color: #F54035;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.close {
+    display: none !important;
+}
+
+.btn-intro {
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn-intro:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+    cursor: pointer;
+}
+
+.btn-intro::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    transition: all .3s;
+}
+   
+.btn-intro:hover::after {
+    background-color: rgb(0, 238, 255);
+    transform: scaleX(1.2) scaleY(1.2);
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+} 
+
+.modal-container {
+    --growth-from: 0.7;
+    --growth-to: 1;
+    margin: auto;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    z-index: 1;
+    animation: growth ease-in 0.1s;
+}
+
+/* button style */
+ 
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+
+/* animation */
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }to {
+        transform: scale(var(--growth-to));
+    }
+}

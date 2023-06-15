@@ -471,6 +471,7 @@
     width: 170px;
     background-color: var(--white-color);
     height: 100%;
+    
 }
 
 .HomeP__category-list {
@@ -481,7 +482,7 @@
 .HomeP__category-item {
     display: flex;
     align-items: center;
-    padding: 8px 0;
+    padding: 16px 0;
 }
 
 .HomeP__category-item:hover {
@@ -559,7 +560,7 @@
     top: calc(100% + 2px);
     box-shadow: 0 1px 5px rgb(189,189,189);
     border-radius: 3px;
-    z-index: 1;
+    z-index: 2;
     display: none;
 }
 
@@ -598,7 +599,6 @@
 
 /* schedule */ 
 .homeP__schedule {
-    /* margin-top: 32px; */
     display: flex;
     background: var(--white-color);
     min-height: 50vh;
@@ -606,6 +606,8 @@
     margin-top: 20px;
     align-items: center;
     justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .schedule__contaier {
@@ -733,8 +735,13 @@
 
 .schedule__body li {
     width: calc(100% / 7);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-color);
+}
+
+.schedule__weekdays {
+    padding: 4px 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .schedule__day-name {
@@ -742,15 +749,23 @@
     font-weight: 500;
 }
 
+
 .schedule__dates li {
-    margin-top: 30px;
+    padding: 40px;
     position: relative;
     z-index: 1;
     cursor: pointer;
+    border: 1px solid rgb(204, 204, 204, 0.4);
+}
+
+.schdule-date-text {
+    position: absolute;
+    top: 3px;
+    left: 5px;
 }
 
 .schedule__dates li.inactive {
-    color: #aaa;
+    color: rgb(170, 170, 170, 0.7);
 }
 
 .schedule__dates li.active {
@@ -761,18 +776,137 @@
     position: absolute;
     content: "";
     z-index: -1;
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     transform: translate(-50%, -50%);
 }
 
 .schedule__dates li.active::before {
-    background-color: #6332c5;
+    background-color: rgba(69, 150, 212, 0.6);
 }
 
 .schedule__dates li:not(.active):hover::before {
-    background-color: #e4e1e1;
+    background-color: rgb(228, 225, 225, 0.4);
+}
+
+/* screen add task */
+
+.homeP-form__create {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.1);
+    z-index: 1;
+    display: flex;
+    animation: growth ease-in 0.1s;
+    z-index: 3;
+}
+
+.homeP-form__create-content {
+    position: relative;
+    width: 500px;
+    margin: auto;
+    background-color: var(--white-color);
+}
+
+.close-form__create {
+    position: absolute;
+    font-size: 1.4rem;
+    right: 9px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.homeP-form__create-name {
+    font-size: 1.5rem;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.homeP-form__create-form {
+    margin: 12px 32px;
+}
+
+.homeP-form__create-form input {
+    outline: none;
+}
+
+.homeP-form__create-title {
+    font-size: 1.3rem;
+    width: 100%;
+    padding: 6px 8px 4px;
+    margin-bottom: 16px;
+}
+
+.homeP-form__create-time {
+    list-style: none;
+    font-size: 1.3rem;
+}
+.homeP-form__create-time-item {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeP-form__create-time-item input {
+    flex-grow: 1;
+    padding: 6px 8px 4px;
+}
+
+.homeP-form__create-time-item i {
+    font-size: 1.3rem;
+    margin: 0 8px;
+}
+
+
+.homeP-form__create-desc input{
+    width: 100%;
+    padding: 6px 8px 4px;
+    font-size: 1.3rem;
+    height: 90px;
+}
+
+.homeP-form__create-footer {
+    display: flex;
+    margin: 16px 0 18px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.homeP-form__create-remind {
+    padding: 6px 8px 4px;
+    font-size: 1.3rem;
+}
+
+.homeP-form__create-remind-icon {
+    position: absolute;
+    left: 150px;
+    top: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.remind-list {
+    list-style: none;
+    font-size: 1.2rem;
+    animation: growth ease-in 0.1s;
+    display: none;
+}
+
+.remind-item {
+    padding: 6px;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.remind-item:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+.homeP-form__create-btn {
+    font-size: 1.4rem;
 }

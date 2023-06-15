@@ -169,7 +169,97 @@
                     </div>
                 </div>
             </div>
+            <div class="homeP-form__create close">
+                <div class="homeP-form__create-content">
+                    <i class="fa-solid fa-xmark close-form__create js-close-form__create"></i>
+                    <h3 class="homeP-form__create-name">Tạo công việc mới</h3>
+                    <form action="" class="homeP-form__create-form">
+                        <input type="text" class="homeP-form__create-title" placeholder="Tên công việc">
+                        <ul class="homeP-form__create-time">
+                            <li class="homeP-form__create-time-item">
+                                <input type="date" >
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <input type="date" >
+                            </li>
+                            <li class="homeP-form__create-time-item">
+                                <input type="time" >
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <input type="time" >
+                            </li>
+                        </ul>
+                        <div class="homeP-form__create-desc">
+                            <input type="text" class="homeP-form__create-content-item" placeholder="Để lại mô tả công việc ở đây nhé!">
+                        </div>
+                        <div class="homeP-form__create-footer">
+                            <div>
+                                <input type="text" placeholder="Trước 30 phút" class="homeP-form__create-remind">
+                                <i class="fa-solid fa-chevron-down homeP-form__create-remind-icon"></i>
+                                <ul class="remind-list">
+                                    <li class="remind-item">Trước 30 phút</li>
+                                    <li class="remind-item">Trước 1 tiếng</li>
+                                    <li class="remind-item">Trước 3 tiếng</li>
+                                    <li class="remind-item">Trước 1 ngày</li>
+                                </ul>
+                            </div>
+                            <div class="btn btn--primary homeP-form__create-btn js-homeP-form__create-btn">Tạo công việc</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="homeP-task">
+                <div class="homeP-task__container">
+                    <div class="homeP-task__header">
+                        <div class="homeP-task__name">Học UXUI</div>
+                        <div class="homeP-task__list-icon">
+                            <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
+                            <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i>
+                            <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
+                        </div>
+                    </div>
+                    <div class="homeP-task__times">8:00 - 10:30</div>
+                    <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
+                </div>
+            </div>
+            
+            <div class="homeP-delete js-homeP-delete">
+                <div class="homeP-delete-container">
+                    <p>Xác nhận xóa công việc</p>
+                    <div class="homeP-delete-button js-homeP-delete-button">Xác nhận</div>
+                </div>
+            </div>
+
+            <div class="homeP__wacht-detail js-homeP__wacht-detail">
+                <div class="homeP__wacht-detail-container">
+                    <h3>Chi tiết công việc</h3>
+                    <div class="homeP__wacht-detail-name">
+                        <span>Tên công việc:</span>
+                        <span>Học UIUX</span>
+                    </div>
+                    <div class="homeP__wacht-detail-time">
+                        <ul class="homeP__wacht-detail-list">
+                            <li class="homeP__wacht-detail-item">5/6/2023</li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <li class="homeP__wacht-detail-item ">5/6/2023</li>
+                        </ul>
+                        <ul class="homeP__wacht-detail-list">
+                            <li class="homeP__wacht-detail-item">13:00</li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <li class="homeP__wacht-detail-item ">15:30</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="homeP__wacht-detail-content" placeholder="D9-401"></input>
+                    <div class="homeP__wacht-detail-control">
+                        <div class="btn btn--primary homeP__wacht-detail-btn js-detail-edit">Chỉnh sửa</div>
+                        <div class="btn btn--primary homeP__wacht-detail-btn js-detail-exit">Thoát</div>
+                    </div>
+                </div>
+            </div>  
+
+           <div id="toast"></div>
+            <!-- Success -->
         </div>
         <script src="./main.js"></script>
     </body>
 </html>
+

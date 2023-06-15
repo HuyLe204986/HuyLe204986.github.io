@@ -128,3 +128,336 @@ html {
         transform: scale(var(--growth-to));
     }
 }
+
+/* toast */
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 99999;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear 0.3s;
+}
+
+@keyframes slideInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    border-color: #47d864;
+}
+
+.toast--success .toast__icon {
+    color: #47d864;
+}
+
+.toast--warning {
+    border-color: #ffc021;
+}
+
+.toast--warning .toast__icon{
+    color: #ffc021;
+}
+
+.toast + .toast {
+    margin-top: 24px;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__close, 
+.toast__icon {
+    padding: 0 16px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    opacity: 0.6;
+}
+
+
+/* homeP task */
+
+.homeP-task__container {
+    width: 200px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    position: absolute;
+    top: 373px;
+    left: 500px;
+    z-index: 2;
+    display: none;
+
+}
+.homeP-task__container::before {
+    position: absolute;
+    content: "";
+    display: block;
+    border-width: 20px 25px;
+    border-color: transparent transparent var(--white-color)  transparent;
+    border-style: solid;
+    bottom: calc(100% - 7px);
+    left: 16px;
+}
+
+.homeP-task__header {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 12px;
+}
+
+.homeP-task__name {
+    width: 50%;
+    padding: 4px 0;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.homeP-task__icon {
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.homeP-task__icon:nth-child(3) {
+    font-size: 1.6rem;
+}
+
+.homeP-task__remind-desc,
+.homeP-task__times {
+    font-size: 1.4rem;
+    margin: 12px;
+}
+
+
+.homeP-task__abbreviate {
+    width: 160px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    left: 0;
+   
+}
+
+.homeP-task__abbreviate-content {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.homeP-task__abbreviate-time {
+    position: relative;
+    right:  2px;
+    font-size: 1rem;
+    border-radius: 6px;
+    background-color: #a9f499;
+    padding: 0 3px;
+}
+
+.homeP-task__abbreviate-text {
+    flex: 1;
+    line-height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+    font-weight: 500;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.homeP__moretask a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    color: rgb(23, 23, 223, 0.8);
+}
+
+/* xóa */
+
+.homeP-delete {
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.3);
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: 2;
+    display: none;
+}
+
+
+.homeP-delete-container {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: var(--white-color);
+    margin: 10% 40%;
+    border-radius: 10px;
+}
+
+.homeP-delete-container p {
+    font-size: 1.5rem;
+    margin: 24px 24px;
+}
+
+.homeP-delete-button {
+    font-size: 1.4rem;
+    padding: 8px;
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+}
+
+.homeP-delete-button:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* xem chi tiết */
+
+.homeP__wacht-detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: flex;
+    display: none;
+}
+
+.homeP__wacht-detail-container {
+    margin: auto;
+    width: 400px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
+.homeP__wacht-detail-container h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 18px 0;
+}
+
+.homeP__wacht-detail-name {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.homeP__wacht-detail-name span:nth-child(1) {
+    margin: 0 24px;
+}
+
+.homeP__wacht-detail-name span:nth-child(2) {
+    margin-left: 4px;
+} 
+
+.homeP__wacht-detail-time {
+    margin: 18px 0;
+}
+
+.homeP__wacht-detail-list {
+    font-size: 1.4rem;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.homeP__wacht-detail-list i{
+    margin: 0 32px;
+}
+
+.homeP__wacht-detail-item {
+    flex-grow: 1;
+}
+
+.homeP__wacht-detail-list:nth-child(2) {
+    margin-top: 18px;
+}
+
+.homeP__wacht-detail-content {
+    margin: 18px 24px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    width: calc(90% - 10px);
+    height: 70px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    outline: none;
+}
+
+.homeP__wacht-detail-control {
+    display: flex;
+    margin-bottom: 18px;
+    float: right;
+    margin-right: 24px;
+}
+
+.homeP__wacht-detail-btn:nth-child(1){
+    margin-right: 5px;
+}

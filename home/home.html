@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="/assets/css/base.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/grid.css">
+        <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
+        <link rel="stylesheet" href="/assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="app">
+            <div class="homeP-header">
+                <div class="grid wide">
+                    <div class="homeP-header__navbar">
+                        <ul class="homeP-header__navbar-list">
+                            <li class="homeP-header__avatar homeP-header__item">
+                                <img src="/assets/img/intro_logo2.svg" alt="" class="homeP-header-img">
+                                <span class="homeP-header-text">COOK IT</span>
+                            </li>
+                            <li class="homeP-header__item homeP-header__item-noti">
+                                <div class="homeP-header-notify">
+                                    <i class="fa-solid fa-bell homeP-header-icon">
+                                        <span class="homeP-header-notify-qty">2</span>
+                                    </i>
+                                    <span >Thông báo</span>
+                                    <div class="homeP-header-notify-wrap">
+                                        <h3 class="homeP-header-notify-header">
+                                            <span>
+                                                Thông báo mới nhận
+                                            </span>
+                                        </h3>
+                                        <ul class="homeP-header-notify-list">
+                                            <li class="homeP-header-notify-item homeP-header-notify--viewed">
+                                                <a href="" class="homeP-header-notify-link">
+                                                    <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-notify-img">
+                                                    <div class="homeP-header-notify-info">
+                                                        <span class="homeP-header-notify-name">Nguyễn Chí Thành đã thêm một công việc mới trong nhóm UIUX</span>
+                                                        <span class="homeP-header-notify-minute"> 2 phút trước</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="homeP-header-notify-item homeP-header-notify--viewed">
+                                                <a href="" class="homeP-header-notify-link">
+                                                    <img src="https://www.svgrepo.com/show/17468/avatar.svg" alt="" class="homeP-header-notify-img">
+                                                    <div class="homeP-header-notify-info">
+                                                        <span class="homeP-header-notify-name">Lê Trung Hiếu đã xóa công việc trong nhóm OOP</span>
+                                                        <span class="homeP-header-notify-minute"> 1 giờ trước</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="homeP-header-notify-item">
+                                                <a href="" class="homeP-header-notify-link">
+                                                    <img src="https://www.svgrepo.com/show/29870/avatar.svg" alt="" class="homeP-header-notify-img">
+                                                    <div class="homeP-header-notify-info">
+                                                        <span class="homeP-header-notify-name">Tạ Trung Hiếu thêm bạn vào nhóm CSDL</span>
+                                                        <span class="homeP-header-notify-minute"> 3 giờ trước</span>
+                                                    </div>
+                                                </a>
+                                            </li>     
+                                        </ul>
+                                        <footer class="homeP-header-notify-footer">
+                                            <a href="" class="homeP-header-notify-footer-btn">Xem tất cả</a>
+                                        </footer>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="homeP-header__item homeP-header__user">
+                                <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-user-img">
+                                <span class="homeP-header-user-name">Huy Lê</span>
+                                <ul class="homeP__navbar-user-menu">
+                                    <li class="homeP__navbar-user-item"><a href="">Thông tin tài khoản</a></li>
+                                    <li class="homeP__navbar-user-item"><a href="">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="homeP-container">
+                <div class="homePcontent">
+                    <div class="grid wide">
+                        <div class="row sm-gutter app__content">
+                            <div class="col l-2">
+                                <nav class="HomeP__category">
+                                    <ul class="HomeP__category-list">
+                                        <li class="HomeP__category-item color--active">
+                                            <i class="fa-solid fa-house HomeP__category-icon"></i>
+                                            <div class="HomeP__category-desc">Trang chủ</div>
+                                        </li>
+                                        <li class="HomeP__category-item">
+                                            <i class="fa-solid fa-user-group HomeP__category-icon"></i>
+                                            <div class="HomeP__category-desc">Nhóm của bạn</div>
+                                        </li>
+                                        <li class="HomeP__category-item">
+                                            <i class="fa-solid fa-chart-simple HomeP__category-icon"></i>
+                                            <div class="HomeP__category-desc">Thống kê</div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col l-10">
+                                <div class="homeP-wrap">
+                                    <div class="homeP__title">Danh sách công việc</div>
+                                    <div class="homeP__search">
+                                        <div class="homeP__search-input-wrap">
+                                            <input type="text" class="homeP__search-input" placeholder="Tìm kiếm công việc">
+                                            <div class="homeP__search-history">
+                                                <h3 class="homeP__search-history-heading">Lịch sử tìm kiếm</h3>
+                                                <ul class="homeP__search-history-list">
+                                                    <li class="homeP__search-history-item">
+                                                        <a href="">Làm bài tập UIUX</a>
+                                                    </li>
+                                                    <li class="homeP__search-history-item"><a href="">Học Cơ sở dữ liệu</a></li>
+                                                    <li class="homeP__search-history-item"><a href="">Ăn tối với em Trang</a> </li>
+                                                    <li class="homeP__search-history-item"><a href="">Đi chơi với em Phương</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button class="homeP-btn-search">
+                                            <i class="homeP__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                                       </button> 
+                                    </div>
+                                </div>
+                                <div class="homeP__schedule">
+                                   <div class="schedule__contaier">
+                                        <header class="schedule__header">
+                                            <div class="schedule__datemonth">
+                                                <p class="schedule__current-date"></p>
+                                                <div class="schedule__navigation">
+                                                    <i class="fa-solid fa-chevron-left schedule__prev" id="calendar-prev"></i>
+                                                    <i class="fa-solid fa-chevron-right schedule__next" id="calendar-next"></i>
+                                                </div>
+                                            </div>
+                                            <div class="schedule__select">
+                                                <ul class="schedule__select-list">
+                                                    <li class="schedule__select-item color--active">Tháng</li>
+                                                    <li class="schedule__select-item">Tuần</li>
+                                                    <li class="schedule__select-item">Ngày</li>
+                                                </ul>
+                                                <button class="create__task">
+                                                    <i class="fa-regular fa-plus create__task-icon"></i>
+                                                    <span> Công việc mới</span>
+                                                </button>
+                                            </div>
+                                        </header>
+                                        <div class="schedule__body">
+                                            <ul class="schedule__weekdays">
+                                                <li class="schedule__day-name">Thứ 2</li>
+                                                <li class="schedule__day-name">Thứ 3</li>
+                                                <li class="schedule__day-name">Thứ 4</li>
+                                                <li class="schedule__day-name">Thứ 5</li>
+                                                <li class="schedule__day-name">Thứ 6</li>
+                                                <li class="schedule__day-name">Thứ 7</li>
+                                                <li class="schedule__day-name">Chủ nhật</li>
+                                            </ul>
+                                            <ul class="schedule__dates"></ul>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>

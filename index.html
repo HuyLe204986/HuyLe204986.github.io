@@ -53,17 +53,17 @@
                                 <h3 class="auth-form__header-text">Đăng Ký</h3>
                             </div>
                             <!-- form điền thông tin -->
-                            <div class="auth-form__form">
+                            <form action="" class="auth-form__form">
                                 <div class="auth-form__group">
-                                    <input type="email" class="auth-form__input" placeholder="Nhập email của bạn">
+                                    <input name="email" type="email" class="auth-form__input"  placeholder="Nhập email của bạn" >
                                 </div>
                                 <div class="auth-form__group">
-                                    <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                    <input name="password" type="password" class="auth-form__input"  placeholder="Nhập mật khẩu" >
                                 </div>
                                 <div class="auth-form__group">
-                                    <input type="password" class="auth-form__input" placeholder="Xác nhận mật khẩu">
+                                    <input name="repassword" type="password" class="auth-form__input"  placeholder="Xác nhận mật khẩu" >
                                 </div>
-                            </div>
+                            </form>
 
                             <div class="auth-form__outside">
                                 <p class="auth-form__outside-text">
@@ -75,7 +75,7 @@
 
                             <div class="auth-form__controls">
                                 <button class="btn btn--normal auth-form__controls-back js-auth-form__close">Thoát</button>
-                                <button class="btn btn--primary">Đăng ký</button>
+                                <button class="btn btn--primary js-btn-signup">Đăng ký</button>
                             </div>
 
                             
@@ -115,7 +115,9 @@
 
                             <div class="auth-form__controls">
                                 <button class="btn btn--normal auth-form__controls-back js-auth-form__close">Thoát</button>
-                                <button class="btn btn--primary">Đăng nhập</button>
+                                <a href="taskmanagementweb/index.html" class="auth-form__controls-link">
+                                    <button class="btn btn--primary">Đăng nhập</button>
+                                </a>
                             </div>
 
                             <div class="auth-form__sign-in">

@@ -3,7 +3,7 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
-    --primary-color: #F54035;
+    --primary-color: #b993f7;
 }
 
 * {
@@ -114,6 +114,10 @@ html {
     height: 32px;
     font-size: 1.2rem;
     padding: 0 8px;
+}
+
+.color--active {
+    background-color: var(--primary-color);
 }
 
 /* animation */

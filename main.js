@@ -27,6 +27,7 @@ function showSignUp() {
 logIn.addEventListener('click', showLogIn);
 signUp.onclick = showSignUp;
 
+
 function hide() {
     modal.classList.add('close'); 
     if(!isLogIn && isSignUp) {
@@ -48,6 +49,3 @@ modal.addEventListener('click',hide);
 modalContainer.addEventListener('click', function(event) {
     event.stopPropagation();
 })
-
-
-

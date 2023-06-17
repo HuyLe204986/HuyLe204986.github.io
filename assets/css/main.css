@@ -516,6 +516,13 @@
     height: 36px;
 }
 
+.backPage {
+    font-size: 1.5rem;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
 .homeP__title {
     font-size: 1.8rem;
     color: #F54035;
@@ -682,6 +689,11 @@
     border: 1px solid #ccc;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
     overflow: hidden;
+    margin-left: 8px; 
+}
+
+.teamP-member {
+    margin-left: 16px;
 }
 
 .create__task::before {
@@ -1304,6 +1316,7 @@
 .teamP-create-team__container h3 {
     padding: 8px;
     background-color: var(--primary-color);
+    margin-bottom: 24px;
 }
 
 .teamP-create-team__container input {
@@ -1330,6 +1343,7 @@
 
 .teamP-create-team__access {
     position: relative;
+    margin-bottom: 36px;
 }
 
 .teamP-select-icon {
@@ -1341,8 +1355,11 @@
 
 .teamP-create-list {
     list-style: none;
-    animation: growth ease-in 0.1s;
+    animation: growth ease-in 0.3s;
     display: none;
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 2px);
 }
 
 .teamP-create-list__item {
@@ -1351,10 +1368,249 @@
     background-color: var(--white-color);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
     margin-left: 16px;
-    margin-top: -4px;
+    margin-top: 1px;
     cursor: pointer;
 }
 
 .background--active {
+    background-color: var(--primary-color);
+}
+
+/* thêm task mới */
+.teamP__task {
+    position: absolute;
+    z-index: 2;
+    top: calc(47% + 32px);
+    left: calc(40% + 29px);
+}
+
+/* chi tiết công việc nhóm */
+.teamP-detail-task {
+    position: absolute;
+    top: calc(50% + 32px);
+    left: calc(40% + 29px);
+}
+
+.homeP-detail-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    z-index: 2;
+    display: none;
+}
+
+.homeP-detail-screen__container {
+    width: 600px;
+    margin: auto;
+    background-color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.homeP-detail-screen__container h3 {
+    padding: 8px;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.homeP-detail-screen__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 20px;
+}
+
+.homeP-detail-screen__name span:nth-child(2) {
+    margin-left: 8px;
+}
+
+.homeP-detail-screen__btnAdd {
+    padding: 6px;   
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.homeP-detail-screen__btnAdd i {
+    margin-right: 2px;
+    font-size: 1.2rem;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: 5%;
+}
+
+table, td, th {
+    border: 1px solid var(--border-color);
+}
+
+td {
+    text-align: center;
+}
+
+td,th {
+    padding: 10px 0;
+}
+
+.homeP-detail-screen__btnDone {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    border-radius: 3px;
+    float: right;
+    margin: 16px 5% 16px 0;
+}
+
+.homeP-detail-screen__btnAdd:hover,
+.homeP-detail-screen__btnDone:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+.teamP_checkDone {
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    color: green;
+    background-color: var(--white-color);
+}
+
+.teamP-screen__member {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    display: flex;
+    display: none;
+}
+
+.teamP-screen__member-container {
+    margin: auto;
+    background-color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    animation: headerNotifyGrowwth ease-in 0.3s;
+    padding: 24px;
+    width: 300px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.teamP-screen__member-close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+}
+
+.teamP-manager-member {
+    list-style: none;
+}
+
+.teamP-manager-item {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    margin: 8px 0;
+}
+
+.normal-member span{
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    margin: 8px 0;
+}
+
+.normal-member span:nth-child(1) {
+    padding: 0;
+    border: none;
+}
+
+.teamP-add__member-btn {
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    margin-top: 6px;
+    float: right;
+    border-radius: 4px;
+}
+
+.teamP-add__member-btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+/* add member screen */
+
+.teamP__addmember {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    display: flex;
+    display: none;
+}
+
+.teamP__addmember-container {
+    margin: auto;
+    background-color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    animation: headerNotifyGrowwth ease-in 0.3s;
+    width: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.teamP__addmember-container h3 {
+    text-align: center;
+     padding: 8px;
+     background-color: var(--primary-color);
+}
+
+.teamP__addmember-form {
+    margin: 16px;
+    width: 100%;
+}
+
+.teamP__addmember-form input {
+    width: 90%;
+    padding: 12px 4px;
+    margin: 8px 0;
+}
+
+
+.teamP__addmember-form input:nth-child(2) {
+    padding-bottom: 32px;
+}
+
+.teamP__addmember-btnControl {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 18px 16px 16px;
+}
+
+.teamP__addmember-btn {
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.teamP__addmember-btn:hover {
+    cursor: pointer;
     background-color: var(--primary-color);
 }

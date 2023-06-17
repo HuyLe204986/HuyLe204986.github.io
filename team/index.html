@@ -1,187 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Team</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-            <link rel="stylesheet" href="/assets/css/base.css">
-            <link rel="stylesheet" href="/assets/css/main.css">
-            <link rel="stylesheet" href="/assets/css/grid.css">
-            <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
-            <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
-            <link rel="stylesheet" href="/assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap"
-                rel="stylesheet">
-    </head>
-    <body>
-        <div class="homeP-header">
-            <div class="grid wide">
-                <div class="homeP-header__navbar">
-                    <ul class="homeP-header__navbar-list">
-                        <li class="homeP-header__avatar homeP-header__item">
-                            <img src="/assets/img/intro_logo2.svg" alt="" class="homeP-header-img">
-                            <span class="homeP-header-text">COOK IT</span>
-                        </li>
-                        <li class="homeP-header__item homeP-header__item-noti">
-                            <div class="homeP-header-notify">
-                                <i class="fa-solid fa-bell homeP-header-icon">
-                                    <span class="homeP-header-notify-qty">2</span>
-                                </i>
-                                <span >Thông báo</span>
-                                <div class="homeP-header-notify-wrap">
-                                    <h3 class="homeP-header-notify-header">
-                                        <span>
-                                            Thông báo mới nhận
-                                        </span>
-                                    </h3>
-                                    <ul class="homeP-header-notify-list">
-                                        <li class="homeP-header-notify-item homeP-header-notify--viewed">
-                                            <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
-                                                <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-notify-img">
-                                                <div class="homeP-header-notify-info">
-                                                    <span class="homeP-header-notify-name">Nguyễn Chí Thành đã thêm một công việc mới trong nhóm UIUX</span>
-                                                    <span class="homeP-header-notify-minute"> 2 phút trước</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="homeP-header-notify-item homeP-header-notify--viewed">
-                                            <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
-                                                <img src="https://www.svgrepo.com/show/17468/avatar.svg" alt="" class="homeP-header-notify-img">
-                                                <div class="homeP-header-notify-info">
-                                                    <span class="homeP-header-notify-name">Lê Trung Hiếu đã xóa công việc trong nhóm OOP</span>
-                                                    <span class="homeP-header-notify-minute"> 1 giờ trước</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="homeP-header-notify-item">
-                                            <a href="" class="homeP-header-notify-link">
-                                                <img src="https://www.svgrepo.com/show/29870/avatar.svg" alt="" class="homeP-header-notify-img">
-                                                <div class="homeP-header-notify-info">
-                                                    <span class="homeP-header-notify-name">Tạ Trung Hiếu thêm bạn vào nhóm CSDL</span>
-                                                    <span class="homeP-header-notify-minute"> 3 giờ trước</span>
-                                                </div>
-                                            </a>
-                                        </li>     
-                                    </ul>
-                                    <footer class="homeP-header-notify-footer">
-                                        <a href="" class="homeP-header-notify-footer-btn">Xem tất cả</a>
-                                    </footer>
-                                </div>
-                            </div> 
-                        </li>
-                        <li class="homeP-header__item homeP-header__user">
-                            <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-user-img">
-                            <span class="homeP-header-user-name">Huy Lê</span>
-                            <ul class="homeP__navbar-user-menu">
-                                <li class="homeP__navbar-user-item js-homeP__navbar-user-item"><a href="#">Thông tin tài khoản</a></li>
-                                <li class="homeP__navbar-user-item"><a href="">Đăng xuất</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+    <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
+    <link rel="stylesheet" href="/assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="homeP-header">
+        <div class="grid wide">
+            <div class="homeP-header__navbar">
+                <ul class="homeP-header__navbar-list">
+                    <li class="homeP-header__avatar homeP-header__item">
+                        <img src="/assets/img/intro_logo2.svg" alt="" class="homeP-header-img">
+                        <span class="homeP-header-text">COOK IT</span>
+                    </li>
+                    <li class="homeP-header__item homeP-header__item-noti">
+                        <div class="homeP-header-notify">
+                            <i class="fa-solid fa-bell homeP-header-icon">
+                                <span class="homeP-header-notify-qty">2</span>
+                            </i>
+                            <span>Thông báo</span>
+                            <div class="homeP-header-notify-wrap">
+                                <h3 class="homeP-header-notify-header">
+                                    <span>
+                                        Thông báo mới nhận
+                                    </span>
+                                </h3>
+                                <ul class="homeP-header-notify-list">
+                                    <li class="homeP-header-notify-item homeP-header-notify--viewed">
+                                        <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
+                                            <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt=""
+                                                class="homeP-header-notify-img">
+                                            <div class="homeP-header-notify-info">
+                                                <span class="homeP-header-notify-name">Nguyễn Chí Thành đã thêm một công
+                                                    việc mới trong nhóm UIUX</span>
+                                                <span class="homeP-header-notify-minute"> 2 phút trước</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="homeP-header-notify-item homeP-header-notify--viewed">
+                                        <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
+                                            <img src="https://www.svgrepo.com/show/17468/avatar.svg" alt=""
+                                                class="homeP-header-notify-img">
+                                            <div class="homeP-header-notify-info">
+                                                <span class="homeP-header-notify-name">Lê Trung Hiếu đã xóa công việc
+                                                    trong nhóm OOP</span>
+                                                <span class="homeP-header-notify-minute"> 1 giờ trước</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="homeP-header-notify-item">
+                                        <a href="" class="homeP-header-notify-link">
+                                            <img src="https://www.svgrepo.com/show/29870/avatar.svg" alt=""
+                                                class="homeP-header-notify-img">
+                                            <div class="homeP-header-notify-info">
+                                                <span class="homeP-header-notify-name">Tạ Trung Hiếu thêm bạn vào nhóm
+                                                    CSDL</span>
+                                                <span class="homeP-header-notify-minute"> 3 giờ trước</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="homeP-header-notify-footer">
+                                    <a href="" class="homeP-header-notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="homeP-header__item homeP-header__user">
+                        <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-user-img">
+                        <span class="homeP-header-user-name">Huy Lê</span>
+                        <ul class="homeP__navbar-user-menu">
+                            <li class="homeP__navbar-user-item js-homeP__navbar-user-item"><a href="#">Thông tin tài
+                                    khoản</a></li>
+                            <li class="homeP__navbar-user-item"><a href="">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="homeP-container">
-            <div class="homePcontent">
-                <div class="grid wide">
-                    <div class="row sm-gutter app__content">
-                        <div class="col l-2">
-                            <nav class="HomeP__category">
-                                <ul class="HomeP__category-list">
-                                    <a href="/home/home.html">
-                                        <li class="HomeP__category-item  js-HomeP-home">
-                                            <i class="fa-solid fa-house HomeP__category-icon"></i>
-                                            <div class="HomeP__category-desc">Trang chủ</div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li class="HomeP__category-item color--active js-HomeP-team">
-                                            <i class="fa-solid fa-user-group HomeP__category-icon "></i>
-                                            <div class="HomeP__category-desc">Nhóm của bạn</div>
-                                        </li>
-                                    </a>
-                                    <a href="/statistic/index.html">
-                                        <li class="HomeP__category-item js-HomeP-statistic">
-                                            <i class="fa-solid fa-chart-simple HomeP__category-icon "></i>
-                                            <div class="HomeP__category-desc">Thống kê</div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li class="HomeP__category-item">
-                                            <i class="fa-solid fa-circle-question HomeP__category-icon"></i>
-                                            <div class="HomeP__category-desc">Trợ giúp</div>
-                                        </li>
-                                    </a>
-                                </ul>
-                            </nav>
+    </div>
+    <div class="homeP-container">
+        <div class="homePcontent">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2">
+                        <nav class="HomeP__category">
+                            <ul class="HomeP__category-list">
+                                <a href="/home/home.html">
+                                    <li class="HomeP__category-item  js-HomeP-home">
+                                        <i class="fa-solid fa-house HomeP__category-icon"></i>
+                                        <div class="HomeP__category-desc">Trang chủ</div>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="HomeP__category-item color--active js-HomeP-team">
+                                        <i class="fa-solid fa-user-group HomeP__category-icon "></i>
+                                        <div class="HomeP__category-desc">Nhóm của bạn</div>
+                                    </li>
+                                </a>
+                                <a href="/statistic/index.html">
+                                    <li class="HomeP__category-item js-HomeP-statistic">
+                                        <i class="fa-solid fa-chart-simple HomeP__category-icon "></i>
+                                        <div class="HomeP__category-desc">Thống kê</div>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="HomeP__category-item">
+                                        <i class="fa-solid fa-circle-question HomeP__category-icon"></i>
+                                        <div class="HomeP__category-desc">Trợ giúp</div>
+                                    </li>
+                                </a>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col l-10 teamP__listTeam close">
+                        <div class="teamP-control">
+                            <ul class="teamP-control-list">
+                                <li class="teamP-control-item js-team-witd-code">Tham gia nhóm bằng mã</li>
+                                <li class="teamP-control-item js-team-create">Tạo nhóm mới</li>
+                            </ul>
                         </div>
-                        <div class="col l-10 ">
-                            <div class="teamP-control">
-                                <ul class="teamP-control-list">
-                                    <li class="teamP-control-item js-team-witd-code">Tham gia nhóm bằng mã</li>
-                                    <li class="teamP-control-item js-team-create">Tạo nhóm mới</li>
-                                </ul>
+                        <div class="teamP-myteam">
+                            <div class="row sm-gutter">
+                                <!-- list team -->
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://jobsgo.vn/blog/wp-content/uploads/2020/06/lam-viec-nhom-1.jpg);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">Giao diện và trải nghiệm người dùng</h4>
+                                    </a>
+                                </div>
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://th.bing.com/th/id/R.99802b681b2dcd3c8f21ff9771bca722?rik=rzoRRaUNdjN%2bEQ&riu=http%3a%2f%2fwww.zeegee.com%2fcourses%2fimages%2foop-1.png&ehk=2Gc3duTOofNJbuyUlsdTdCTL7sjFKStfoDFGc2HsyF8%3d&risl=&pid=ImgRaw&r=0);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">Lập trình hướng đối tượng</h4>
+                                    </a>
+                                </div>
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://th.bing.com/th/id/R.c0cf74ca1cfbfc89ab15efc8639adc88?rik=uRM9IfD9%2foCcNg&pid=ImgRaw&r=0);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">GR1 2022-2</h4>
+                                    </a>
+                                </div>
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://th.bing.com/th/id/OIP.-IJeCSJV8BVeh-nfYfW-igHaE8?w=280&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">Tiếng Nhật 6</h4>
+                                    </a>
+                                </div>
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://plat4mation.com/wp-content/uploads/2021/08/p4m_blog_visuals_ServicenNow-App-Engine_feature_540x360.jpg);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">ITSS Software Development</h4>
+                                    </a>
+                                </div>
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://th.bing.com/th/id/OIP.B6hGZ0_W9eIWjZU0iwFmGwHaEH?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">Kỹ năng mềm</h4>
+                                    </a>
+                                </div>
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://th.bing.com/th/id/OIP.arXBnL3f4CmIkUkD3ZBAdQHaD8?w=329&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">Trí tuệ nhân tạo</h4>
+                                    </a>
+                                </div>
+                                <div class="col l-3">
+                                    <a href="#" class="teamP-myteam-item">
+                                        <i class="ti-more"></i>
+                                        <div class="teamP-myteam-item__img"
+                                            style="background-image: url(https://th.bing.com/th/id/R.5f818412edf609ae45d68cbc8dae2d30?rik=ByGIEb15125jDg&pid=ImgRaw&r=0);">
+                                        </div>
+                                        <h4 class="teamP-myteam-item__name">Manchester is blue</h4>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="teamP-myteam">
-                                <div class="row sm-gutter">
-                                    <!-- list team -->
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://jobsgo.vn/blog/wp-content/uploads/2020/06/lam-viec-nhom-1.jpg);"></div>
-                                            <h4 class="teamP-myteam-item__name">Giao diện và trải nghiệm người dùng</h4>
-                                        </a>
+                        </div>
+                    </div>
+
+                    <div class="col l-10 teamP-detail__team ">
+                        <i class="ti-arrow-left backPage"></i>
+                        <div class="homeP-wrap sidebar">
+                            <div class="homeP__title">Giao diện và trải nghiệm người dùng</div>
+                            <div class="homeP__search">
+                                <div class="homeP__search-input-wrap">
+                                    <input type="text" class="homeP__search-input" placeholder="Tìm kiếm công việc">
+                                    <div class="homeP__search-history">
+                                        <h3 class="homeP__search-history-heading">Lịch sử tìm kiếm</h3>
+                                        <ul class="homeP__search-history-list">
+                                            <li class="homeP__search-history-item">
+                                                <a href="">Làm bài tập UIUX</a>
+                                            </li>
+                                            <li class="homeP__search-history-item"><a href="">Học Cơ sở dữ liệu</a></li>
+                                            <li class="homeP__search-history-item"><a href="">Báo cáo GR1</a> </li>
+                                            <li class="homeP__search-history-item"><a href="">Mua đồ</a></li>
+                                        </ul>
                                     </div>
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://th.bing.com/th/id/R.99802b681b2dcd3c8f21ff9771bca722?rik=rzoRRaUNdjN%2bEQ&riu=http%3a%2f%2fwww.zeegee.com%2fcourses%2fimages%2foop-1.png&ehk=2Gc3duTOofNJbuyUlsdTdCTL7sjFKStfoDFGc2HsyF8%3d&risl=&pid=ImgRaw&r=0);"></div>
-                                            <h4 class="teamP-myteam-item__name">Lập trình hướng đối tượng</h4>
-                                        </a>
+                                </div>
+                                <button class="homeP-btn-search">
+                                    <i class="homeP__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="homeP__schedule sidebar">
+                            <div class="schedule__contaier">
+                                <header class="schedule__header">
+                                    <div class="schedule__datemonth">
+                                        <p class="schedule__current-date"></p>
+                                        <div class="schedule__navigation">
+                                            <i class="fa-solid fa-chevron-left schedule__prev" id="calendar-prev"></i>
+                                            <i class="fa-solid fa-chevron-right schedule__next" id="calendar-next"></i>
+                                        </div>
                                     </div>
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://th.bing.com/th/id/R.c0cf74ca1cfbfc89ab15efc8639adc88?rik=uRM9IfD9%2foCcNg&pid=ImgRaw&r=0);"></div>
-                                            <h4 class="teamP-myteam-item__name">GR1 2022-2</h4>
-                                        </a>
+                                    <div class="schedule__select">
+                                        <ul class="schedule__select-list">
+                                            <li class="schedule__select-item color--active">Tháng</li>
+                                            <li class="schedule__select-item">Tuần</li>
+                                            <li class="schedule__select-item">Ngày</li>
+                                        </ul>
+                                        <button class="create__task">
+                                            <i class="fa-regular fa-plus create__task-icon"></i>
+                                            <span> Công việc mới</span>
+                                        </button>
+                                        <button class="create__task teamP-member">
+                                            <i class="fa-regular fa-plus create__task-icon"></i>
+                                            <span> Thành viên</span>
+                                        </button>
                                     </div>
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://th.bing.com/th/id/OIP.-IJeCSJV8BVeh-nfYfW-igHaE8?w=280&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7);"></div>
-                                            <h4 class="teamP-myteam-item__name">Tiếng Nhật 6</h4>
-                                        </a>
+                                </header>
+                                <div class="schedule__body">
+                                    <ul class="schedule__weekdays">
+                                        <li class="schedule__day-name">Chủ nhật</li>
+                                        <li class="schedule__day-name">Thứ 2</li>
+                                        <li class="schedule__day-name">Thứ 3</li>
+                                        <li class="schedule__day-name">Thứ 4</li>
+                                        <li class="schedule__day-name">Thứ 5</li>
+                                        <li class="schedule__day-name">Thứ 6</li>
+                                        <li class="schedule__day-name">Thứ 7</li>
+                                    </ul>
+                                    <ul class="schedule__dates"></ul>
+                                    <div class="homeP-task__abbreviate teamP__task" style="background-color:#f0925b;">
+                                        <div class="homeP-task__abbreviate-content">
+                                            <span class="homeP-task__abbreviate-time">0:00 - 23:59</span>
+                                            <span class="homeP-task__abbreviate-text">Bài tập UXUI</span>
+                                        </div>
                                     </div>
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://plat4mation.com/wp-content/uploads/2021/08/p4m_blog_visuals_ServicenNow-App-Engine_feature_540x360.jpg);"></div>
-                                            <h4 class="teamP-myteam-item__name">ITSS Software Development</h4>
-                                        </a>
+                                    <div class="homeP-task ">
+                                        <div class="homeP-task__container teamP-detail-task">
+                                            <div class="homeP-task__header">
+                                                <div class="homeP-task__name">Bài tập UXUI</div>
+                                                <div class="homeP-task__list-icon">
+                                                    <i class="fa-regular fa-eye homeP-task__icon js-watch-detail js-teamP_watch-detail"></i>
+                                                    <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i>
+                                                    <i
+                                                        class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
+                                                </div>
+                                            </div>
+                                            <div class="homeP-task__times">0:00 - 23:59</div>
+                                            <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
+                                        </div>
                                     </div>
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://th.bing.com/th/id/OIP.B6hGZ0_W9eIWjZU0iwFmGwHaEH?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);"></div>
-                                            <h4 class="teamP-myteam-item__name">Kỹ năng mềm</h4>
-                                        </a>
+
+                                    <div class="homeP-detail-screen js-homeP-detail-screen">
+                                        <div class="homeP-detail-screen__container">
+                                            <h3>Chi tiết công việc</h3>
+                                            <header class="homeP-detail-screen__header">
+                                                <div class="homeP-detail-screen__name">
+                                                    <span>Tên công việc:</span>
+                                                    <span>Bài tập UXUI</span>
+                                                </div>
+                                                <div class="homeP-detail-screen__btnAdd js-themgiaidoan">
+                                                    <i class="ti-plus"></i> 
+                                                    <span>Thêm giai đoạn</span>
+                                                </div>
+                                            </header>
+                                            <table>
+                                                <tr>
+                                                  <th>Giai đoạn</th>
+                                                  <th>Người thực hiện</th>
+                                                  <th>Bắt đầu</th>
+                                                  <th>Kết thúc</th>
+                                                  <th>Trạng thái</th>
+                                                </tr>
+                                                <tr>
+                                                  <td>Vẽ giao diện<br> ứng dụng</td>
+                                                  <td>Nguyễn Chí Thành</td>
+                                                  <td>1/6/2023</td>
+                                                  <td>4/6/2023</td>
+                                                  <td><i class="fa-solid fa-check teamP_checkDone"></i></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Viết báo cáo</td>
+                                                  <td>Lê Trung Hiếu<br>Tạ Trung Hiếu</td>
+                                                  <td>4/6/2023</td>
+                                                  <td>5/6/2023</td>
+                                                  <td><i class="fa-solid fa-check teamP_checkDone"></i></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Bảo vệ</td>
+                                                  <td>Lê Tuấn Ngọc Huy</td>
+                                                  <td>7/6/2023</td>
+                                                  <td>7/6/2023</td>
+                                                  <td><span></span></td>
+                                                </tr>
+                                            </table>
+                                            <div class="homeP-detail-screen__btnDone js-hoanthanh">
+                                                Xong
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://th.bing.com/th/id/OIP.arXBnL3f4CmIkUkD3ZBAdQHaD8?w=329&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);"></div>
-                                            <h4 class="teamP-myteam-item__name">Trí tuệ nhân tạo</h4>
-                                        </a>
+
+                                    <div class="teamP-screen__member">
+                                        <div class="teamP-screen__member-container">
+                                            <i class="fa-solid fa-xmark teamP-screen__member-close"></i>
+                                            <div class="teamP-manager-member">
+                                                Người quản lý(1)
+                                                <div class="teamP-manager-item">Nguyễn Chí Thành</div>
+                                            </div>
+                                            <div class="normal-member">
+                                                <span class="teamP-normal-member-item">Thành viên (5)</span>
+                                                <span class="teamP-normal-member-item">Lê Tuấn Ngọc Huy</span>
+                                                <span class="teamP-normal-member-item">Lê Trung Hiếu</span>
+                                                <span class="teamP-normal-member-item">Tạ Trung Hiếu</span>
+                                                <span class="teamP-normal-member-item">Nguyễn Văn A</span>
+                                                <span class="teamP-normal-member-item">User 1</span>
+                                            </div>
+                                            <div class="teamP-add__member-btn">Thêm thành viên</div>
+                                        </div>
                                     </div>
-                                    <div class="col l-3">
-                                        <a href="#" class="teamP-myteam-item">
-                                            <i class="ti-more"></i>
-                                            <div class="teamP-myteam-item__img" style="background-image: url(https://th.bing.com/th/id/R.5f818412edf609ae45d68cbc8dae2d30?rik=ByGIEb15125jDg&pid=ImgRaw&r=0);"></div>
-                                            <h4 class="teamP-myteam-item__name">Manchester is blue</h4>
-                                        </a>
+
+                                    <div class="teamP__addmember">
+                                        <div class="teamP__addmember-container">
+                                            <h3>Thêm thành viên</h3>
+                                            <div class="teamP__addmember-form">
+                                                <input type="email" name="" id="" placeholder="Email của người dùng">
+                                            <input type="text" name="" id="" placeholder="Để lại lời nhắn cảu bạn(nếu có) ở đây nhé">
+                                            </div>
+                                            <div class="teamP__addmember-btnControl">
+                                                <div class="teamP__addmember-btn js-teamP__addmember-themThanhVien">Thêm thành viên</div>
+                                                <div class="teamP__addmember-btn js-teamP__addmember-huy">Hủy</div>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -189,52 +383,55 @@
                 </div>
             </div>
         </div>
-        <div class="teamP-join-with-code">
-            <div class="teamP-code__content">
-                <h3>Tham gia nhóm bằng mã</h3>
-                <input type="text" placeholder="Nhập mã nhóm của bạn">
-                <ul class="teamP-code__control">
-                    <li class="teamP-code__control-item js-teamP-code-done">
-                        Xác nhận
-                    </li>
-                    <li class="teamP-code__control-item js-teamP-code-cancel">Hủy bỏ</li>
-                </ul>
-            </div>
-            
+    </div>
+    <div class="teamP-join-with-code">
+        <div class="teamP-code__content">
+            <h3>Tham gia nhóm bằng mã</h3>
+            <input type="text" placeholder="Nhập mã nhóm của bạn">
+            <ul class="teamP-code__control">
+                <li class="teamP-code__control-item js-teamP-code-done">
+                    Xác nhận
+                </li>
+                <li class="teamP-code__control-item js-teamP-code-cancel">Hủy bỏ</li>
+            </ul>
         </div>
-        <div class="teamP-create-team">
-            <div class="teamP-create-team__container">
-                <h3>Tạo nhóm mới của bạn</h3>
-                <input type="text" name="" id="" placeholder="Tên nhóm">
-                <input type="text" placeholder="Mô tả ngắn">
-                <div class="teamP-create-team__access">
-                    <input type="text" placeholder="Riêng tư- chỉ người quản lý mới có thể thêm thành viên" class="teamP-access__input">
-                    <i class="fa-solid fa-chevron-down teamP-select-icon js-teamP-select-icon"></i>
-                </div>
+
+    </div>
+    <div class="teamP-create-team">
+        <div class="teamP-create-team__container">
+            <h3>Tạo nhóm mới của bạn</h3>
+            <input type="text" name="" id="" placeholder="Tên nhóm">
+            <input type="text" placeholder="Mô tả ngắn">
+            <div class="teamP-create-team__access">
+                <input type="text" placeholder="Riêng tư- chỉ người quản lý mới có thể thêm thành viên"
+                    class="teamP-access__input">
+                <i class="fa-solid fa-chevron-down teamP-select-icon js-teamP-select-icon"></i>
                 <ul class="teamP-create-list js-teamP-create-list">
                     <li class="teamP-create-list__item">Công khai - bất kỳ ai cũng có thể tham gia</li>
-                    <li class="teamP-create-list__item background--active">Riêng tư- chỉ người quản lý mới có thể thêm thành viên</li>
-                </ul>
-                <ul class="teamP-create-control">
-                    <li class="teamP-create-control-item js-create-done">Tạo nhóm</li>
-                    <li class="teamP-create-control-item js-create-cancel">Hủy</li>
+                    <li class="teamP-create-list__item background--active">Riêng tư- chỉ người quản lý mới có thể thêm
+                        thành viên</li>
                 </ul>
             </div>
+            <ul class="teamP-create-control">
+                <li class="teamP-create-control-item js-create-done">Tạo nhóm</li>
+                <li class="teamP-create-control-item js-create-cancel">Hủy</li>
+            </ul>
         </div>
-        <div id="toast"></div>
-            <!-- Success -->
-        <footer>
-            <div class="homeP-social">
-                <!-- <div class="social___des">Theo dõi chúng tôi</div> -->
-                <i class="social-icon ti-facebook"></i>
-                <i class="social-icon ti-instagram"></i>
-                <i class="social-icon ti-twitter-alt"></i>
-                <i class="social-icon ti-youtube"></i>
-                <i class="social-icon ti-linkedin"></i>
-            </div>
-            <div class="footer__text">Được hỗ trợ bởi Đại học Bách Khoa Hà Nội HI_17 2023</div>
-        </footer>
-        <script src="main.js"></script>
-        <script src="/home/main.js"></script>
-    </body>
+    </div>
+    <div id="toast"></div>
+    <!-- Success -->
+    <footer>
+        <div class="homeP-social">
+            <!-- <div class="social___des">Theo dõi chúng tôi</div> -->
+            <i class="social-icon ti-facebook"></i>
+            <i class="social-icon ti-instagram"></i>
+            <i class="social-icon ti-twitter-alt"></i>
+            <i class="social-icon ti-youtube"></i>
+            <i class="social-icon ti-linkedin"></i>
+        </div>
+        <div class="footer__text">Được hỗ trợ bởi Đại học Bách Khoa Hà Nội HI_17 2023</div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
 </html>

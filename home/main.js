@@ -37,7 +37,7 @@ const manipulate = ()=> {
      // loop to add the dates of the current month
      for (let i=1; i <=lastdate; i++) {
         // check if the current date is today
-        let isToday=i===date.getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? "active": "";
+        let isToday=i===date.getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? "active": "normalDay";
         lit+=`<li class="${isToday}"><span class="schdule-date-text">${i}</span></li>`
     }
     // loop to add the first dates of the next month
@@ -196,25 +196,6 @@ for(var  i = 0; i < remindItems.length; i++) {
 }
 
 var listDay = day.childNodes;
-
-var task = [
-    {
-        time: '8:00 - 10:30',
-        text:  'Học UIUX'
-    },
-    {
-        time: '7:30 - 9:30',
-        text:  'Đá bóng'
-    },
-    {
-        time: '10:00 - 11:45',
-        text:  'Học Tiếng Nhật'
-    },
-    {
-        time: '13:00 - 15:30',
-        text:  'Báo cáo GR1'
-    },
-];
 
 // việc 1
 var elementDate = listDay[11];
@@ -485,3 +466,4 @@ function showSuccessCreate() {
         duration: 2000
     });
 }
+

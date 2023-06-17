@@ -4,6 +4,7 @@
     --text-color: #333;
     --border-color: #dbdbdb;
     --primary-color: #b993f7;
+    --btn-color: #ee4d2d;
 }
 
 * {
@@ -64,7 +65,7 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
 } 
 
@@ -120,6 +121,9 @@ html {
     background-color: var(--primary-color);
 }
 
+.btn.btn--color {
+    background-color: var(--btn-color);
+}
 /* animation */
 @keyframes growth {
     from {
@@ -390,7 +394,7 @@ html {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 2;
     display: flex;
     display: none;

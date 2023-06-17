@@ -468,3 +468,20 @@ setTimeout(function(){
 
 
 
+function showSuccessJoin() {
+    toast({
+        title: 'Thành công!',
+        message: 'Tham gia nhóm thành công',
+        type: 'success',
+        duration: 2000
+    });
+}
+
+function showSuccessCreate() {
+    toast({
+        title: 'Thành công!',
+        message: 'Tạo nhóm thành công',
+        type: 'success',
+        duration: 2000
+    });
+}

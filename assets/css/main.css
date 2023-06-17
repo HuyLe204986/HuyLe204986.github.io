@@ -803,7 +803,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0,0.1);
+    background-color: rgba(0, 0, 0,0.2);
     z-index: 1;
     display: flex;
     animation: growth ease-in 0.1s;
@@ -926,7 +926,7 @@
     left: 0;
     bottom: 0;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 2;
     display: none;
 }
@@ -1152,4 +1152,209 @@
     font-size: 1.5rem;
     text-align: center;
     margin: 12px 0;
+}
+
+/* team */
+/* control team */
+
+.teamP-control-list {
+    list-style: none;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.teamP-control-item {
+    padding: 8px;
+    margin-left: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 5px rgb(189,189,189);
+}
+
+.teamP-control-item:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* list team */
+.teamP-myteam {
+    margin-bottom: 10px;
+}
+.teamP-myteam-item {
+    display: block;
+    position: relative;
+    background-color: var(--white-color);
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: transform ease-in 0.1s;
+    will-change: transform;
+    padding: 10px 0;
+}
+
+.teamP-myteam-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+.teamP-myteam-item i {
+    font-size: 1.5rem;
+    margin-left: 256px;
+}
+.teamP-myteam-item__img {
+    padding-top: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.teamP-myteam-item__name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 16px 0;
+}
+
+/* join team with code */
+.teamP-join-with-code {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    display: none;
+}
+
+.teamP-code__content {
+    margin: auto;
+    width: 400px;
+    background-color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 5px;
+    animation: headerNotifyGrowwth ease-in 0.3s;
+    overflow: hidden;
+}
+
+.teamP-code__content h3 {
+    padding: 8px;
+    background-color: var(--primary-color);
+}
+
+.teamP-code__content input {
+    padding: 8px 32px;
+    margin-top: 16px;
+    margin-left: 90px;
+}
+
+.teamP-code__control {
+    list-style: none;
+    display: flex;
+    margin: 16px 16px 0 0;
+    justify-content: flex-end;
+}
+
+.teamP-code__control-item {
+    padding: 6px;
+    border-radius: 3px;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    margin-right: 6px;
+    margin-bottom: 16px;
+}
+
+.teamP-create-control-item:hover,
+.teamP-code__control-item:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* create team */
+
+.teamP-create-team {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.teamP-create-team__container {
+    margin: auto;
+    width: 400px;
+    background-color: var(--white-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: 4px;
+    animation: headerNotifyGrowwth ease-in 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.teamP-create-team__container h3 {
+    padding: 8px;
+    background-color: var(--primary-color);
+}
+
+.teamP-create-team__container input {
+    display: block;
+    padding: 8px;
+    width: 90%;
+    margin: 16px 0 8px 16px;
+    outline: none;
+}
+
+.teamP-create-control {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 16px 14px;
+}
+
+.teamP-create-control-item {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.teamP-create-team__access {
+    position: relative;
+}
+
+.teamP-select-icon {
+    position: absolute;
+    right: 33px;
+    bottom: 12px;
+    cursor: pointer;
+}
+
+.teamP-create-list {
+    list-style: none;
+    animation: growth ease-in 0.1s;
+    display: none;
+}
+
+.teamP-create-list__item {
+    width: 90%;
+    padding: 6px;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    margin-left: 16px;
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+.background--active {
+    background-color: var(--primary-color);
 }

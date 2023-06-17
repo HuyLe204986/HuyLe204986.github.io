@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/assets/css/base.css">
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="/assets/css/grid.css">
+        <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
         <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
         <link rel="stylesheet" href="/assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
@@ -38,7 +39,7 @@
                                         </h3>
                                         <ul class="homeP-header-notify-list">
                                             <li class="homeP-header-notify-item homeP-header-notify--viewed">
-                                                <a href="" class="homeP-header-notify-link">
+                                                <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
                                                     <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-notify-img">
                                                     <div class="homeP-header-notify-info">
                                                         <span class="homeP-header-notify-name">Nguyễn Chí Thành đã thêm một công việc mới trong nhóm UIUX</span>
@@ -47,7 +48,7 @@
                                                 </a>
                                             </li>
                                             <li class="homeP-header-notify-item homeP-header-notify--viewed">
-                                                <a href="" class="homeP-header-notify-link">
+                                                <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
                                                     <img src="https://www.svgrepo.com/show/17468/avatar.svg" alt="" class="homeP-header-notify-img">
                                                     <div class="homeP-header-notify-info">
                                                         <span class="homeP-header-notify-name">Lê Trung Hiếu đã xóa công việc trong nhóm OOP</span>
@@ -75,7 +76,7 @@
                                 <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-user-img">
                                 <span class="homeP-header-user-name">Huy Lê</span>
                                 <ul class="homeP__navbar-user-menu">
-                                    <li class="homeP__navbar-user-item"><a href="">Thông tin tài khoản</a></li>
+                                    <li class="homeP__navbar-user-item js-homeP__navbar-user-item"><a href="#">Thông tin tài khoản</a></li>
                                     <li class="homeP__navbar-user-item"><a href="">Đăng xuất</a></li>
                                 </ul>
                             </li>
@@ -90,23 +91,35 @@
                             <div class="col l-2">
                                 <nav class="HomeP__category">
                                     <ul class="HomeP__category-list">
-                                        <li class="HomeP__category-item color--active">
-                                            <i class="fa-solid fa-house HomeP__category-icon"></i>
-                                            <div class="HomeP__category-desc">Trang chủ</div>
-                                        </li>
-                                        <li class="HomeP__category-item">
-                                            <i class="fa-solid fa-user-group HomeP__category-icon"></i>
-                                            <div class="HomeP__category-desc">Nhóm của bạn</div>
-                                        </li>
-                                        <li class="HomeP__category-item">
-                                            <i class="fa-solid fa-chart-simple HomeP__category-icon"></i>
-                                            <div class="HomeP__category-desc">Thống kê</div>
-                                        </li>
+                                        <a href="#">
+                                            <li class="HomeP__category-item color--active js-HomeP-home">
+                                                <i class="fa-solid fa-house HomeP__category-icon"></i>
+                                                <div class="HomeP__category-desc">Trang chủ</div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="HomeP__category-item js-HomeP-team">
+                                                <i class="fa-solid fa-user-group HomeP__category-icon "></i>
+                                                <div class="HomeP__category-desc">Nhóm của bạn</div>
+                                            </li>
+                                        </a>
+                                        <a href="/statistic/index.html">
+                                            <li class="HomeP__category-item js-HomeP-statistic">
+                                                <i class="fa-solid fa-chart-simple HomeP__category-icon "></i>
+                                                <div class="HomeP__category-desc">Thống kê</div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="HomeP__category-item">
+                                                <i class="fa-solid fa-circle-question HomeP__category-icon"></i>
+                                                <div class="HomeP__category-desc">Trợ giúp</div>
+                                            </li>
+                                        </a>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="col l-10">
-                                <div class="homeP-wrap">
+                            <div class="col l-10 ">
+                                <div class="homeP-wrap sidebar">
                                     <div class="homeP__title">Danh sách công việc</div>
                                     <div class="homeP__search">
                                         <div class="homeP__search-input-wrap">
@@ -118,8 +131,8 @@
                                                         <a href="">Làm bài tập UIUX</a>
                                                     </li>
                                                     <li class="homeP__search-history-item"><a href="">Học Cơ sở dữ liệu</a></li>
-                                                    <li class="homeP__search-history-item"><a href="">Ăn tối với em Trang</a> </li>
-                                                    <li class="homeP__search-history-item"><a href="">Đi chơi với em Phương</a></li>
+                                                    <li class="homeP__search-history-item"><a href="">Báo cáo GR1</a> </li>
+                                                    <li class="homeP__search-history-item"><a href="">Mua đồ</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -128,7 +141,7 @@
                                        </button> 
                                     </div>
                                 </div>
-                                <div class="homeP__schedule">
+                                <div class="homeP__schedule sidebar">
                                    <div class="schedule__contaier">
                                         <header class="schedule__header">
                                             <div class="schedule__datemonth">
@@ -152,13 +165,13 @@
                                         </header>
                                         <div class="schedule__body">
                                             <ul class="schedule__weekdays">
+                                                <li class="schedule__day-name">Chủ nhật</li>
                                                 <li class="schedule__day-name">Thứ 2</li>
                                                 <li class="schedule__day-name">Thứ 3</li>
                                                 <li class="schedule__day-name">Thứ 4</li>
                                                 <li class="schedule__day-name">Thứ 5</li>
                                                 <li class="schedule__day-name">Thứ 6</li>
                                                 <li class="schedule__day-name">Thứ 7</li>
-                                                <li class="schedule__day-name">Chủ nhật</li>
                                             </ul>
                                             <ul class="schedule__dates"></ul>
                                         </div>
@@ -210,7 +223,7 @@
             <div class="homeP-task">
                 <div class="homeP-task__container">
                     <div class="homeP-task__header">
-                        <div class="homeP-task__name">Học UXUI</div>
+                        <div class="homeP-task__name">Học UIUX</div>
                         <div class="homeP-task__list-icon">
                             <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
                             <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i>
@@ -225,7 +238,10 @@
             <div class="homeP-delete js-homeP-delete">
                 <div class="homeP-delete-container">
                     <p>Xác nhận xóa công việc</p>
-                    <div class="homeP-delete-button js-homeP-delete-button">Xác nhận</div>
+                    <div class="homeP-delete-container-control">
+                        <div class="homeP-delete-button js-homeP-delete-button">Xác nhận</div>
+                    <div class="homeP-delete-button js-homeP-cancel-button">Hủy</div>
+                    </div>
                 </div>
             </div>
 
@@ -253,12 +269,79 @@
                         <div class="btn btn--primary homeP__wacht-detail-btn js-detail-edit">Chỉnh sửa</div>
                         <div class="btn btn--primary homeP__wacht-detail-btn js-detail-exit">Thoát</div>
                     </div>
+
+                   <div class="homeP__wacht-detail-chart">
+                        <canvas id="detail-canvas"></canvas>
+                        <div class="homeP__wacht-detail-percent">
+                            <p class="js-detail-canvas-percent">0%</p>
+                            <div class="homeP__wacht-percent-wrap">
+                                <i class="fa-solid fa-plus js-percentAdd"></i>
+                                <i class="fa-solid fa-minus js-percentMinus"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>  
 
+            <div class="homeP__info-user js-homeP__info-user">
+                <div class="info-user__container">
+                    <div class="info-user__containe-wrap">
+                        <div class="info-user__content">
+                            <ul class="info-user__content-list">
+                                <li class="info-user__content-item">
+                                    <p>Họ và tên:</p>
+                                    <span>Lê Tuấn Ngọc Huy</span>
+                                </li>
+                                <li class="info-user__content-item">
+                                    <p>Ngày sinh:</p>
+                                    <span>01/01/2002</span>
+                                </li>
+                                <li class="info-user__content-item">
+                                    <p>Giới tính:</p>
+                                    <span>Nam</span>
+                                </li>
+                                <li class="info-user__content-item">
+                                    <p>Nghề nghiệp:</p>
+                                    <span>Sinh viên</span>
+                                </li>
+                                <li class="info-user__content-item">
+                                    <p>Email:</p>
+                                    <span>abc@gmail.com</span>
+                                </li>
+                                <li class="info-user__content-item">
+                                    <p>SĐT:</p>
+                                    <span>0123456789</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info-user__avatar">
+                            <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="info-user-img">
+                            <div class="info-user-name">Huy Lê</div>
+                        </div>
+                    </div>
+                    <div class="info-user__control">
+                        <div class=" info-user__control-btn js-info-user__save">Lưu thay đổi</div>
+                        <div class=" info-user__control-btn js-info-user__cancel">Hủy</div>
+                    </div>
+                </div>
+            </div>
+
            <div id="toast"></div>
             <!-- Success -->
+
+            <footer>
+                <div class="homeP-social">
+                    <!-- <div class="social___des">Theo dõi chúng tôi</div> -->
+                    <i class="social-icon ti-facebook"></i>
+                    <i class="social-icon ti-instagram"></i>
+                    <i class="social-icon ti-twitter-alt"></i>
+                    <i class="social-icon ti-youtube"></i>
+                    <i class="social-icon ti-linkedin"></i>
+                </div>
+                <div class="footer__text">Được hỗ trợ bởi Đại học Bách Khoa Hà Nội HI_17 2023</div>
+            </footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="./main.js"></script>
     </body>
 </html>

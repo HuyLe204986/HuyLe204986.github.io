@@ -295,6 +295,7 @@ var modalDelete = document.querySelector('.js-homeP-delete');
 var btnEdit = document.querySelector('.js-detail-edit');
 var btnExit = document.querySelector('.js-detail-exit');
 var modalEdit = document.querySelector('.js-homeP__wacht-detail');
+var cancelDelete = document.querySelector('.js-homeP-cancel-button');
 function showDetail() {
     taskContainer.style.display='block';
     taskContainer.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
@@ -334,6 +335,9 @@ function showSuccessEdit() {
     });
 }
 
+cancelDelete.onclick = function() {
+    modalDelete.style.display='none';
+}
 
 btnDelete.onclick = function(){
     modalDelete.style.display='none';
@@ -348,3 +352,119 @@ btnEdit.onclick = function() {
 btnExit.onclick = function() {
     modalEdit.style.display='none';
 }
+
+
+var infoUserForm = document.querySelector('.js-homeP__info-user');
+var btnFormInfosave = document.querySelector('.js-info-user__save');
+var btnFormInfocancel = document.querySelector('.js-info-user__cancel');
+var thongTinTaiKhoan = document.querySelector('.js-homeP__navbar-user-item');
+
+
+thongTinTaiKhoan.onclick = function() {
+    infoUserForm.style.display = 'flex';
+}
+
+btnFormInfosave.addEventListener('click', function() {
+    infoUserForm.style.display = 'none';
+    showSuccessEdit();
+})
+
+btnFormInfocancel.addEventListener('click', function() {
+    infoUserForm.style.display = 'none';
+})
+
+
+var listSidebars = document.querySelectorAll('.HomeP__category-item');
+var listScreen = document.querySelectorAll('.sidebar');
+function removeActive(e) {
+    e.classList.remove('color--active')
+}
+function showActive(e) {
+    e.classList.add('color--active')
+}
+
+var lengthSidebar = listSidebars.length;
+var lengthScreen = listScreen.length;
+function checkActive() {
+    var rs = 0;
+    for(var i = 0; i< lengthSidebar; i++) {
+        if(listSidebars[i].classList.contains('color--active')){
+           rs = i;
+        }
+    }
+    return rs;
+}
+for (const key in listSidebars) {
+    listSidebars[key].onclick = function() {
+        for(var i = 0; i< lengthSidebar; i++){
+            if(i == checkActive()){
+                listSidebars[i].classList.remove('color--active');
+                listSidebars[key].classList.add('color--active');
+            }
+        }
+    }
+}
+
+var detailCanvas = document.getElementById('detail-canvas');
+var percent =  document.querySelector('.js-detail-canvas-percent');
+var p = percent.innerHTML.slice(-percent.innerHTML.length,-1);
+var stringPercent = + p;
+
+
+var addPercentBtn = document.querySelector('.js-percentAdd');
+var minusPercentBtn = document.querySelector('.js-percentMinus');
+
+// addPercentBtn.addEventListener('click', function() {
+//     stringPercent += 10;
+//     percent.innerHTML = `${stringPercent}%`;
+    
+// })
+//  minusPercentBtn.addEventListener('click', function() {
+//     stringPercent -= 10;
+//     percent.innerHTML = `${stringPercent}%`;
+    
+// })
+
+function addPercent() {
+    stringPercent += 10;
+    percent.innerHTML = `${stringPercent}%`; 
+}
+function minusPercent() {
+    stringPercent -= 10;
+    percent.innerHTML = `${stringPercent}%`;
+}
+addPercentBtn.onclick = addPercent;
+minusPercentBtn.onclick = minusPercent;
+
+setTimeout(function(){
+    var dt = {
+        labels: [
+            
+          ],
+          datasets: [{
+            label: 'Task',
+            data: [stringPercent ,100-stringPercent],
+            backgroundColor: [
+            "rgb(255, 119, 119, 1)",
+              "rgb(105, 75, 219,1)"
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const fg = {
+        type: 'doughnut',
+        data: dt,
+        options: {
+            responsive: true,
+           legend: {
+             display: false
+           }
+        },
+        
+    };
+    var detailChart = new Chart(detailCanvas, fg);
+    
+},5000)
+
+
+

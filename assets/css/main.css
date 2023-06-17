@@ -696,6 +696,11 @@
     margin-left: 16px;
 }
 
+.teamP-member-icon {
+    position: relative;
+    top: 2px;
+}
+
 .create__task::before {
     content: '';
     position: absolute;

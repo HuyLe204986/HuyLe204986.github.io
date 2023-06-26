@@ -37,7 +37,7 @@ const manipulate = ()=> {
      // loop to add the dates of the current month
      for (let i=1; i <=lastdate; i++) {
         // check if the current date is today
-        let isToday=i===date.getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? "active": "normalDay";
+        let isToday=i===date.getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? `active normalDay`: `normalDay`;
         lit+=`<li class="${isToday}"><span class="schdule-date-text">${i}</span></li>`
     }
     // loop to add the first dates of the next month
@@ -197,56 +197,17 @@ for(var  i = 0; i < remindItems.length; i++) {
 
 var listDay = day.childNodes;
 
-// việc 1
-var elementDate = listDay[11];
+var elementDate = listDay[9];
 var html = elementDate.innerHTML;
+function addTask2( {time='', text='', time2='', text2=''}) {
     html += `
-    <div class="homeP-task__abbreviate" style="background-color:#f0925b;">
-        <div class="homeP-task__abbreviate-content">
-            <span class="homeP-task__abbreviate-time">10:15 - 11:45</span>
-            <span class="homeP-task__abbreviate-text">Học tiếng nhật</span>
-        </div>
-    </div>
-    `;
-
-
-elementDate.innerHTML = html;
-// việc 2
-var elementDateTwo = listDay[20];
-var html3 = elementDateTwo.innerHTML;
-function addTask3( {time='', text=''}) {
-    html3 += `
-    <div class="homeP-task__abbreviate" style="background-color: var(--primary-color);">
-        <div class="homeP-task__abbreviate-content" >
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--study-color);">
+        <div class="homeP-task__abbreviate-content" onclick = "showDetail()">
             <span class="homeP-task__abbreviate-time">${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
         </div>
     </div>
-    `;
-}
-function showTaskOnCalendar() {
-    addTask3({
-        time: '8:30 - 9:30' ,
-        text: 'Đá bóng'
-    });
-}
-showTaskOnCalendar();
-elementDateTwo.innerHTML = html3;
-
-// việc 3
-
-var elementDateThree = listDay[8];
-var html = elementDateThree.innerHTML;
-
-function addTask2( {time='', text='' ,time2='', text2=''}) {
-    html += `
-    <div class="homeP-task__abbreviate">
-        <div class="homeP-task__abbreviate-content" onclick=showDetail() style="background-color: #ec6f6f;">
-            <span class="homeP-task__abbreviate-time">${time}</span>
-            <span class="homeP-task__abbreviate-text">${text}</span>
-        </div>
-    </div>
-    <div class="homeP-task__abbreviate" style="margin-top: 21px;">
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--study-color); margin-top: 24px;">
         <div class="homeP-task__abbreviate-content">
             <span class="homeP-task__abbreviate-time">${time2}</span>
             <span class="homeP-task__abbreviate-text">${text2}</span>
@@ -255,31 +216,259 @@ function addTask2( {time='', text='' ,time2='', text2=''}) {
     <div class="homeP__moretask"><a href="">+2 more...</a></div>
     `;
 }
-
-function showTaskOnCalendar2() {
+function showTaskOnCalendar() {
     addTask2({
-        time: '13:00 - 15:30' ,
-        text: 'Học UIUX',
-        time2: '8:00 - 10:30' ,
-        text2: 'Báo cáo GR1'
+        time: '8:00 - 10:30' ,
+        text: 'Học OOP',
+        time2: '12:30 - 15:50',
+        text2: 'Học UIUX',
+    });
+}
+showTaskOnCalendar();
+elementDate.innerHTML = html;
+
+var elementDateTwo = listDay[20];
+var html2 = elementDateTwo.innerHTML;
+function addTask( {time='', text=''}) {
+    html2 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--entertain-color);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar2() {
+    addTask({
+        time: '8:00 - 10:30' ,
+        text: 'Đá Bóng',
     });
 }
 showTaskOnCalendar2();
-elementDateThree.innerHTML = html;
+elementDateTwo.innerHTML = html2;
+
+var elementDateThree = listDay[21];
+var html3 = elementDateThree.innerHTML;
+function addTask3( {time='', text=''}) {
+    html3 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--entertain-color);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color);">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar3() {
+    addTask3({
+        time: '14:30 - 16:30' ,
+        text: 'Xem Phim',
+    });
+}
+showTaskOnCalendar3();
+elementDateThree.innerHTML = html3;
+
+var elementDateFour = listDay[25];
+var html4 = elementDateFour.innerHTML;
+function addTask4( {time='', text=''}) {
+    html4 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--work-color);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar4() {
+    addTask4({
+        time: '7:30-10:30' ,
+        text: 'Báo Cáo GR1',
+    });
+}
+showTaskOnCalendar4();
+elementDateFour.innerHTML = html4;
+
+var elementDateFive = listDay[28];
+var html5 = elementDateFive.innerHTML;
+function addTask5( {time='', text=''}) {
+    html5 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--work-color);" onclick="showDetail3()">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color);">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar5() {
+    addTask5({
+        time: '7:30-10:30' ,
+        text: 'Họp Team',
+    });
+}
+showTaskOnCalendar5();
+elementDateFive.innerHTML = html5;
+
+var elementDateSix = listDay[30];
+var html6 = elementDateSix.innerHTML;
+function addTask6( {time='', text=''}) {
+    html6 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--study-color); width: calc(300% + 5px);" onclick="showDetail4()">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="width:15%; background-color: var(--warning-color);">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar6() {
+    addTask6({
+        time: '19:30 - 22:30' ,
+        text: 'Học Tiếng Nhật',
+    });
+}
+showTaskOnCalendar6();
+elementDateSix.innerHTML = html6;
+
+var elementDateSeven = listDay[5];
+var html7 = elementDateSeven.innerHTML;
+function addTask7( {time='', text=''}) {
+    html7 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--entertain-color);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color);">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar7() {
+    addTask7({
+        time: '13:00-14:30' ,
+        text: 'Chơi Game',
+    });
+}
+showTaskOnCalendar7();
+elementDateSeven.innerHTML = html7;
+
+var elementDate8 = listDay[17];
+var html8 = elementDate8.innerHTML;
+function addTask8( {time='', text=''}) {
+    html8 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--entertain-color);" onclick="showDetail5()">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar8() {
+    addTask8({
+        time: '22:30-0:30' ,
+        text: 'Xem EPL',
+    });
+}
+showTaskOnCalendar8();
+elementDate8.innerHTML = html8;
+
+var elementDate9 = listDay[7];
+var html9 = elementDate9.innerHTML;
+function addTask9( {time='', text=''}) {
+    html9 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--work-color);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color);">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar9() {
+    addTask9({
+        time: '22:30-0:30' ,
+        text: 'Bài Tập OOP',
+    });
+}
+showTaskOnCalendar9();
+elementDate9.innerHTML = html9;
+
+
+var elementDate10 = listDay[11];
+var html10 = elementDate10.innerHTML;
+function addTask10( {time='', text='', time2='', text2=''}) {
+    html10 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--study-color);" onclick="showDetail2()">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--study-color); margin-top: 24px;">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time2}</span>
+            <span class="homeP-task__abbreviate-text">${text2}</span>
+        </div>
+    </div>
+    <div class="homeP__moretask"><a href="">+1 more...</a></div>
+    `;
+}
+function showTaskOnCalendar10() {
+    addTask10({
+        time: '10:15 - 11:45' ,
+        text: 'Học Tiếng Nhật',
+        time2: '12:30 - 14:50',
+        text2: 'Học Tiếng Anh',
+    });
+}
+showTaskOnCalendar10();
+elementDate10.innerHTML = html10;
+
+var elementDate11 = listDay[14];
+var html11 = elementDate11.innerHTML;
+function addTask11( {time='', text=''}) {
+    html11 += `
+    <div class="homeP-task__abbreviate workspace" style="background-color: var(--study-color); width: 200%;">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar11() {
+    addTask11({
+        time: '7:15 - 9:45' ,
+        text: 'JLPT N3',
+    });
+}
+showTaskOnCalendar11();
+elementDate11.innerHTML = html11;
 
 var taskContainer =document.querySelector('.homeP-task__container')
 var closeTaskContaner = document.querySelector('.homeP-task__icon-close');
 var watchDetail = document.querySelector('.js-watch-detail');
-var deleteTask = document.querySelector('.js-task-remove');
+var deleteTask = document.querySelector('.js-detail-delete');
 var btnDelete = document.querySelector('.js-homeP-delete-button');
 var modalDelete = document.querySelector('.js-homeP-delete');
 var btnEdit = document.querySelector('.js-detail-edit');
 var btnExit = document.querySelector('.js-detail-exit');
 var modalEdit = document.querySelector('.js-homeP__wacht-detail');
 var cancelDelete = document.querySelector('.js-homeP-cancel-button');
+
 function showDetail() {
     taskContainer.style.display='block';
     taskContainer.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
+    document.querySelector('.js-homeP__wacht-detail-decs').innerHTML = "Học OOP";
+    var listNgay = document.querySelectorAll('.homeP__wacht-detail-item');
+    for(var i = 0; i < 2; i++) {
+        listNgay[i].innerHTML= '6/6/2023';
+    }
+    listNgay[2].innerHTML= '8:00';
+    listNgay[3].innerHTML= '10:30';
+    document.querySelector('.js-detail-canvas-percent').innerHTML = '100%'
 }
 
 function hideDetail() {
@@ -288,6 +477,7 @@ function hideDetail() {
 
 function xoaTask() {
     modalDelete.style.display='block';
+    modalEdit.style.display='none';
 }
 
 function xemDetail() {
@@ -297,6 +487,99 @@ function xemDetail() {
 closeTaskContaner.addEventListener('click',hideDetail);
 watchDetail.addEventListener('click', xemDetail);
 deleteTask.addEventListener('click',xoaTask);
+
+var task2Close = document.querySelector('.homeP-task2 .homeP-task__icon-close');
+var task2Container = document.querySelector('.homeP-task2 .homeP-task__container');
+var task2WatDetail = document.querySelector('.homeP-task2 .js-watch-detail');
+
+task2Close.addEventListener('click',function(){
+    task2Container.style.display = 'none';
+})
+
+function showDetail2() {
+    task2Container.style.display='block';
+    task2Container.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
+}
+
+task2WatDetail.onclick = function() {
+    xemDetail();
+    document.querySelector('.js-homeP__wacht-detail-decs').innerHTML = "Học Tiếng Nhật";
+    var listDate = document.querySelectorAll('.homeP__wacht-detail-item');
+    for(var i = 0; i < 2; i++) {
+        listDate[i].innerHTML= '8/6/2023';
+    }
+    listDate[2].innerHTML= '10:15';
+    listDate[3].innerHTML= '11:45';
+    document.querySelector('.js-detail-canvas-percent').innerHTML = '100%'
+}
+
+var task3Close = document.querySelector('.homeP-task3 .homeP-task__icon-close');
+var task3Container = document.querySelector('.homeP-task3 .homeP-task__container');
+var task3WatDetail = document.querySelector('.homeP-task3 .js-watch-detail');
+
+task3Close.addEventListener('click',function(){
+    task3Container.style.display = 'none';
+})
+
+function showDetail3() {
+    task3Container.style.display='block';
+    task3Container.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
+}
+
+task3WatDetail.onclick = function() {
+    xemDetail();
+    document.querySelector('.js-homeP__wacht-detail-decs').innerHTML = "Họp Team";
+    var listDay = document.querySelectorAll('.homeP__wacht-detail-item');
+    for(var i = 0; i < 2; i++) {
+        listDay[i].innerHTML= '25/6/2023';
+    }
+    listDay[2].innerHTML= '7:30';
+    listDay[3].innerHTML= '10:30';
+    document.querySelector('.js-detail-canvas-percent').innerHTML = '0%';
+}
+var task4Close = document.querySelector('.homeP-task4 .homeP-task__icon-close');
+var task4Container = document.querySelector('.homeP-task4 .homeP-task__container');
+var task4WatDetail = document.querySelector('.homeP-task4 .js-watch-detail');
+task4Close.addEventListener('click', function() {
+    task4Container.style.display = 'none';
+})
+function showDetail4() {
+    task4Container.style.display = 'block';
+    task4Container.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
+}
+
+task4WatDetail.onclick = function() {
+    xemDetail();
+    document.querySelector('.js-homeP__wacht-detail-decs').innerHTML = "Học Tiếng Nhật";
+    var listDays = document.querySelectorAll('.homeP__wacht-detail-item');
+    listDays[0].innerHTML = '27/6/2023';
+    listDays[1].innerHTML = '29/6/2023';
+    listDays[2].innerHTML = '19:30';
+    listDays[3].innerHTML = '22:30';
+    document.querySelector('.js-detail-canvas-percent').innerHTML = '0%';
+}
+
+var task5Close = document.querySelector('.homeP-task5 .homeP-task__icon-close');
+var task5Container = document.querySelector('.homeP-task5 .homeP-task__container');
+var task5WatDetail = document.querySelector('.homeP-task5 .js-watch-detail');
+task5Close.addEventListener('click', function() {
+    task5Container.style.display = 'none';
+})
+function showDetail5() {
+    task5Container.style.display = 'block';
+    task5Container.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
+}
+
+task5WatDetail.onclick = function() {
+    xemDetail();
+    document.querySelector('.js-homeP__wacht-detail-decs').innerHTML = "Xem EPL";
+    var listDayss = document.querySelectorAll('.homeP__wacht-detail-item');
+    listDayss[0].innerHTML = '14/6/2023';
+    listDayss[1].innerHTML = '14/6/2023';
+    listDayss[2].innerHTML = '22:30';
+    listDayss[3].innerHTML = '0:30';
+    document.querySelector('.js-detail-canvas-percent').innerHTML = '100%';
+}
 
 function showSuccessDelete() {
     toast({
@@ -328,6 +611,10 @@ btnDelete.onclick = function(){
 btnEdit.onclick = function() {
     modalEdit.style.display='none';
     showSuccessEdit();
+    var modalALl = document.querySelectorAll('.homeP-task__container');
+    for(var i = 0; i < modalALl.length; i++) {
+        modalALl[i].style.display='none';
+    }
 }
 
 btnExit.onclick = function() {
@@ -405,15 +692,15 @@ var minusPercentBtn = document.querySelector('.js-percentMinus');
 //     percent.innerHTML = `${stringPercent}%`;
     
 // })
-
 function addPercent() {
     stringPercent += 10;
     percent.innerHTML = `${stringPercent}%`; 
 }
 function minusPercent() {
     stringPercent -= 10;
-    percent.innerHTML = `${stringPercent}%`;
+    percent.innerHTML = `${stringPercent}%`; 
 }
+
 addPercentBtn.onclick = addPercent;
 minusPercentBtn.onclick = minusPercent;
 

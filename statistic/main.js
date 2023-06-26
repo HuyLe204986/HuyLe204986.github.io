@@ -37,14 +37,16 @@ var pieChartsElement = document.getElementById('my-canvas');
 const data = {
     labels: [
       'Hoàn thành',
-      'Quá hạn'
+      'Quá hạn',
+      'Đang thực hiện'
     ],
     datasets: [{
       label: 'My First Dataset',
-      data: [69, 29],
+      data: [69, 29, 2],
       backgroundColor: [
         " rgb(255, 119, 119, 0.8)",
-        "rgb(105, 75, 219,0.8)"
+        "rgb(105, 75, 219,0.8)",
+        "rgb(102,51,23,0.8)"
       ],
       hoverOffset: 4
     }]

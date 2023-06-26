@@ -250,7 +250,7 @@
     transform-origin: calc(100% - 32px) top;
     animation: headerNotifyGrowwth ease-in 0.3s;
     will-change: opacity, transform;
-    z-index: 2;
+    z-index: 3;
     display: none;
 }
 
@@ -526,7 +526,99 @@
 .homeP__title {
     font-size: 1.8rem;
     color: #F54035;
+    position: relative;
 }
+
+.homeP__title:hover {
+    color: rgb(245, 64, 53, 0.5);
+    cursor: pointer;
+}
+
+.homeP__title:hover .homeP__workspace-list {
+    display: block;
+}
+
+.homeP__workspace-list {
+    width: 120px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    list-style: none;
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 5px rgb(189, 189, 189);
+    position: absolute;
+    z-index: 2;
+    top: calc(100% + 5px);
+    display: none;
+    border-radius: 3px;
+}
+
+.homeP__workspace-item {
+    position: relative;
+    padding: 12px 12px 12px 40px;
+    color: var(--text-color);
+}
+
+.homeP__workspace-item:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    border-width: 8px 8px;
+    border-color: var(--study-color) var(--entertain-color) var(--work-color) #a9f499;   
+    border-style: solid;
+    top: 12px;
+    left: 15px;
+}
+
+.homeP__workspace-item:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    border-width: 8px 8px;
+    border-color: var(--study-color);   
+    border-style: solid;
+    top: 12px;
+    left: 15px;
+}
+
+.homeP__workspace-item:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    border-width: 8px 8px;
+    border-color: var(--entertain-color);   
+    border-style: solid;
+    top: 12px;
+    left: 15px;
+}
+
+
+.homeP__workspace-item:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    border-width: 8px 8px;
+    border-color: var(--work-color);   
+    border-style: solid;
+    top: 12px;
+    left: 15px;
+}
+
+.homeP__workspace-item:hover {
+    background-color: var(--primary-color);
+}
+
+.homeP__workspace-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    
+}
+
+.homeP__workspace-list::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: -8px;
+}
+
 
 .homeP__search {
     display: flex;
@@ -805,7 +897,7 @@
 }
 
 .schedule__dates li.active::before {
-    background-color: rgba(69, 150, 212, 0.6);
+    background-color:  #b7d4f0;
 }
 
 .schedule__dates li:not(.active):hover::before {

@@ -3,8 +3,14 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
-    --primary-color: #b993f7;
+    --primary-color: #8496D7;
     --btn-color: #ee4d2d;
+    --done-color: #a9f499;
+    --warning-color: #e7f159;
+    --notDone-color: #ff6b6b;
+    --study-color: #ff8ba4;
+    --work-color: #43c7f1;
+    --entertain-color: #bb82dc;
 }
 
 * {
@@ -229,17 +235,20 @@ html {
 
 /* homeP task */
 
+.homeP-task {
+    position: absolute;
+    top: calc(50% + 12px);
+    left:calc(43% + 2px);
+    z-index: 2;
+}
+
 .homeP-task__container {
     width: 200px;
     background-color: var(--white-color);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     position: absolute;
-    top: 373px;
-    left: 500px;
-    z-index: 2;
     display: none;
-
 }
 .homeP-task__container::before {
     position: absolute;
@@ -264,7 +273,7 @@ html {
     width: 50%;
     padding: 4px 0;
     border-radius: 3px;
-    background-color: var(--primary-color);
+    background-color: #ff8ba4;
     text-align: center;
     font-size: 1.4rem;
 }
@@ -272,16 +281,25 @@ html {
 .homeP-task__icon {
     padding: 0 3px;
     cursor: pointer;
+    font-size: 1.6rem;
 }
 
 .homeP-task__icon:nth-child(3) {
     font-size: 1.6rem;
 }
 
+.homeP-task__avatar img {
+    width: 23px;
+    height: 23px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    margin: 6px 0 0 12px;
+} 
+
 .homeP-task__remind-desc,
 .homeP-task__times {
     font-size: 1.4rem;
-    margin: 12px;
+    margin: 6px 12px 12px;
 }
 
 
@@ -294,7 +312,6 @@ html {
     position: absolute;
     top: 17px;
     left: 0;
-   
 }
 
 .homeP-task__abbreviate-content {
@@ -310,8 +327,9 @@ html {
     right:  2px;
     font-size: 1rem;
     border-radius: 6px;
-    background-color: #a9f499;
+    background-color: var(--done-color);
     padding: 0 3px;
+    color: var(--text-color);
 }
 
 .homeP-task__abbreviate-text {
@@ -325,6 +343,55 @@ html {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
 }
+
+.homeP-task2 {
+    position: absolute;
+    top: calc(50% + 12px);
+    left:calc(64% + 12px);
+    z-index: 2;
+}
+
+
+.homeP-task2 .homeP-task__name {
+    width: 60%;
+}
+
+
+.homeP-task3 {
+    position: absolute;
+    top: calc(84% + 16px);
+    left:calc(21% + 16px);
+    z-index: 2;
+}
+
+.homeP-task3 .homeP-task__name {
+    background-color: var(--work-color);
+}
+
+
+.homeP-task4 .homeP-task__name {
+    width: 60%;
+}
+
+
+.homeP-task4 {
+    position: absolute;
+    top: calc(84% + 12px);
+    left:calc(64% + 12px);
+    z-index: 2;
+}
+
+.homeP-task5 {
+    position: absolute;
+    top: calc(61% + 18px);
+    left:calc(52% + 24px);
+    z-index: 2;
+}
+
+.homeP-task5 .homeP-task__name {
+    background-color: var(--entertain-color);
+}
+
 
 .homeP__moretask a{
     display: block;
@@ -466,12 +533,24 @@ html {
 .homeP__wacht-detail-control {
     display: flex;
     margin-bottom: 18px;
-    float: right;
     margin-right: 24px;
+    float: right;
 }
 
-.homeP__wacht-detail-btn:nth-child(1){
-    margin-right: 5px;
+.homeP__wacht-detail-btn {
+    width: 80px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    margin: 0 5px;
+    font-size: 1.3rem;
+    padding: 6px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.homeP__wacht-detail-btn:hover {
+    cursor: pointer;
+    background-color: rgb(132, 150, 215, 0.9);
 }
 
 .homeP__wacht-detail-chart {

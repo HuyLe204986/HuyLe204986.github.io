@@ -403,6 +403,19 @@ html {
     color: rgb(23, 23, 223, 0.8);
 }
 
+.teamP-task2 {
+    position: absolute;
+    top: calc(72% + 12px);
+    left:calc(34% + 2px);
+    z-index: 2;
+}
+
+.teamP-task2 .teamP-detail-task {
+    /* display: block;  */
+}
+
+
+
 /* xóa */
 
 .homeP-delete {
@@ -592,5 +605,75 @@ html {
     border: 1px solid var(--border-color);
     border-radius: 2px;
     margin: 4px 0 0 4px;
+    cursor: pointer;
+}
+
+/* thêm không gian làm việc */
+
+.homeP__worksapce-form {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    z-index: 1;
+    display: none;
+}
+
+.worksapce-form__container {
+    margin: auto;
+    width: 400px;
+    background-color: var(--white-color);
+}
+
+.worksapce-form__container h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 16px 0;
+}
+
+.worksapce-form__name {
+    font-size: 1.3rem;
+    outline: none;
+    width: 90%;
+    padding: 6px 12px;
+    margin: 0 20px;
+}
+
+.worksapce-form__color {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin: 16px 20px;
+}
+
+.worksapce-form__color span {
+    font-size: 1.4rem;
+} 
+
+.worksapce-form__color input {
+    height: 16px;
+    margin-left: 92px;
+}
+
+.worksapce-form__controll {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 20px;
+}
+
+.worksapce-form__controll-btn {
+    font-size: 1.3rem;
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    margin: 0 0 16px 8px;
+}
+
+.worksapce-form__controll-btn:hover {
+    background-color: var(--primary-color);
     cursor: pointer;
 }

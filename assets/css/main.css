@@ -618,7 +618,24 @@
     position: absolute;
     top: -8px;
 }
+.homeP__workspace-new {
+    display: flex;
+    align-items: center;
+}
 
+.homeP__workspace-new i {
+    position: absolute;
+    top: 9px;
+    left: 13px;
+    font-size: 1.4rem;
+    padding: 2px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.homeP__workspace-new span {
+    margin-left: -1px;
+}
 
 .homeP__search {
     display: flex;
@@ -1475,17 +1492,17 @@
 
 /* thêm task mới */
 .teamP__task {
-    position: absolute;
+    /* position: absolute;
     z-index: 2;
     top: calc(47% + 32px);
-    left: calc(40% + 29px);
+    left: calc(40% + 29px); */
 }
 
 /* chi tiết công việc nhóm */
 .teamP-detail-task {
     position: absolute;
-    top: calc(50% + 32px);
-    left: calc(40% + 29px);
+    top: calc(50% + 20px);
+    left: 360px;
 }
 
 .homeP-detail-screen {
@@ -1710,4 +1727,79 @@ td,th {
 .teamP__addmember-btn:hover {
     cursor: pointer;
     background-color: var(--primary-color);
+}
+
+/* help Page */
+
+.helpP__header-head::first-letter {
+    font-size: 3rem;
+}
+
+.helpP__header-head span {
+    color: var(--white-color);
+    text-shadow: 2px 2px 5px red;
+}
+
+.helpP__header-thank {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 24px 0;
+}
+
+.helpP__list {
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+.help__item {
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.help__item-desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.help__item-screen {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 16px 0;
+}
+
+.help__item-img:nth-child(1) {
+    margin-right: -200px;
+}
+
+.help__item-img:nth-child(2) {
+    width: 1000px;
+    height: 247px;
+    object-fit: contain;
+}
+
+.help__item-screen-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 12px 0;
+    border: 1px solid #ccc;
+    background-color: var(--white-color);
+    border-top-left-radius: 20px;
+
+}
+
+.help__item-screen-detail img {
+    width: 70%;
+}
+
+.help__item-screen-detail span {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-top: 12px;
+    width: 209px;
 }

@@ -159,17 +159,120 @@ function showErrorToast() {
     });
 }
 
+// thêm công việc
+var Dayslist = document.querySelectorAll('.normalDay');
+var task1 = Dayslist[5];
+var content = task1.innerHTML;
+function themTask( {time='', text=''}) {
+    content += `
+    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color); width: calc(300% + 4px);">
+        <div class="homeP-task__abbreviate-content" onclick = "showDetail()">
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar() {
+    themTask({
+        time: '0:00 - 23:59',
+        text: 'Bài Tập UIUX',
+    });
+}
+showTaskOnCalendar();
+task1.innerHTML = content;
+
+var task2 = Dayslist[10];
+var content2 = task2.innerHTML;
+function themTask2( {time='', text=''}) {
+    content2 += `
+    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content" onclick = "showDetail2()">
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar2() {
+    themTask2({
+        time: '0:00 - 23:59',
+        text: 'Thiết Kế Giao Diện',
+    });
+}
+showTaskOnCalendar2();
+task2.innerHTML = content2;
+
+var task3 = Dayslist[19];
+var content3 = task3.innerHTML;
+function themTask3( {time='', text=''}) {
+    content3 += `
+    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content" onclick = "showDetail3()">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar3() {
+    themTask3({
+        time: '19:00 - 20:00',
+        text: 'Họp Team',
+    });
+}
+showTaskOnCalendar3();
+task3.innerHTML = content3;
+var task3Screen = document.querySelector('.teamP-task2 .teamP-detail-task')
+function showDetail3() {
+    task3Screen.style.display = 'block';
+    task3Screen.style.animation = `headerNotifyGrowwth ease-in 0.3s`;
+}
+
+document.querySelector('.teamP-task2 .homeP-task__icon-close').onclick = function() {
+    task3Screen.style.display = 'none';
+}
+
+document.querySelector('.teamP-task2 .js-teamP_watch-detail').onclick = function() {
+    xemDetail();
+    document.querySelector('.teamP_notDone').style.display = 'none';
+    document.querySelector('.js-homeP-detail-screen__name').innerHTML = 'Họp Team';
+}
+
+var task4 = Dayslist[16];
+var content4 = task4.innerHTML;
+function themTask4( {time='', text=''}) {
+    content4 += `
+    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar4() {
+    themTask4({
+        time: '19:00 - 23:00',
+        text: 'Viết báo cáo',
+    });
+}
+showTaskOnCalendar4();
+task4.innerHTML = content4;
+
+
 
 
 var taskContainer =document.querySelector('.homeP-task__container')
 var closeTaskContaner = document.querySelector('.homeP-task__icon-close');
 var watchDetail = document.querySelector('.js-watch-detail');
-var deleteTask = document.querySelector('.js-task-remove');
+// var deleteTask = document.querySelector('.js-task-remove');
 var btnDelete = document.querySelector('.js-homeP-delete-button');
 var modalDelete = document.querySelector('.js-homeP-delete');
 var btnEdit = document.querySelector('.js-detail-edit');
 var btnExit = document.querySelector('.js-detail-exit');
-var modalEdit = document.querySelector('.js-homeP__wacht-detail');
+// var modalEdit = document.querySelector('.js-homeP__wacht-detail');
+// var modalEdit  = document.querySelector('.js-homeP-detail-screen')
 var cancelDelete = document.querySelector('.js-homeP-cancel-button');
 function showDetail() {
     taskContainer.style.display='block';
@@ -185,12 +288,14 @@ function xoaTask() {
 }
 
 function xemDetail() {
-    modalEdit.style.display = 'flex';
+    chiTiet.style.display = 'flex';
+    document.querySelector('.teamP_notDone').style.display = 'inline-block';
+    document.querySelector('.js-homeP-detail-screen__name').innerHTML = 'Bài Tập UIUX';
 }
 
 closeTaskContaner.addEventListener('click',hideDetail);
 watchDetail.addEventListener('click', xemDetail);
-deleteTask.addEventListener('click',xoaTask);
+// deleteTask.addEventListener('click',xoaTask);
 
 function showSuccessDelete() {
     toast({
@@ -322,19 +427,51 @@ var teamItems = document.querySelectorAll('.teamP-myteam-item');
 var listTeamScreen = document.querySelector('.teamP__listTeam');
 var detailTeam = document.querySelector('.teamP-detail__team');
 var backTeam = document.querySelector('.backPage');
-teamItems.forEach(element => {
+var listNames = ['Giao diện và trải nghiệm người dùng','Lập trình hướng đối tượng', 'GR1 2022-2', 'Tiếng Nhật 6', 'ITSS Software Development'];
+
+
+teamItems.forEach(function(element, indx){
     element.onclick = function(e) {
         listTeamScreen.classList.add('close');
         detailTeam.classList.remove('close');
+        document.querySelector('.homeP__title').innerHTML = `${listNames[indx]}`;
+        // if( document.querySelector('.homeP__title').innerHTML === 'Lập trình hướng đối tượng') {
+        //     var task5 = Dayslist[2];
+        //     var content5 = task5.innerHTML;
+        //     function themTask5( {time='', text=''}) {
+        //         content5 += `
+        //         <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--work-color);">
+        //             <div class="homeP-task__abbreviate-content" onclick = "showDetail()">
+        //                 <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color);">${time}</span>
+        //                 <span class="homeP-task__abbreviate-text">${text}</span>
+        //             </div>
+        //         </div>
+        //         `;
+        //     }
+        //     function showTaskOnCalendar5() {
+        //         themTask5({
+        //             time: '0:00 - 23:59',
+        //             text: 'Bài Tập OOP',
+        //         });
+        //     }
+        //     showTaskOnCalendar5();
+        //     task5.innerHTML = content5;
+        // }
     }
 });
 
+
+
+
+
+
 backTeam.onclick = function() {
     listTeamScreen.classList.remove('close');
-        detailTeam.classList.add('close');
+    detailTeam.classList.add('close');
 }
 
 var taskTeam = document.querySelector('.teamP__task');
+// var taskTeam = document.querySelector('.homeP-task');
 
 taskTeam.onclick = showDetail;
 

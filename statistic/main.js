@@ -8,10 +8,10 @@ var config = {
             label:"Hoàn thành", 
             data: [9, 6, 7, 14, 17, 16],
             backgroundColor: [
-               " rgb(255, 119, 119, 0.8)"
+               " rgb(169, 244, 153, 0.8)"
             ],
             borderColor: [
-                " rgb(255, 119, 119, 1)"
+                "rgb(255, 119, 119, 1)"
             ],
             borderWidth: 1,
         },
@@ -19,7 +19,7 @@ var config = {
             label:"Quá hạn", 
             data: [1, 4, 6, 3, 7, 8],
             backgroundColor: [
-               "rgb(105, 75, 219,0.8)"
+               "rgb(255, 107, 107, 0.8)"
             ],
             borderColor: [
                 "rgb(105, 75, 219,1)"
@@ -42,11 +42,11 @@ const data = {
     ],
     datasets: [{
       label: 'My First Dataset',
-      data: [69, 29, 2],
+      data: [69, 25, 6],
       backgroundColor: [
-        " rgb(255, 119, 119, 0.8)",
-        "rgb(105, 75, 219,0.8)",
-        "rgb(102,51,23,0.8)"
+        "rgb(169, 244, 153, 0.8)",
+        "rgb(255, 107, 107, 0.8)",
+        "rgb(231, 241, 89, 0.8)"
       ],
       hoverOffset: 4
     }]

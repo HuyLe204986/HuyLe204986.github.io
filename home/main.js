@@ -714,7 +714,7 @@ setTimeout(function(){
             data: [stringPercent ,100-stringPercent],
             backgroundColor: [
             "rgb(255, 119, 119, 1)",
-              "rgb(105, 75, 219,1)"
+              "rgb(169, 244, 153, 1)"
             ],
             hoverOffset: 4
         }]
@@ -754,3 +754,28 @@ function showSuccessCreate() {
     });
 }
 
+
+// không gian làm việc
+
+var addWorkspace = document.querySelector('.homeP__workspace-new');
+var formAddWorkspace = document.querySelector('.homeP__worksapce-form');
+var containerAddWorkspace = document.querySelector('.worksapce-form__container')
+var addWorkspaceBtns = document.querySelectorAll('.worksapce-form__controll-btn');
+
+function showAddWorkspace() {
+    formAddWorkspace.style.display = 'flex'
+    containerAddWorkspace.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
+}
+
+function hideAddWorkspace() {
+    formAddWorkspace.style.display = 'none';
+}
+
+function successAddWorkspace() {
+    formAddWorkspace.style.display = 'none';
+    showSuccessToast();
+}
+
+addWorkspace.onclick = showAddWorkspace;
+addWorkspaceBtns[0].addEventListener('click',successAddWorkspace);
+addWorkspaceBtns[1].addEventListener('click',hideAddWorkspace);

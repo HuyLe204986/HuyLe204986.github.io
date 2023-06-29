@@ -165,7 +165,7 @@ var task1 = Dayslist[5];
 var content = task1.innerHTML;
 function themTask( {time='', text=''}) {
     content += `
-    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color); width: calc(300% + 4px);">
+    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color); width: calc(300% + 4px);">
         <div class="homeP-task__abbreviate-content" onclick = "showDetail()">
             <span class="homeP-task__abbreviate-time">${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
@@ -186,8 +186,8 @@ var task2 = Dayslist[10];
 var content2 = task2.innerHTML;
 function themTask2( {time='', text=''}) {
     content2 += `
-    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color); width: calc(200% + 4px);">
-        <div class="homeP-task__abbreviate-content" onclick = "showDetail2()">
+    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content" >
             <span class="homeP-task__abbreviate-time">${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
         </div>
@@ -207,7 +207,7 @@ var task3 = Dayslist[19];
 var content3 = task3.innerHTML;
 function themTask3( {time='', text=''}) {
     content3 += `
-    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color); width: calc(200% + 4px);">
+    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color); width: calc(200% + 4px);">
         <div class="homeP-task__abbreviate-content" onclick = "showDetail3()">
             <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
@@ -243,7 +243,7 @@ var task4 = Dayslist[16];
 var content4 = task4.innerHTML;
 function themTask4( {time='', text=''}) {
     content4 += `
-    <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--study-color);">
+    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color);">
         <div class="homeP-task__abbreviate-content">
             <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
@@ -259,6 +259,191 @@ function showTaskOnCalendar4() {
 }
 showTaskOnCalendar4();
 task4.innerHTML = content4;
+
+
+var task5 = Dayslist[3];
+var content5 = task5.innerHTML;
+function themTask5( {time='', text=''}) {
+    content5 += `
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content" onclick = "showDetail5()">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar5() {
+    themTask5({
+        time: '19:00 - 23:00',
+        text: 'Phân Tích UC',
+    });
+}
+showTaskOnCalendar5();
+task5.innerHTML = content5;
+
+var task5Screen = document.querySelector('.teamP-task3 .teamP-detail-task')
+function showDetail5() {
+    task5Screen.style.display = 'block';
+    task5Screen.style.animation = `headerNotifyGrowwth ease-in 0.3s`;
+}
+
+document.querySelector('.teamP-task3 .homeP-task__icon-close').onclick = function() {
+    task5Screen.style.display = 'none';
+}
+
+document.querySelector('.teamP-task3 .js-teamP_watch-detail').onclick = function() {
+    xemDetail();
+    document.querySelector('.teamP_notDone').style.display = 'none';
+    document.querySelector('.teamP_overdue').style.display = 'inline-block';
+    document.querySelector('.js-homeP-detail-screen__name').innerHTML = 'Phân Tích UC';
+}
+
+var task6 = Dayslist[14];
+var content6 = task6.innerHTML;
+function themTask6( {time='', text=''}) {
+    content6 += `
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar6() {
+    themTask6({
+        time: '20:00 - 23:00',
+        text: 'Họp Team Dev',
+    });
+}
+showTaskOnCalendar6();
+task6.innerHTML = content6;
+
+var task7 = Dayslist[24];
+var content7 = task7.innerHTML;
+function themTask7( {time='', text='', time2='', text2=''}) {
+    content7 += `
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); margin-top: 24px; width: calc(300% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time2}</span>
+            <span class="homeP-task__abbreviate-text">${text2}</span>
+        </div>
+    </div>
+    <div class="homeP__moretask"><a href="">+1 more...</a></div>
+    `;
+}
+function showTaskOnCalendar7() {
+    themTask7({
+        time: '7:00 - 9:00',
+        text: 'Viết Báo Cáo',
+        time2: '20:00 - 23:00',
+        text2: 'Kiểm Thử Sản Phẩm',
+    });
+}
+showTaskOnCalendar7();
+task7.innerHTML = content7;
+
+var task8 = Dayslist[27];
+var content8 = task8.innerHTML;
+function themTask8( {time='', text='', time2='', text2=''}) {
+    content8 += `
+    <div class="homeP-task__abbreviate workspace teamP__task gr1_gr" style="background-color: var(--entertain-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    <div class="homeP-task__abbreviate workspace teamP__task gr1_gr" style="background-color: var(--entertain-color); margin-top: 24px; width: calc(300% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time">${time2}</span>
+            <span class="homeP-task__abbreviate-text">${text2}</span>
+        </div>
+    </div>
+    <div class="homeP__moretask"><a href="">+1 more...</a></div>
+    `;
+}
+function showTaskOnCalendar8() {
+    themTask8({
+        time: '13:00 - 14:00',
+        text: 'Báo Cáo GR1',
+        time2: '15:00 - 16:00',
+        text2: 'Thiết Kế Sản Phẩm',
+    });
+}
+showTaskOnCalendar8();
+task8.innerHTML = content8;
+
+
+var task9 = Dayslist[13];
+var content9 = task9.innerHTML;
+function themTask9( {time='', text=''}) {
+    content9 += `
+    <div class="homeP-task__abbreviate workspace teamP__task gr1_gr" style="background-color: var(--entertain-color);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar9() {
+    themTask9({
+        time: '9:00 - 10:30',
+        text: 'Họp Team Dev',
+    });
+}
+showTaskOnCalendar9();
+task9.innerHTML = content9;
+
+var task10 = Dayslist[22];
+var content10 = task10.innerHTML;
+function themTask10( {time='', text=''}) {
+    content10 += `
+    <div class="homeP-task__abbreviate workspace teamP__task gr1_gr" style="background-color: var(--entertain-color);width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar10() {
+    themTask10({
+        time: '9:00 - 10:30',
+        text: 'Phân Tích Yêu Cầu',
+    });
+}
+showTaskOnCalendar10();
+task10.innerHTML = content10;
+
+
+var task11 = Dayslist[1];
+var content11 = task11.innerHTML;
+function themTask11( {time='', text=''}) {
+    content11 += `
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color);width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar11() {
+    themTask11({
+        time: '9:00 - 10:30',
+        text: 'Phân Tích Yêu Cầu',
+    });
+}
+showTaskOnCalendar11();
+task11.innerHTML = content11;
 
 
 
@@ -427,7 +612,12 @@ var teamItems = document.querySelectorAll('.teamP-myteam-item');
 var listTeamScreen = document.querySelector('.teamP__listTeam');
 var detailTeam = document.querySelector('.teamP-detail__team');
 var backTeam = document.querySelector('.backPage');
-var listNames = ['Giao diện và trải nghiệm người dùng','Lập trình hướng đối tượng', 'GR1 2022-2', 'Tiếng Nhật 6', 'ITSS Software Development'];
+var listNames = ['Giao diện và trải nghiệm người dùng','Lập trình hướng đối tượng', 'GR1 2022-2', 'Tiếng Nhật 6', 
+'ITSS Software Development', 'Kỹ năng mềm', 'Trí tuệ nhân tạo', 'Manchester is blue'];
+
+
+var teamTask = document.querySelectorAll('.teamP__task');
+var moreTask = document.querySelectorAll('.homeP__moretask');
 
 
 teamItems.forEach(function(element, indx){
@@ -435,28 +625,41 @@ teamItems.forEach(function(element, indx){
         listTeamScreen.classList.add('close');
         detailTeam.classList.remove('close');
         document.querySelector('.homeP__title').innerHTML = `${listNames[indx]}`;
-        // if( document.querySelector('.homeP__title').innerHTML === 'Lập trình hướng đối tượng') {
-        //     var task5 = Dayslist[2];
-        //     var content5 = task5.innerHTML;
-        //     function themTask5( {time='', text=''}) {
-        //         content5 += `
-        //         <div class="homeP-task__abbreviate workspace teamP__task" style="background-color: var(--work-color);">
-        //             <div class="homeP-task__abbreviate-content" onclick = "showDetail()">
-        //                 <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color);">${time}</span>
-        //                 <span class="homeP-task__abbreviate-text">${text}</span>
-        //             </div>
-        //         </div>
-        //         `;
-        //     }
-        //     function showTaskOnCalendar5() {
-        //         themTask5({
-        //             time: '0:00 - 23:59',
-        //             text: 'Bài Tập OOP',
-        //         });
-        //     }
-        //     showTaskOnCalendar5();
-        //     task5.innerHTML = content5;
-        // }
+        if(indx == 0 || indx == 4) {
+            teamTask.forEach(element => {
+                if(element.classList.contains('uxui_gr')){
+                    element.style.display = 'block';
+                }else {
+                    element.style.display = 'none';
+                }
+            });
+            document.querySelector('.create__task.new__task').style.display = 'block';
+            document.querySelector('.teamP-add__member-btn').style.display = 'block';
+            moreTask.forEach(element => {
+                element.style.display = 'none'
+            });
+        }else if(indx == 1 || indx == 5) {
+            teamTask.forEach(element => {
+                if(element.classList.contains('oop_gr')){
+                    element.style.display = 'block';
+                }else {
+                    element.style.display = 'none';
+                }
+            });
+            document.querySelector('.create__task.new__task').style.display = 'none';
+            document.querySelector('.teamP-add__member-btn').style.display = 'none';
+            // moreTask[0].style.display = 'block';
+            moreTask[1].style.display = 'none';
+        }else if(indx == 2) {
+            teamTask.forEach(element => {
+                if(element.classList.contains('gr1_gr')){
+                    element.style.display = 'block';
+                }else {
+                    element.style.display = 'none';
+                }
+            });
+            moreTask[0].style.display = 'none';
+        }
     }
 });
 
@@ -488,13 +691,29 @@ var themGiaiDoan = document.querySelector('.js-themgiaidoan');
 var hoanthanh = document.querySelector('.js-hoanthanh');
 var chiTiet = document.querySelector('.js-homeP-detail-screen');
 var btnXem = document.querySelector('.js-teamP_watch-detail');
+var screenThem = document.querySelector('.teamP-addnew-stage');
+var closeThem = document.querySelector('.teamP-stage__close');
+var xacNhanThem = document.querySelector('.teamP-stage-done');
 hoanthanh.onclick = function () {
     chiTiet.style.display = 'none'
 }
 
 themGiaiDoan.onclick = function() {
     chiTiet.style.display = 'none';
+    // showSuccessAddDetail();
+    screenThem.style.display = 'flex'
+}
+
+closeThem.onclick = function() {
+    chiTiet.style.display = 'flex';
+    // showSuccessAddDetail();
+    screenThem.style.display = 'none'
+}
+
+xacNhanThem.onclick = function() {
+    chiTiet.style.display = 'flex';
     showSuccessAddDetail();
+    screenThem.style.display = 'none'
 }
 
 btnXem.onclick = function() {
@@ -518,6 +737,7 @@ var addMember = document.querySelector('.teamP-add__member-btn');
 var btnAddMember = document.querySelector('.js-teamP__addmember-themThanhVien');
 var btnNoAddMember = document.querySelector('.js-teamP__addmember-huy');
 var modalAddMember = document.querySelector('.teamP__addmember');
+var newtask = document.querySelector('.new__task');
 
 memberBtn.onclick = function() {
     modalMember.style.display = 'flex';
@@ -540,3 +760,181 @@ btnAddMember.onclick = function() {
     modalAddMember.style.display = 'none';
     showSuccessAdd();
 }
+
+
+var upFileBtn = document.querySelector('.js-upfile');
+var inputFileBtn = document.querySelector('.js-inputfile');
+var inputChat = document.querySelector('.js-input-chat');
+var btnSendChat = document.querySelector('.js-send-chat');
+var btnLike = document.querySelector('.js-likeChat')
+
+upFileBtn.addEventListener('click', function() {
+    inputFileBtn.click();
+})
+
+inputFileBtn.addEventListener('change', function() {
+    const fileToUpload = fileInput.files[0]; // Lấy tệp được chọn
+
+  // Tạo một đối tượng FormData
+  const formData = new FormData();
+  formData.append('file', fileToUpload);
+
+  // Gửi yêu cầu POST sử dụng Fetch
+  fetch('/upload', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => {
+      // Xử lý phản hồi từ máy chủ
+      console.log('Tệp đã được gửi thành công!');
+    })
+    .catch(error => {
+      // Xử lý lỗi nếu có
+      console.error('Lỗi khi gửi tệp:', error);
+    });
+});
+
+function renderChat(res) {
+    var html = ''
+    return html = `
+    <li class="teamP-chat__flow-item">
+        <div class="teamP-chat__flow-role teamP-chat__flow-role-me">Người dùng: Huy</div>
+        <div class="teamP-chat__flow-content teamP-chat__flow-content-me" style="margin-top: 12px">
+            <img class="teamP-chat__flow-avatar" src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
+            <div class="teamP-chat__flow-mess">${res}</div>
+        </div>
+    </li>
+    `;
+}
+
+function showChat() {
+    var res = inputChat.value;
+    document.querySelector('.teamP-chat__flow').innerHTML += renderChat(res);
+    inputChat.value = '';
+}
+
+btnSendChat.onclick = showChat;
+
+inputChat.onkeydown = function(e) {
+    console.log(e.code);
+    switch (e.which) {
+        case 13:
+            showChat();
+            break;
+    }
+}
+
+btnLike.onclick = function() {
+    var kq = '\u{1F44D}';
+    document.querySelector('.teamP-chat__flow').innerHTML += renderChat(kq);
+}
+
+var screenChat =  document.querySelector('.teamP-chat');
+var containerChat = document.querySelector('.teamP-chat__container');
+var btnComment = document.querySelector('.js-commentChat') // nút comment trong xem chi tiết
+var screenShareFile = document.querySelector('.teamP-chat__file-share');
+
+function hideChat() {
+    screenChat.style.display = 'none';
+    chiTiet.style.display = 'flex';
+}
+
+screenShareFile.onclick = function(e) {
+    e.stopPropagation();
+}
+
+containerChat.onclick = function(e) {
+    e.stopPropagation();
+}
+
+function showChat2() {
+    screenChat.style.display = 'flex';
+    // containerChat.style.animation=`headerNotifyGrowwth ease-in 0.3s`;
+    chiTiet.style.display = 'none';
+}
+
+
+screenChat.addEventListener('click', hideChat);
+btnComment.addEventListener('click', showChat2);
+
+function displaySelectedFile() {
+    const fileInput = document.getElementById('myFileInput');
+    const fileNameElement = document.querySelector('.file-upload-name');
+    
+    if (fileInput.files.length > 0) {
+      const fileName = fileInput.files[0].name;
+      fileNameElement.textContent = fileName;
+    } else {
+      fileNameElement.textContent = 'Chọn file';
+    }
+}
+
+function displaySelectedFile1() {
+    const fileInput = document.getElementById('myFileInput1');
+    const fileNameElement = document.querySelector('.file-upload-name1');
+    
+    if (fileInput.files.length > 0) {
+      const fileName = fileInput.files[0].name;
+      fileNameElement.textContent = fileName;
+    } else {
+      fileNameElement.textContent = 'Chọn file';
+    }
+}
+
+function displaySelectedFile2() {
+    const fileInput = document.getElementById('myFileInput2');
+    const fileNameElement = document.querySelector('.file-upload-name2');
+    
+    if (fileInput.files.length > 0) {
+      const fileName = fileInput.files[0].name;
+      fileNameElement.textContent = fileName;
+    } else {
+      fileNameElement.textContent = 'Chọn file';
+    }
+}
+
+function displaySelectedFile3() {
+    const fileInput = document.getElementById('myFileInput3');
+    const fileNameElement = document.querySelector('.file-upload-name3');
+    
+    if (fileInput.files.length > 0) {
+      const fileName = fileInput.files[0].name;
+      fileNameElement.textContent = fileName;
+    } else {
+      fileNameElement.textContent = 'Chọn file';
+    }
+}
+
+var infoUpdate = document.querySelector('.js-infoFileUpdadte');
+var infoClick = 0;
+infoUpdate.onclick = function() {
+    infoClick++;
+    if(infoClick % 2 == 1){
+        screenShareFile.style.display = 'block';
+        screenShareFile.style.animation = `headerNotifyGrowwth ease-in 0.3s`;
+    }else {
+        screenShareFile.style.display = 'none';
+    }
+}
+
+var closeTaoMoi = document.querySelector('.js-close-form__create');
+var screenTaoMoi = document.querySelector('.homeP-form__create');
+var btnTaoMoi = document.querySelector('.js-homeP-form__create-btn');
+closeTaoMoi.addEventListener('click', function(){
+    screenTaoMoi.classList.add('close');
+})
+
+function showSuccessTask() {
+    toast({
+        title: 'Thành công!',
+        message: 'Đã thêm công việc mới thành công',
+        type: 'success',
+        duration: 2000
+    });
+}
+
+
+btnTaoMoi.addEventListener('click', function() {
+    showSuccessTask();
+    screenTaoMoi.classList.add('close');
+})

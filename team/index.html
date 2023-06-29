@@ -251,7 +251,7 @@
                                             <li class="schedule__select-item">Tuần</li>
                                             <li class="schedule__select-item">Ngày</li>
                                         </ul>
-                                        <button class="create__task">
+                                        <button class="create__task new__task">
                                             <i class="fa-regular fa-plus create__task-icon"></i>
                                             <span> Công việc mới</span>
                                         </button>
@@ -303,6 +303,21 @@
                                             <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
                                         </div>
                                     </div>
+                                    <div class="homeP-task  teamP-task3">
+                                        <div class="homeP-task__container teamP-detail-task">
+                                            <div class="homeP-task__header">
+                                                <div class="homeP-task__name">Phân Tích UC</div>
+                                                <div class="homeP-task__list-icon">
+                                                    <i class="fa-regular fa-eye homeP-task__icon js-watch-detail js-teamP_watch-detail"></i>
+                                                    <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
+                                                    <i
+                                                        class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
+                                                </div>
+                                            </div>
+                                            <div class="homeP-task__times">19:00 - 23:00</div>
+                                            <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
+                                        </div>
+                                    </div>
 
                                     <div class="homeP-detail-screen js-homeP-detail-screen">
                                         <div class="homeP-detail-screen__container">
@@ -312,9 +327,14 @@
                                                     <span>Tên công việc:</span>
                                                     <span class="js-homeP-detail-screen__name">Bài tập UXUI</span>
                                                 </div>
-                                                <div class="homeP-detail-screen__btnAdd js-themgiaidoan">
-                                                    <i class="ti-plus"></i> 
-                                                    <span>Thêm giai đoạn</span>
+                                                <div class="homeP-detail-screen__wrap">
+                                                    <div class="homeP-detail-screen__btnAdd js-themgiaidoan">
+                                                        <i class="ti-plus"></i> 
+                                                        <span>Thêm giai đoạn</span>
+                                                    </div>
+                                                    <i class="fa-regular fa-comment homeP-detail-screen__btn-comment js-commentChat">
+                                                        <span>1</span>
+                                                    </i>
                                                 </div>
                                             </header>
                                             <table>
@@ -344,7 +364,8 @@
                                                   <td>Lê Tuấn Ngọc Huy</td>
                                                   <td>7/6/2023</td>
                                                   <td>7/6/2023</td>
-                                                  <td><i class="fa-solid fa-check teamP_checkDone teamP_notDone"></i></td>
+                                                  <td><i class="fa-solid fa-check teamP_checkDone teamP_notDone"></i>
+                                                    <i class="fa-solid fa-xmark teamP_checkDone  teamP_overdue"></i></td>
                                                   <td><span></span></td>
                                                 </tr>
                                             </table>
@@ -391,7 +412,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -430,6 +450,182 @@
             </ul>
         </div>
     </div>
+
+    <div class="teamP-chat">
+        <div class="teamP-chat__container">
+            <header class="teamP-chat__head">           
+                <div class="teamP-chat__name">
+                    <span></span>
+                    Bài Tập UIUX
+                </div>
+                <div class="teamP-chat__controll">
+                    <i class="fa-solid fa-phone teamP-chat__controll-item"></i>
+                    <i class="fa-solid fa-video teamP-chat__controll-item"></i>
+                    <i class="fa-sharp fa-solid fa-circle-info teamP-chat__controll-item js-infoFileUpdadte"></i>
+                </div>
+            </header>
+            <ul class="teamP-chat__flow">
+                <li class="teamP-chat__flow-item">
+                    <div class="teamP-chat__flow-role">Người quản lý: Thành</div>
+                    <div class="teamP-chat__flow-content">
+                        <img class="teamP-chat__flow-avatar" src="https://www.svgrepo.com/show/10308/boy.svg" alt="">
+                        <div class="teamP-chat__flow-mess">Các công việc mình đã chia các bạn để ý hạn nhé</div>
+                    </div>
+                </li>
+                <li class="teamP-chat__flow-item">
+                    <div class="teamP-chat__flow-role">Người dùng: Hiếu</div>
+                    <div class="teamP-chat__flow-content">
+                        <img class="teamP-chat__flow-avatar" src="https://cdn1.iconfinder.com/data/icons/people-avatar-19/419/boy-3-512.png" alt="">
+                        <div class="teamP-chat__flow-mess">OK bạn ơi</div>
+                    </div>
+                </li>
+                <li class="teamP-chat__flow-item">
+                    <div class="teamP-chat__flow-role">Người dùng: Hiếu</div>
+                    <div class="teamP-chat__flow-content">
+                        <img class="teamP-chat__flow-avatar" src="https://www.svgrepo.com/show/75643/kung-fu.svg" alt="">
+                        <div class="teamP-chat__flow-mess">Rõ thưa sếp</div>
+                    </div>
+                </li>
+                <li class="teamP-chat__flow-item">
+                    <div class="teamP-chat__flow-role">Người quản lý: Thành</div>
+                    <div class="teamP-chat__flow-content">
+                        <img class="teamP-chat__flow-avatar" src="https://www.svgrepo.com/show/10308/boy.svg" alt="">
+                        <div class="teamP-chat__flow-mess">Làm sớm nghỉ sớm</div>
+                    </div>
+                </li>
+                <li class="teamP-chat__flow-item">
+                    <div class="teamP-chat__flow-role teamP-chat__flow-role-me">Người dùng: Huy</div>
+                    <div class="teamP-chat__flow-content teamP-chat__flow-content-me">
+                        <img class="teamP-chat__flow-avatar" src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
+                        <div class="teamP-chat__flow-mess">Cuối tuần họp nhé</div>
+                    </div>
+                </li>
+                <li class="teamP-chat__flow-item">
+                    <div class="teamP-chat__flow-role">Người quản lý: Thành</div>
+                    <div class="teamP-chat__flow-content">
+                        <img class="teamP-chat__flow-avatar" src="https://www.svgrepo.com/show/10308/boy.svg" alt="">
+                        <div class="teamP-chat__flow-mess">Ok xong hết rồi nhé</div>
+                    </div>
+                </li>
+                <li class="teamP-chat__flow-item">
+                    <div class="teamP-chat__flow-role">Người quản lý: Thành</div>
+                    <div class="teamP-chat__flow-content">
+                        <img class="teamP-chat__flow-avatar" src="https://www.svgrepo.com/show/10308/boy.svg" alt="">
+                        <div class="teamP-chat__flow-mess">皆さん、お疲れ様でした。</div>
+                    </div>
+                </li>
+                <li class="teamP-chat__flow-item teamP-chat__flow-item-seen">
+                    <img class="teamP-chat__flow-avatar teamP-chat__flow-avatar-seen" src="https://www.svgrepo.com/show/10308/boy.svg" alt="">
+                    <img class="teamP-chat__flow-avatar teamP-chat__flow-avatar-seen" src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
+                    <img class="teamP-chat__flow-avatar teamP-chat__flow-avatar-seen" src="https://www.svgrepo.com/show/75643/kung-fu.svg" alt="">
+                    <img class="teamP-chat__flow-avatar teamP-chat__flow-avatar-seen" src="https://cdn1.iconfinder.com/data/icons/people-avatar-19/419/boy-3-512.png" alt="">
+                </li>
+            </ul>
+            <div class="teamP-chat__form">
+                <div class="teamP-chat__form-file">
+                    <input type="file" class="js-inputfile">
+                    <i class="fa-regular fa-image js-upfile"></i>
+                </div>
+                <div class="teamP-chat__form-input">
+                    <input type="text" placeholder="Aa" class="js-input-chat">
+                    <i class="fa-regular fa-paper-plane js-send-chat"></i>
+                </div>
+                <div class="teamP-chat__form-like">
+                    <i class="fa-regular fa-thumbs-up js-likeChat" ></i>
+                </div>
+            </div>
+        </div>
+        <div class="teamP-chat__file-share">
+            <header>File phương tiện được chia sẻ</header>
+            <div class="teamP-chat__file-body">
+                <div class="file-upload">
+                    <label for="myFileInput" class="file-upload-label">
+                      <span class="file-upload-icon"><i class="fas fa-file"></i></span>
+                      <span class="file-upload-name">Chọn file</span>
+                    </label>
+                    <input type="file" id="myFileInput" class="file-upload-input"  onchange="displaySelectedFile()">
+                </div>
+                <div class="file-upload">
+                    <label for="myFileInput" class="file-upload-label">
+                      <span class="file-upload-icon"><i class="fas fa-file"></i></span>
+                      <span class="file-upload-name file-upload-name1">Chọn file</span>
+                    </label>
+                    <input type="file" id="myFileInput1" class="file-upload-input"  onchange="displaySelectedFile1()">
+                </div>
+                <div class="file-upload">
+                    <label for="myFileInput" class="file-upload-label">
+                      <span class="file-upload-icon"><i class="fas fa-file"></i></span>
+                      <span class="file-upload-name file-upload-name2">Chọn file</span>
+                    </label>
+                    <input type="file" id="myFileInput2" class="file-upload-input"  onchange="displaySelectedFile2()">
+                </div>
+                <div class="file-upload">
+                    <label for="myFileInput" class="file-upload-label">
+                      <span class="file-upload-icon"><i class="fas fa-file"></i></span>
+                      <span class="file-upload-name file-upload-name3">Chọn file</span>
+                    </label>
+                    <input type="file" id="myFileInput3" class="file-upload-input"  onchange="displaySelectedFile3()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="homeP-form__create close">
+        <div class="homeP-form__create-content">
+            <i class="fa-solid fa-xmark close-form__create js-close-form__create"></i>
+            <h3 class="homeP-form__create-name">Tạo công việc mới</h3>
+            <form action="" class="homeP-form__create-form">
+                <input type="text" class="homeP-form__create-title" placeholder="Tên công việc">
+                <ul class="homeP-form__create-time">
+                    <li class="homeP-form__create-time-item">
+                        <input type="date" >
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <input type="date" >
+                    </li>
+                    <li class="homeP-form__create-time-item">
+                        <input type="time" >
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <input type="time" >
+                    </li>
+                </ul>
+                <div class="homeP-form__create-desc">
+                    <input type="text" class="homeP-form__create-content-item" placeholder="Để lại mô tả công việc ở đây nhé!">
+                </div>
+                <div class="homeP-form__create-footer">
+                    <div>
+                        <input type="text" placeholder="Trước 30 phút" class="homeP-form__create-remind">
+                        <i class="fa-solid fa-chevron-down homeP-form__create-remind-icon"></i>
+                        <ul class="remind-list">
+                            <li class="remind-item">Trước 30 phút</li>
+                            <li class="remind-item">Trước 1 tiếng</li>
+                            <li class="remind-item">Trước 3 tiếng</li>
+                            <li class="remind-item">Trước 1 ngày</li>
+                        </ul>
+                    </div>
+                    <div class="btn btn--primary homeP-form__create-btn js-homeP-form__create-btn">Tạo công việc</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="teamP-addnew-stage">
+        <div class="teamP-stage__container">
+            <h3>Thêm giai đoạn mới</h3>
+            <i class="ti-close teamP-stage__close"></i>
+            <input required="" type="text" name="text" class="teamP-stage__input">
+            <label class="teamP-stage-label">Tên giai đoạn</label>
+            <input required="" type="text" name="text" class="teamP-stage__input">
+            <label class="teamP-stage-label teamP-stage-label2">Người thực hiện</label>
+            <div class="teamP-stage-time">
+                <input type="date" name="" id="">
+                <i class="ti-arrow-right"></i>
+                <input type="date" name="" id="">
+            </div>
+            <div class="teamP-stage-controll">
+                <div class="teamP-stage-done">Xác nhận</div>
+            </div>
+        </div>
+    </div>
+
     <div id="toast"></div>
     <!-- Success -->
     <footer>

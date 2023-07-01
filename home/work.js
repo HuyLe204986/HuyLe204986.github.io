@@ -8,8 +8,8 @@ function showTask(time, content) {
 
 var listDates = document.querySelectorAll('.workspace');
 var Dates = document.querySelectorAll('.normalDay');
+Dates[3].childNodes[6].innerText = '';
 Dates[5].childNodes[6].innerText = '';
-Dates[7].childNodes[6].innerText = '';
 var lengthDate = listDates.length;
 for (const key in listDates) {
     if(listDates[key].style.backgroundColor === 'var(--work-color)') {

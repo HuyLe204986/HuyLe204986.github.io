@@ -161,7 +161,7 @@ function showErrorToast() {
 
 // thêm công việc
 var Dayslist = document.querySelectorAll('.normalDay');
-var task1 = Dayslist[5];
+var task1 = Dayslist[1];
 var content = task1.innerHTML;
 function themTask( {time='', text=''}) {
     content += `
@@ -203,7 +203,49 @@ function showTaskOnCalendar2() {
 showTaskOnCalendar2();
 task2.innerHTML = content2;
 
-var task3 = Dayslist[19];
+var task12 = Dayslist[21];
+var content12 = task12.innerHTML;
+function themTask12( {time='', text=''}) {
+    content12 += `
+    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color); width: calc(400% + 4px);">
+        <div class="homeP-task__abbreviate-content" >
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color);">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar12() {
+    themTask12({
+        time: '0:00 - 23:59',
+        text: 'Nhận Xét Sản Phẩm',
+    });
+}
+showTaskOnCalendar12();
+task12.innerHTML = content12;
+
+var task13 = Dayslist[5];
+var content13 = task13.innerHTML;
+function themTask13( {time='', text=''}) {
+    content13 += `
+    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content" >
+            <span class="homeP-task__abbreviate-time">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar13() {
+    themTask13({
+        time: '0:00 - 23:59',
+        text: 'Trả Lời Câu Hỏi Round 2',
+    });
+}
+showTaskOnCalendar13();
+task13.innerHTML = content13;
+
+var task3 = Dayslist[18];
 var content3 = task3.innerHTML;
 function themTask3( {time='', text=''}) {
     content3 += `
@@ -245,7 +287,7 @@ function themTask4( {time='', text=''}) {
     content4 += `
     <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color);">
         <div class="homeP-task__abbreviate-content">
-            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color);">${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
         </div>
     </div>
@@ -286,6 +328,7 @@ var task5Screen = document.querySelector('.teamP-task3 .teamP-detail-task')
 function showDetail5() {
     task5Screen.style.display = 'block';
     task5Screen.style.animation = `headerNotifyGrowwth ease-in 0.3s`;
+    themGiaiDoan.style.display = 'none';
 }
 
 document.querySelector('.teamP-task3 .homeP-task__icon-close').onclick = function() {
@@ -305,7 +348,7 @@ function themTask6( {time='', text=''}) {
     content6 += `
     <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(200% + 4px);">
         <div class="homeP-task__abbreviate-content">
-            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--notDone-color)";>${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
         </div>
     </div>
@@ -314,11 +357,53 @@ function themTask6( {time='', text=''}) {
 function showTaskOnCalendar6() {
     themTask6({
         time: '20:00 - 23:00',
-        text: 'Họp Team Dev',
+        text: 'Thiết Kế Giao Diện',
     });
 }
 showTaskOnCalendar6();
 task6.innerHTML = content6;
+
+var task14 = Dayslist[9];
+var content14 = task14.innerHTML;
+function themTask14( {time='', text=''}) {
+    content14 += `
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(400% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar14() {
+    themTask14({
+        time: '10:00 - 12:00',
+        text: 'Họp Team Dev',
+    });
+}
+showTaskOnCalendar14();
+task14.innerHTML = content14;
+
+var task15 = Dayslist[19];
+var content15 = task15.innerHTML;
+function themTask15( {time='', text=''}) {
+    content15 += `
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time";>${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar15() {
+    themTask15({
+        time: '16:00 - 17:30',
+        text: 'Giới Thiệu Sản Phẩm',
+    });
+}
+showTaskOnCalendar15();
+task15.innerHTML = content15;
 
 var task7 = Dayslist[24];
 var content7 = task7.innerHTML;
@@ -326,13 +411,13 @@ function themTask7( {time='', text='', time2='', text2=''}) {
     content7 += `
     <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(200% + 4px);">
         <div class="homeP-task__abbreviate-content">
-            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color)";>${time}</span>
+            <span class="homeP-task__abbreviate-time" >${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
         </div>
     </div>
     <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); margin-top: 24px; width: calc(300% + 4px);">
         <div class="homeP-task__abbreviate-content">
-            <span class="homeP-task__abbreviate-time">${time2}</span>
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color);">${time2}</span>
             <span class="homeP-task__abbreviate-text">${text2}</span>
         </div>
     </div>
@@ -350,7 +435,7 @@ function showTaskOnCalendar7() {
 showTaskOnCalendar7();
 task7.innerHTML = content7;
 
-var task8 = Dayslist[27];
+var task8 = Dayslist[2];
 var content8 = task8.innerHTML;
 function themTask8( {time='', text='', time2='', text2=''}) {
     content8 += `
@@ -417,11 +502,53 @@ function themTask10( {time='', text=''}) {
 function showTaskOnCalendar10() {
     themTask10({
         time: '9:00 - 10:30',
-        text: 'Phân Tích Yêu Cầu',
+        text: 'Kiểm Thử',
     });
 }
 showTaskOnCalendar10();
 task10.innerHTML = content10;
+
+var task16 = Dayslist[7];
+var content16 = task16.innerHTML;
+function themTask16( {time='', text=''}) {
+    content16 += `
+    <div class="homeP-task__abbreviate workspace teamP__task gr1_gr" style="background-color: var(--entertain-color);width: calc(200% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" >${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar16() {
+    themTask16({
+        time: '14:00 - 15:30',
+        text: 'Phân Tích Yêu Cầu',
+    });
+}
+showTaskOnCalendar16();
+task16.innerHTML = content16;
+
+var task17 = Dayslist[17];
+var content17 = task17.innerHTML;
+function themTask17( {time='', text=''}) {
+    content17 += `
+    <div class="homeP-task__abbreviate workspace teamP__task gr1_gr" style="background-color: var(--entertain-color);width: calc(400% + 4px);">
+        <div class="homeP-task__abbreviate-content">
+            <span class="homeP-task__abbreviate-time" style="background-color: var(--warning-color);">${time}</span>
+            <span class="homeP-task__abbreviate-text">${text}</span>
+        </div>
+    </div>
+    `;
+}
+function showTaskOnCalendar17() {
+    themTask17({
+        time: '6:45 - 10:30',
+        text: 'Thiết Kế Sản Phẩm Round 2',
+    });
+}
+showTaskOnCalendar17();
+task17.innerHTML = content17;
 
 
 var task11 = Dayslist[1];
@@ -638,6 +765,7 @@ teamItems.forEach(function(element, indx){
             moreTask.forEach(element => {
                 element.style.display = 'none'
             });
+            document.querySelector('.homeP__title').style.color = 'var(--study-color)';
         }else if(indx == 1 || indx == 5) {
             teamTask.forEach(element => {
                 if(element.classList.contains('oop_gr')){
@@ -648,8 +776,10 @@ teamItems.forEach(function(element, indx){
             });
             document.querySelector('.create__task.new__task').style.display = 'none';
             document.querySelector('.teamP-add__member-btn').style.display = 'none';
-            // moreTask[0].style.display = 'block';
-            moreTask[1].style.display = 'none';
+            moreTask[0].style.display = 'none';
+            moreTask[1].style.display = 'block';
+            document.querySelector('.homeP__title').style.color = 'var(--work-color)';
+
         }else if(indx == 2) {
             teamTask.forEach(element => {
                 if(element.classList.contains('gr1_gr')){
@@ -658,7 +788,10 @@ teamItems.forEach(function(element, indx){
                     element.style.display = 'none';
                 }
             });
-            moreTask[0].style.display = 'none';
+            moreTask[1].style.display = 'none';
+            moreTask[0].style.display = 'block';
+            document.querySelector('.homeP__title').style.color = 'var(--entertain-color)';
+
         }
     }
 });

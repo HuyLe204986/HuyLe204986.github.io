@@ -11,6 +11,7 @@
     --study-color: #ff8ba4;
     --work-color: #43c7f1;
     --entertain-color: #bb82dc;
+    --star-gold-color: #FFCE3E;
 }
 
 * {
@@ -27,9 +28,19 @@ html {
     box-sizing: border-box;
 }
 
+.mt-top-right {
+    margin-right: 18px !important;
+    margin-top: 18px !important;
+}
+
+.mt-12 {
+    margin-left: 19px   !important;
+}
+
 .close {
     display: none !important;
 }
+
 
 .btn-intro {
     padding: 10px 30px;
@@ -405,19 +416,17 @@ html {
 
 .teamP-task2 {
     position: absolute;
-    top: calc(72% + 12px);
-    left:calc(34% + 2px);
+    top: calc(72% + 16px);
+    left: calc(62% + 36px);
     z-index: 2;
 }
 
-.teamP-task2 .teamP-detail-task {
-    /* display: block;  */
-}
+
 
 .teamP-task3 {
     position: absolute;
-    top: calc(50% + 14px);
-    left:calc(12% + 12px);
+    top: calc(50% + 12px);
+    left: calc(50% + 54px);
     z-index: 2;
 }
 
@@ -685,4 +694,51 @@ html {
 .worksapce-form__controll-btn:hover {
     background-color: var(--primary-color);
     cursor: pointer;
+}
+.longtask--warning {
+    color: var(--warning-color) !important;
+}
+
+.longtask--notDone {
+    color: var(--notDone-color) !important;
+}
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 16px;
+    display: none;
+}
+
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    /* background-color: #ed5c3f; */
+    opacity: 0.7;
+}
+
+.pagination-item__link {
+    --height: 26px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
 }

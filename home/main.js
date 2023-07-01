@@ -1,3 +1,18 @@
+setTimeout(function() {
+    var hasDisplayedGreeting = sessionStorage.getItem('hasDisplayedGreeting');
+    if (!hasDisplayedGreeting) {
+        showIntro();
+        sessionStorage.setItem('hasDisplayedGreeting', true);
+    }
+},200)
+function showIntro() {
+    toast({
+        title: 'Chào Huy!',
+        message: 'Chào mừng bạn quay trở lại',
+        type: 'success',
+        duration: 2000
+    });
+}
 
 let date = new Date(); // tạo đối tượng ngày mới với ngày và giờ hiện tại
 let year = date.getFullYear(); // lấy năm hiện tại
@@ -779,3 +794,27 @@ function successAddWorkspace() {
 addWorkspace.onclick = showAddWorkspace;
 addWorkspaceBtns[0].addEventListener('click',successAddWorkspace);
 addWorkspaceBtns[1].addEventListener('click',hideAddWorkspace);
+
+
+var btnLongTask = document.querySelector('.work_long');
+var calendar = document.querySelector('.homeP__schedule.sidebar');
+var screenLongTask = document.querySelector('.homeP__longTask');
+var pagi = document.querySelector('.pagination');
+var backToCalendar = document.querySelector('.back-to-calender');
+// var screenCalender = document.querySelector('.btnQuayLai');
+function showScreenLongTask() {
+    calendar.style.display = 'none';
+    screenLongTask.style.display = 'block';
+    pagi.style.display = 'flex';
+    backToCalendar.style.display = 'block';
+}
+
+function hideScreenLongTask() {
+    calendar.style.display = 'block';
+    screenLongTask.style.display = 'none';
+    pagi.style.display = 'none';
+    backToCalendar.style.display = 'none';
+}
+// screenCalender.onclick = hideScreenLongTask;
+btnLongTask.onclick = showScreenLongTask;
+backToCalendar.addEventListener('click', hideScreenLongTask)

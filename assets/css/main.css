@@ -118,8 +118,26 @@
     border-color: #999;
 }
 
+.invalid-password {
+    font-size: 1rem;
+    color: red;
+    position: relative;
+    left: 1px;
+    top: 5px;
+    display: none;
+}
+
+.invalid-password-not-coincidence {
+    font-size: 1.2rem;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    color: red;
+    display: none;
+}
+
 .auth-form__outside {
-    margin-top: 8px;
+    margin-top: 16px;
 }
 
 .auth-form__outside-text {
@@ -787,6 +805,20 @@
     border-radius: 3px;
 }
 
+.create__task2.work_long {
+    padding:  8px;
+    margin-left: 24px;
+    font-size: 1.3rem;
+    background-color: var(--white-color);
+    outline: none;
+    border: 1px solid var(--border-color);
+}
+
+.create__task2.work_long:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
 .create__task {
     display: flex;
     outline: none;
@@ -832,6 +864,7 @@
     color: #212121;
     scale: 1.1;
     box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+    cursor: pointer;
   }
   
   .create__task:active {
@@ -965,12 +998,29 @@
     outline: none;
 }
 
+.homeP-form__create-for-isLongTask {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.homeP-form__create-for-isLongTask input {
+    height: 18px;
+    width: 18px;
+}
+
+.homeP-form__create-for-isLongTask label {
+    margin-left: 4px;
+    position: relative;
+    top: -3px;
+}
+
 .homeP-form__create-title {
     font-size: 1.3rem;
     width: 100%;
     padding: 6px 8px 4px;
     margin-bottom: 16px;
 }
+
 
 .homeP-form__create-time {
     list-style: none;
@@ -1307,6 +1357,8 @@
 .teamP-myteam {
     margin-bottom: 10px;
 }
+
+.longTask__container,
 .teamP-myteam-item {
     display: block;
     position: relative;
@@ -1320,6 +1372,7 @@
     padding: 10px 0;
 }
 
+.longTask__container:hover,
 .teamP-myteam-item:hover {
     transform: translateY(-1px);
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
@@ -1502,7 +1555,7 @@
 .teamP-detail-task {
     position: absolute;
     top: calc(50% + 20px);
-    left: 360px;
+    left: 240px;
 }
 
 .homeP-detail-screen {
@@ -1802,6 +1855,10 @@ td .teamP_overdue {
     align-items: center;
     justify-content: space-around;
     margin: 16px 0;
+}
+
+.help__item-img-team {
+    width: 560px;
 }
 
 .help__item-img:nth-child(1) {
@@ -2211,4 +2268,168 @@ td .teamP_overdue {
 .teamP-stage-done:hover {
     cursor: pointer;
    opacity: 0.8;
+}
+
+/* công việc dài */
+.homeP__longTask {
+    display: none;
+}
+
+.longTask__container {
+    font-size: 1.4rem; 
+    /* clip-path: polygon(0% 0%, 93% 0%,100% 10%, 100% 100%, 0 100%); */
+    /* background-color: var(--work-color); */
+    /* overflow: hidden; */
+    border-top-right-radius: 30px;
+    padding-top: 10px;
+}
+
+
+.longTask__name {
+    font-size: 1.6rem;
+    font-weight: 450;
+    text-align: center;
+    margin: 12px;
+}
+
+.longTask__time {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.longTask__date {
+    flex-grow: 1;
+    margin-left: 28px;
+    margin-bottom: 12px;
+}
+
+.longTask__rating,
+.longTask__remind,
+.longTask__location {
+    margin: 0 0 12px 28px;
+}
+
+.longTask__assess {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.longTask__rating {
+   
+    font-size: 1rem;
+    transform-origin: right;
+    color: #D5D5D5;
+}
+
+.longTask__star--gold {
+    color: var(--star-gold-color);
+}
+
+.longTask-controll {
+    margin-right: 35px;
+    display: flex;
+}
+
+.longTask-controll h4 {
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.longTask-controll i {
+    color: green;
+    font-size: 1.5rem;
+}
+
+.longTask__member {
+   display: flex;
+   align-items: center;
+    margin: 0 0  12px 28px;
+}
+
+.longTask__member-item {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+/* gấp giấy */
+
+.longTask__container::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid var(--study-color);
+}
+
+.longTask__container--color::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid var(--work-color);
+}
+
+.longTask__container--color2::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid var(--entertain-color);
+}
+
+.longTask__container--color3::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid var(--btn-color);
+}
+
+.longTask__favourite {
+    position: absolute;
+    top: 2px;
+    left: -4px;
+    color: var(--btn-color);
+    background-color: currentColor;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    padding-right: 4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.longTask__favourite span{
+    color: var(--white-color);
+}
+
+.longTask__favourite i {
+    color: var(--white-color);
+    font-size: 0.9rem;
+    margin: 0 2px 0 5px;
+}
+
+.longTask__favourite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-top: 4px solid currentColor;
+    border-left: 4px solid transparent;
+    filter: brightness(60%);
+}
+
+.back-to-calender {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
 }

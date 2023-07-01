@@ -53,19 +53,33 @@
                                 <h3 class="auth-form__header-text">Đăng Ký</h3>
                             </div>
                             <!-- form điền thông tin -->
-                            <form action="" class="auth-form__form">
+                            <form action class="auth-form__form js-form-signup">
                                 <div class="auth-form__group">
-                                    <input name="email" type="email" class="auth-form__input"  placeholder="Nhập email của bạn" >
+                                    <input name="email" type="email" class="auth-form__input" required placeholder="Nhập email của bạn" >
                                 </div>
-                                <div class="auth-form__group">
-                                    <input name="password" type="password" class="auth-form__input"  placeholder="Nhập mật khẩu" >
+                                <span class="invalid-password">*Mật khẩu phải chứa ít nhất 8 ký tự gồm số, chữ hoa và chữ thường</span>
+                                <div class="auth-form__group ">
+                                    <input name="password" type="password" class="auth-form__input js-auth-form__input-pass" id="pass1" required placeholder="Nhập mật khẩu" >
                                 </div>
-                                <div class="auth-form__group">
-                                    <input name="repassword" type="password" class="auth-form__input"  placeholder="Xác nhận mật khẩu" >
+                                <span class="invalid-password">*Mật khẩu phải chứa ít nhất 8 ký tự gồm số, chữ hoa và chữ thường</span>
+                                <div class="auth-form__group ">
+                                    <input name="repassword" type="password" class="auth-form__input js-auth-form__input-pass" id="pass2" required placeholder="Xác nhận mật khẩu" >
+                                </div>
+                                <span class="invalid-password-not-coincidence">*Mật khẩu không trùng khớp. Hãy nhập lại</span>
+                                <div class="auth-form__outside">
+                                    <p class="auth-form__outside-text">
+                                        Bằng việc đăng ký, bạn đã đồng ý
+                                        <a href="" class="auth-form__outside-text-link">Điều khoản dịch vụ</a> & 
+                                        <a href="" class="auth-form__outside-text-link">Chính sách bảo mật</a> của chúng tôi
+                                    </p>
+                                </div>  
+                                <div class="auth-form__controls">
+                                    <button class="btn btn--normal auth-form__controls-back js-auth-form__close">Thoát</button>
+                                    <input type="submit" value="Đăng ký" class="btn  js-btn-signup "></input>
                                 </div>
                             </form>
 
-                            <div class="auth-form__outside">
+                            <!-- <div class="auth-form__outside">
                                 <p class="auth-form__outside-text">
                                     Bằng việc đăng ký, bạn đã đồng ý
                                     <a href="" class="auth-form__outside-text-link">Điều khoản dịch vụ</a> & 
@@ -75,8 +89,8 @@
 
                             <div class="auth-form__controls">
                                 <button class="btn btn--normal auth-form__controls-back js-auth-form__close">Thoát</button>
-                                <button class="btn btn--primary js-btn-signup btn--color">Đăng ký</button>
-                            </div>
+                                <input type="submit" value="Đăng ký" class="btn btn--primary js-btn-signup btn--color"></input>
+                            </div> -->
 
                             
                         </div>
@@ -98,16 +112,29 @@
                                 <h3 class="auth-form__header-text">Đăng Nhập</h3>
                             </div>
                             <!-- form điền thông tin -->
-                            <div class="auth-form__form">
+                            <form action class="auth-form__form js-auth-form__form">
                                 <div class="auth-form__group">
-                                    <input type="email" class="auth-form__input" placeholder="Nhập email của bạn">
+                                    <input type="email" class="auth-form__input js-auth-form__input" id="js-email" required placeholder="Nhập email của bạn">
                                 </div>
                                 <div class="auth-form__group">
-                                    <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                    <input type="password" class="auth-form__input js-auth-form__input" id="js-password" required placeholder="Nhập mật khẩu">
                                 </div>
-                            </div>
 
-                            <div class="auth-form__outside">
+                                <div class="auth-form__outside">
+                                    <p class="auth-form__help">
+                                        <a href="" class="auth-form__help-forgot">Quên mật khẩu?</a> 
+                                    </p>
+                                </div>
+    
+                                <div class="auth-form__controls">
+                                    <button class="btn btn--normal auth-form__controls-back js-auth-form__close">Thoát</button>
+                                    <a href="#" class="auth-form__controls-link js-auth-form__controls-link">
+                                        <input type="submit" value="Đăng nhập" class="btn js-btn-dangnhap"></input>
+                                    </a>
+                                </div>
+                            </form>
+
+                            <!-- <div class="auth-form__outside">
                                 <p class="auth-form__help">
                                     <a href="" class="auth-form__help-forgot">Quên mật khẩu?</a> 
                                 </p>
@@ -118,11 +145,11 @@
                                 <a href="home/home.html" class="auth-form__controls-link">
                                     <button class="btn btn--primary btn--color">Đăng nhập</button>
                                 </a>
-                            </div>
+                            </div> -->
 
                             <div class="auth-form__sign-in">
                                 <p class="">Bạn chưa có tài khoản? 
-                                    <a href="" class="auth-form__sign-in-link"> Đăng ký ngay</a>
+                                    <a href="#" class="auth-form__sign-in-link js-sign-in-link"> Đăng ký ngay</a>
                                 </p>
                             </div>
                         </div>
@@ -141,6 +168,7 @@
                 </div>
             </div>
         </div>
+        <div id="toast"></div>
         <script src="./main.js"></script>
     </body>
 </html>

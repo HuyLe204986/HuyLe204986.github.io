@@ -1,238 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="/assets/css/base.css">
-        <link rel="stylesheet" href="/assets/css/main.css">
-        <link rel="stylesheet" href="/assets/css/grid.css">
-        <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
-        <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
-        <link rel="stylesheet" href="/assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-        <div class="app">
-            <div class="homeP-header">
-                <div class="grid wide">
-                    <div class="homeP-header__navbar">
-                        <ul class="homeP-header__navbar-list">
-                            <li class="homeP-header__avatar homeP-header__item">
-                                <img src="/assets/img/intro_logo2.svg" alt="" class="homeP-header-img">
-                                <span class="homeP-header-text">COOK IT</span>
-                            </li>
-                            <li class="homeP-header__item homeP-header__item-noti">
-                                <div class="homeP-header-notify">
-                                    <i class="fa-solid fa-bell homeP-header-icon">
-                                        <span class="homeP-header-notify-qty">2</span>
-                                    </i>
-                                    <span >Thông báo</span>
-                                    <div class="homeP-header-notify-wrap">
-                                        <h3 class="homeP-header-notify-header">
-                                            <span>
-                                                Thông báo mới nhận
-                                            </span>
-                                        </h3>
-                                        <ul class="homeP-header-notify-list">
-                                            <li class="homeP-header-notify-item homeP-header-notify--viewed">
-                                                <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
-                                                    <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-notify-img">
-                                                    <div class="homeP-header-notify-info">
-                                                        <span class="homeP-header-notify-name">Nguyễn Chí Thành đã thêm một công việc mới trong nhóm UIUX</span>
-                                                        <span class="homeP-header-notify-minute"> 2 phút trước</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="homeP-header-notify-item homeP-header-notify--viewed">
-                                                <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
-                                                    <img src="https://www.svgrepo.com/show/17468/avatar.svg" alt="" class="homeP-header-notify-img">
-                                                    <div class="homeP-header-notify-info">
-                                                        <span class="homeP-header-notify-name">Lê Trung Hiếu đã xóa công việc trong nhóm OOP</span>
-                                                        <span class="homeP-header-notify-minute"> 1 giờ trước</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="homeP-header-notify-item">
-                                                <a href="" class="homeP-header-notify-link">
-                                                    <img src="https://www.svgrepo.com/show/29870/avatar.svg" alt="" class="homeP-header-notify-img">
-                                                    <div class="homeP-header-notify-info">
-                                                        <span class="homeP-header-notify-name">Tạ Trung Hiếu thêm bạn vào nhóm CSDL</span>
-                                                        <span class="homeP-header-notify-minute"> 3 giờ trước</span>
-                                                    </div>
-                                                </a>
-                                            </li>     
-                                        </ul>
-                                        <footer class="homeP-header-notify-footer">
-                                            <a href="" class="homeP-header-notify-footer-btn">Xem tất cả</a>
-                                        </footer>
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="homeP-header__item homeP-header__user">
-                                <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="homeP-header-user-img">
-                                <span class="homeP-header-user-name">Huy Lê</span>
-                                <ul class="homeP__navbar-user-menu">
-                                    <li class="homeP__navbar-user-item js-homeP__navbar-user-item"><a href="#">Thông tin tài khoản</a></li>
-                                    <li class="homeP__navbar-user-item"><a href="">Đăng xuất</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+    <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
+    <link rel="stylesheet" href="/assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <div class="homeP-header">
+            <div class="grid wide">
+                <div class="homeP-header__navbar">
+                    <ul class="homeP-header__navbar-list">
+                        <li class="homeP-header__avatar homeP-header__item">
+                            <img src="/assets/img/intro_logo2.svg" alt="" class="homeP-header-img">
+                            <span class="homeP-header-text">COOK IT</span>
+                        </li>
+                        <li class="homeP-header__item homeP-header__item-noti">
+                            <div class="homeP-header-notify">
+                                <i class="fa-solid fa-bell homeP-header-icon">
+                                    <span class="homeP-header-notify-qty">2</span>
+                                </i>
+                                <span>Thông báo</span>
+                                <div class="homeP-header-notify-wrap">
+                                    <h3 class="homeP-header-notify-header">
+                                        <span>
+                                            Thông báo mới nhận
+                                        </span>
+                                    </h3>
+                                    <ul class="homeP-header-notify-list">
+                                        <li class="homeP-header-notify-item homeP-header-notify--viewed">
+                                            <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
+                                                <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt=""
+                                                    class="homeP-header-notify-img">
+                                                <div class="homeP-header-notify-info">
+                                                    <span class="homeP-header-notify-name">Nguyễn Chí Thành đã thêm một
+                                                        công việc mới trong nhóm UIUX</span>
+                                                    <span class="homeP-header-notify-minute"> 2 phút trước</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="homeP-header-notify-item homeP-header-notify--viewed">
+                                            <a href="#" class="homeP-header-notify-link homeP-header-notify-link-view">
+                                                <img src="https://www.svgrepo.com/show/17468/avatar.svg" alt=""
+                                                    class="homeP-header-notify-img">
+                                                <div class="homeP-header-notify-info">
+                                                    <span class="homeP-header-notify-name">Lê Trung Hiếu đã xóa công
+                                                        việc trong nhóm OOP</span>
+                                                    <span class="homeP-header-notify-minute"> 1 giờ trước</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="homeP-header-notify-item">
+                                            <a href="" class="homeP-header-notify-link">
+                                                <img src="https://www.svgrepo.com/show/29870/avatar.svg" alt=""
+                                                    class="homeP-header-notify-img">
+                                                <div class="homeP-header-notify-info">
+                                                    <span class="homeP-header-notify-name">Tạ Trung Hiếu thêm bạn vào
+                                                        nhóm CSDL</span>
+                                                    <span class="homeP-header-notify-minute"> 3 giờ trước</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <footer class="homeP-header-notify-footer">
+                                        <a href="" class="homeP-header-notify-footer-btn">Xem tất cả</a>
+                                    </footer>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="homeP-header__item homeP-header__user">
+                            <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt=""
+                                class="homeP-header-user-img">
+                            <span class="homeP-header-user-name">Huy Lê</span>
+                            <ul class="homeP__navbar-user-menu">
+                                <li class="homeP__navbar-user-item js-homeP__navbar-user-item"><a href="#">Thông tin tài
+                                        khoản</a></li>
+                                <li class="homeP__navbar-user-item"><a href="">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="homeP-container">
-                <div class="homePcontent">
-                    <div class="grid wide">
-                        <div class="row sm-gutter app__content">
-                            <div class="col l-2">
-                                <nav class="HomeP__category">
-                                    <ul class="HomeP__category-list">
-                                        <a href="#">
-                                            <li class="HomeP__category-item color--active js-HomeP-home">
-                                                <i class="fa-solid fa-house HomeP__category-icon"></i>
-                                                <div class="HomeP__category-desc">Trang chủ</div>
-                                            </li>
-                                        </a>
-                                        <a href="/team/index.html">
-                                            <li class="HomeP__category-item js-HomeP-team">
-                                                <i class="fa-solid fa-user-group HomeP__category-icon "></i>
-                                                <div class="HomeP__category-desc">Nhóm của bạn</div>
-                                            </li>
-                                        </a>
-                                        <a href="/statistic/index.html">
-                                            <li class="HomeP__category-item js-HomeP-statistic">
-                                                <i class="fa-solid fa-chart-simple HomeP__category-icon "></i>
-                                                <div class="HomeP__category-desc">Thống kê</div>
-                                            </li>
-                                        </a>
-                                        <a href="/help/index.html">
-                                            <li class="HomeP__category-item">
-                                                <i class="fa-solid fa-circle-question HomeP__category-icon"></i>
-                                                <div class="HomeP__category-desc">Trợ giúp</div>
-                                            </li>
-                                        </a>
+        </div>
+        <div class="homeP-container">
+            <div class="homePcontent">
+                <div class="grid wide">
+                    <div class="row sm-gutter app__content">
+                        <div class="col l-2">
+                            <nav class="HomeP__category">
+                                <ul class="HomeP__category-list">
+                                    <a href="#">
+                                        <li class="HomeP__category-item color--active js-HomeP-home">
+                                            <i class="fa-solid fa-house HomeP__category-icon"></i>
+                                            <div class="HomeP__category-desc">Trang chủ</div>
+                                        </li>
+                                    </a>
+                                    <a href="/team/index.html">
+                                        <li class="HomeP__category-item js-HomeP-team">
+                                            <i class="fa-solid fa-user-group HomeP__category-icon "></i>
+                                            <div class="HomeP__category-desc">Nhóm của bạn</div>
+                                        </li>
+                                    </a>
+                                    <a href="/statistic/index.html">
+                                        <li class="HomeP__category-item js-HomeP-statistic">
+                                            <i class="fa-solid fa-chart-simple HomeP__category-icon "></i>
+                                            <div class="HomeP__category-desc">Thống kê</div>
+                                        </li>
+                                    </a>
+                                    <a href="/help/index.html">
+                                        <li class="HomeP__category-item">
+                                            <i class="fa-solid fa-circle-question HomeP__category-icon"></i>
+                                            <div class="HomeP__category-desc">Trợ giúp</div>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div id="HomeP__home" class="col l-10">
+                            <i class="ti-arrow-left back-to-calender"></i>
+                            <div class="homeP-wrap sidebar">
+                                <div class="homeP__title">Trang chủ
+                                    <ul class="homeP__workspace-list">
+                                        <li class="homeP__workspace-item js-HomeP-home"><a href="#">Trang chủ</a></li>
+                                        <li class="homeP__workspace-item js-HomeP-stydy"><a href="./study.html">Học
+                                                tập</a></li>
+                                        <li class="homeP__workspace-item"><a href="./entertainment.html">Giải trí</a>
+                                        </li>
+                                        <li class="homeP__workspace-item"><a href="./work.html">Công việc</a></li>
+                                        <li class="homeP__workspace-item  homeP__workspace-new">
+                                            <i class="ti-plus"></i>
+                                            <span>Thêm mới</span>
+                                        </li>
                                     </ul>
-                                </nav>
-                            </div>
-                            <div id="HomeP__home" class="col l-10">
-                                <div class="homeP-wrap sidebar">
-                                    <div class="homeP__title">Trang chủ
-                                        <ul class="homeP__workspace-list">
-                                            <li class="homeP__workspace-item js-HomeP-home"><a href="#">Trang chủ</a></li>
-                                            <li class="homeP__workspace-item js-HomeP-stydy"><a href="./study.html">Học tập</a></li>
-                                            <li class="homeP__workspace-item"><a href="./entertainment.html">Giải trí</a></li>
-                                            <li class="homeP__workspace-item"><a href="./work.html">Công việc</a></li>
-                                            <li class="homeP__workspace-item  homeP__workspace-new">
-                                                <i class="ti-plus"></i>
-                                                <span>Thêm mới</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                   
-                                    <div class="homeP__search">
-                                        <div class="homeP__search-input-wrap">
-                                            <input type="text" class="homeP__search-input" placeholder="Tìm kiếm công việc">
-                                            <div class="homeP__search-history">
-                                                <h3 class="homeP__search-history-heading">Lịch sử tìm kiếm</h3>
-                                                <ul class="homeP__search-history-list">
-                                                    <li class="homeP__search-history-item">
-                                                        <a href="">Làm bài tập UIUX</a>
-                                                    </li>
-                                                    <li class="homeP__search-history-item"><a href="">Học Cơ sở dữ liệu</a></li>
-                                                    <li class="homeP__search-history-item"><a href="">Báo cáo GR1</a> </li>
-                                                    <li class="homeP__search-history-item"><a href="">Mua đồ</a></li>
-                                                </ul>
-                                            </div>
+                                </div>
+
+                                <div class="homeP__search">
+                                    <div class="homeP__search-input-wrap">
+                                        <input type="text" class="homeP__search-input" placeholder="Tìm kiếm công việc">
+                                        <div class="homeP__search-history">
+                                            <h3 class="homeP__search-history-heading">Lịch sử tìm kiếm</h3>
+                                            <ul class="homeP__search-history-list">
+                                                <li class="homeP__search-history-item">
+                                                    <a href="">Làm bài tập UIUX</a>
+                                                </li>
+                                                <li class="homeP__search-history-item"><a href="">Học Cơ sở dữ liệu</a>
+                                                </li>
+                                                <li class="homeP__search-history-item"><a href="">Báo cáo GR1</a> </li>
+                                                <li class="homeP__search-history-item"><a href="">Mua đồ</a></li>
+                                            </ul>
                                         </div>
-                                        <button class="homeP-btn-search">
-                                            <i class="homeP__search-btn-icon fa-solid fa-magnifying-glass"></i>
-                                       </button> 
+                                    </div>
+                                    <button class="homeP-btn-search">
+                                        <i class="homeP__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="homeP__schedule sidebar ">
+                                <div class="schedule__contaier">
+                                    <header class="schedule__header">
+                                        <div class="schedule__datemonth">
+                                            <p class="schedule__current-date"></p>
+
+                                            <div class="schedule__navigation">
+                                                <i class="fa-solid fa-chevron-left schedule__prev"
+                                                    id="calendar-prev"></i>
+                                                <i class="fa-solid fa-chevron-right schedule__next"
+                                                    id="calendar-next"></i>
+                                            </div>
+
+                                            <button class="create__task2 work_long">
+                                                <!-- <i class="fa-regular fa-plus create__task-icon"></i> -->
+                                                <span> Công việc dài</span>
+                                            </button>
+                                        </div>
+                                        <div class="schedule__select">
+                                            <ul class="schedule__select-list">
+                                                <li class="schedule__select-item color--active">Tháng</li>
+                                                <li class="schedule__select-item">Tuần</li>
+                                                <li class="schedule__select-item">Ngày</li>
+                                            </ul>
+                                            <button class="create__task">
+                                                <i class="fa-regular fa-plus create__task-icon"></i>
+                                                <span> Công việc mới</span>
+                                            </button>
+                                        </div>
+                                    </header>
+                                    <div class="schedule__body">
+                                        <ul class="schedule__weekdays">
+                                            <li class="schedule__day-name">Chủ nhật</li>
+                                            <li class="schedule__day-name">Thứ 2</li>
+                                            <li class="schedule__day-name">Thứ 3</li>
+                                            <li class="schedule__day-name">Thứ 4</li>
+                                            <li class="schedule__day-name">Thứ 5</li>
+                                            <li class="schedule__day-name">Thứ 6</li>
+                                            <li class="schedule__day-name">Thứ 7</li>
+                                        </ul>
+                                        <ul class="schedule__dates"></ul>
                                     </div>
                                 </div>
-                                <div class="homeP__schedule sidebar">
-                                   <div class="schedule__contaier">
-                                        <header class="schedule__header">
-                                            <div class="schedule__datemonth">
-                                                <p class="schedule__current-date"></p>
-                                                <div class="schedule__navigation">
-                                                    <i class="fa-solid fa-chevron-left schedule__prev" id="calendar-prev"></i>
-                                                    <i class="fa-solid fa-chevron-right schedule__next" id="calendar-next"></i>
+                            </div>
+                            <div class="homeP__longTask">
+                                <div class="row sm-gutter mt-12">
+                                    <div class="col l-3-8 mt-top-right">
+                                        <div class="longTask__container longTask__container--color">
+                                            <h4 class="longTask__name">Họp Team Dev</h4>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">05-07-2023</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">05-09-2023</div>
+                                            </div>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">00:00</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">23:59</div>
+                                            </div>
+                                            <div class="longTask__location">Online trên MS Team</div>
+                                            <div class="longTask__member">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492669/avatar-boy.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492680/avatar-girl.svg" alt="">
+                                            </div>
+                                            <div class="longTask__remind">Nhắc tôi trước 30p</div>
+                                            <div class="longTask__assess">
+                                                <div class="longTask__rating">
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="longTask-controll">
+                                                    <h4>30%</h4>
+                                                    <i class="fa-solid fa-circle-minus longtask--warning"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i>
+                                                    <i class="fa-regular fa-circle-check"></i> -->
                                                 </div>
                                             </div>
-                                            <div class="schedule__select">
-                                                <ul class="schedule__select-list">
-                                                    <li class="schedule__select-item color--active">Tháng</li>
-                                                    <li class="schedule__select-item">Tuần</li>
-                                                    <li class="schedule__select-item">Ngày</li>
-                                                </ul>
-                                                <button class="create__task">
-                                                    <i class="fa-regular fa-plus create__task-icon"></i>
-                                                    <span> Công việc mới</span>
-                                                </button>
+                                            <div class="longTask__favourite">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span>Quan trọng</span>
                                             </div>
-                                        </header>
-                                        <div class="schedule__body">
-                                            <ul class="schedule__weekdays">
-                                                <li class="schedule__day-name">Chủ nhật</li>
-                                                <li class="schedule__day-name">Thứ 2</li>
-                                                <li class="schedule__day-name">Thứ 3</li>
-                                                <li class="schedule__day-name">Thứ 4</li>
-                                                <li class="schedule__day-name">Thứ 5</li>
-                                                <li class="schedule__day-name">Thứ 6</li>
-                                                <li class="schedule__day-name">Thứ 7</li>
-                                            </ul>
-                                            <ul class="schedule__dates"></ul>
-                                        </div>
-                                   </div>
+                                        </div>         
+                                    </div>
+                                    <div class="col l-3-8 mt-top-right">
+                                        <div class="longTask__container">
+                                            <h4 class="longTask__name">Thiết Kế Giao Diện</h4>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">12-07-2023</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">01-09-2023</div>
+                                            </div>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">00:00</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">23:59</div>
+                                            </div>
+                                            <div class="longTask__location">Online trên MS Team</div>
+                                            <div class="longTask__member">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492669/avatar-boy.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492680/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492680/avatar-girl.svg" alt="">
+                                            </div>
+                                            <div class="longTask__remind">Nhắc tôi trước 30p</div>
+                                            <div class="longTask__assess">
+                                                <div class="longTask__rating">
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="longTask-controll">
+                                                    <h4>0%</h4>
+                                                    <i class="fa-solid fa-circle-minus longtask--warning"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i>
+                                                                    <i class="fa-regular fa-circle-check"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="longTask__favourite">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span>Quan trọng</span>
+                                            </div>
+                                        </div>         
+                                    </div>
+                                    <div class="col l-3-8 mt-top-right">
+                                        <div class="longTask__container longTask__container--color">
+                                            <h4 class="longTask__name">Phân Tích Yêu Cầu</h4>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">14-07-2023</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">14-08-2023</div>
+                                            </div>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">00:00</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">23:59</div>
+                                            </div>
+                                            <div class="longTask__location">Online trên MS Team</div>
+                                            <div class="longTask__member">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492669/avatar-boy.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492680/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                            </div>
+                                            <div class="longTask__remind">Nhắc tôi trước 30p</div>
+                                            <div class="longTask__assess">
+                                                <div class="longTask__rating">
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class=" fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="longTask-controll">
+                                                    <h4>100%</h4>
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i>
+                                                                    <i class="fa-regular fa-circle-check"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="longTask__favourite">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span>Quan trọng</span>
+                                            </div>
+                                        </div>         
+                                    </div>
+                                    <div class="col l-3-8 mt-top-right">
+                                        <div class="longTask__container">
+                                            <h4 class="longTask__name">Thu Thập Yêu Cầu</h4>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">02-05-2023</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">14-05-2023</div>
+                                            </div>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">00:00</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">23:59</div>
+                                            </div>
+                                            <div class="longTask__location">Online trên MS Team</div>
+                                            <div class="longTask__member">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492669/avatar-boy.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492680/avatar-girl.svg" alt="">
+                                            </div>
+                                            <div class="longTask__remind">Nhắc tôi trước 30p</div>
+                                            <div class="longTask__assess">
+                                                <div class="longTask__rating">
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class=" fa-solid fa-star"></i>
+                                                    <i class=" fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="longTask-controll">
+                                                    <h4>100%</h4>
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i>
+                                                                    <i class="fa-regular fa-circle-check"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="longTask__favourite close">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span>Quan trọng</span>
+                                            </div>
+                                        </div>         
+                                    </div>
+                                    <div class="col l-3-8 mt-top-right">
+                                        <div class="longTask__container longTask__container--color2">
+                                            <h4 class="longTask__name">Thiết Kế CSDL</h4>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">04-05-2023</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">29-05-2023</div>
+                                            </div>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">00:00</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">23:59</div>
+                                            </div>
+                                            <div class="longTask__location">Online trên MS Team</div>
+                                            <div class="longTask__member">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492669/avatar-boy.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492680/avatar-girl.svg" alt="">
+                                            </div>
+                                            <div class="longTask__remind">Nhắc tôi trước 30p</div>
+                                            <div class="longTask__assess">
+                                                <div class="longTask__rating">
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="longTask-controll">
+                                                    <h4>0%</h4>
+                                                    <i class="fa-regular fa-circle-xmark longtask--notDone"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i>
+                                                    <i class="fa-regular fa-circle-check"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="longTask__favourite">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span>Quan trọng</span>
+                                            </div>
+                                        </div>         
+                                    </div>
+                                    <div class="col l-3-8 mt-top-right">
+                                        <div class="longTask__container longTask__container--color3">
+                                            <h4 class="longTask__name">Born Pink</h4>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">01-07-2023</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">29-07-2023</div>
+                                            </div>
+                                            <div class="longTask__time">
+                                                <div class="longTask__date">00:00</div>
+                                                <i class="ti-arrow-right"></i>
+                                                <div class="longTask__date">23:59</div>
+                                            </div>
+                                            <div class="longTask__location">Online trên MS Team</div>
+                                            <div class="longTask__member">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492678/avatar-girl.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492669/avatar-boy.svg" alt="">
+                                                <img class="longTask__member-item" src="https://www.svgrepo.com/show/492680/avatar-girl.svg" alt="">
+                                            </div>
+                                            <div class="longTask__remind">Nhắc tôi trước 30p</div>
+                                            <div class="longTask__assess">
+                                                <div class="longTask__rating">
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                    <i class="longTask__star--gold fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="longTask-controll">
+                                                    <h4>0%</h4>
+                                                    <i class="fa-regular fa-circle-xmark longtask--notDone"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i>
+                                                                    <i class="fa-regular fa-circle-check"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="longTask__favourite">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span>Quan trọng</span>
+                                            </div>
+                                        </div>         
+                                    </div>  
                                 </div>
                             </div>
+                            <ul class="pagination home__pagination">
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">
+                                        <i class="pagination-item__icon fa-solid fa-caret-left"></i>
+                                    </a>
+                                </li>
+
+                                <li class="pagination-item pagination-item--active">
+                                    <a href="#" class="pagination-item__link">1</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="" class="pagination-item__link">2</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">3</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">4</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">...</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">8</a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">
+                                        <i class="pagination-item__icon fa-solid fa-caret-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="homeP-form__create close">
-                <div class="homeP-form__create-content">
-                    <i class="fa-solid fa-xmark close-form__create js-close-form__create"></i>
-                    <h3 class="homeP-form__create-name">Tạo công việc mới</h3>
-                    <form action="" class="homeP-form__create-form">
-                        <input type="text" class="homeP-form__create-title" placeholder="Tên công việc">
-                        <ul class="homeP-form__create-time">
-                            <li class="homeP-form__create-time-item">
-                                <input type="date" >
-                                <i class="fa-solid fa-arrow-right"></i>
-                                <input type="date" >
-                            </li>
-                            <li class="homeP-form__create-time-item">
-                                <input type="time" >
-                                <i class="fa-solid fa-arrow-right"></i>
-                                <input type="time" >
-                            </li>
-                        </ul>
-                        <div class="homeP-form__create-desc">
-                            <input type="text" class="homeP-form__create-content-item" placeholder="Để lại mô tả công việc ở đây nhé!">
+        </div>
+        <div class="homeP-form__create close">
+            <div class="homeP-form__create-content">
+                <i class="fa-solid fa-xmark close-form__create js-close-form__create"></i>
+                <h3 class="homeP-form__create-name">Tạo công việc mới</h3>
+                <form action="" class="homeP-form__create-form">
+                    <input type="text" class="homeP-form__create-title" placeholder="Tên công việc">
+                    <div class="homeP-form__create-for-isLongTask">
+                        <input type="checkbox" id="congviecdai" name="congviecdai" value="">
+                        <label for="congviecdai"> Công việc dài</label>
+                    </div>                       
+                    <ul class="homeP-form__create-time">
+                        <li class="homeP-form__create-time-item">
+                            <input type="date">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <input type="date">
+                        </li>
+                        <li class="homeP-form__create-time-item">
+                            <input type="time">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <input type="time">
+                        </li>
+                    </ul>
+                    <div class="homeP-form__create-desc">
+                        <input type="text" class="homeP-form__create-content-item"
+                            placeholder="Để lại mô tả công việc ở đây nhé!">
+                    </div>
+                    <div class="homeP-form__create-footer">
+                        <div>
+                            <input type="text" placeholder="Trước 30 phút" class="homeP-form__create-remind">
+                            <i class="fa-solid fa-chevron-down homeP-form__create-remind-icon"></i>
+                            <ul class="remind-list">
+                                <li class="remind-item">Trước 30 phút</li>
+                                <li class="remind-item">Trước 1 tiếng</li>
+                                <li class="remind-item">Trước 3 tiếng</li>
+                                <li class="remind-item">Trước 1 ngày</li>
+                            </ul>
                         </div>
-                        <div class="homeP-form__create-footer">
-                            <div>
-                                <input type="text" placeholder="Trước 30 phút" class="homeP-form__create-remind">
-                                <i class="fa-solid fa-chevron-down homeP-form__create-remind-icon"></i>
-                                <ul class="remind-list">
-                                    <li class="remind-item">Trước 30 phút</li>
-                                    <li class="remind-item">Trước 1 tiếng</li>
-                                    <li class="remind-item">Trước 3 tiếng</li>
-                                    <li class="remind-item">Trước 1 ngày</li>
-                                </ul>
-                            </div>
-                            <div class="btn btn--primary homeP-form__create-btn js-homeP-form__create-btn">Tạo công việc</div>
+                        <div class="btn btn--primary homeP-form__create-btn js-homeP-form__create-btn">Tạo công việc
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
+        </div>
 
-            <!-- <div class="homeP-task__abbreviate" style="background-color: var(--primary-color);">
+        <!-- <div class="homeP-task__abbreviate" style="background-color: var(--primary-color);">
                 <div class="homeP-task__abbreviate-content" >
                     <span class="homeP-task__abbreviate-time">8:30 - 9:30</span>
                     <span class="homeP-task__abbreviate-text">Đá bóng</span>
@@ -255,222 +568,222 @@
                     </div>
                 </div>
             </div> -->
-            <div class="homeP-task">
-                <div class="homeP-task__container">
-                    <div class="homeP-task__header">
-                        <div class="homeP-task__name">Học OOP</div>
-                        <div class="homeP-task__list-icon">
-                            <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
-                            <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
-                            <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
-                        </div>
+        <div class="homeP-task">
+            <div class="homeP-task__container">
+                <div class="homeP-task__header">
+                    <div class="homeP-task__name">Học OOP</div>
+                    <div class="homeP-task__list-icon">
+                        <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
+                        <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
+                        <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
                     </div>
-                    <div class="homeP-task__avatar">
-                        <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
-                    </div>
-                    <div class="homeP-task__times">8:00 - 10:30</div>
-                    <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
                 </div>
+                <div class="homeP-task__avatar">
+                    <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
+                </div>
+                <div class="homeP-task__times">8:00 - 10:30</div>
+                <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
             </div>
-
-            <div class="homeP-task homeP-task2">
-                <div class="homeP-task__container">
-                    <div class="homeP-task__header">
-                        <div class="homeP-task__name">Học Tiếng Nhật</div>
-                        <div class="homeP-task__list-icon">
-                            <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
-                            <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
-                            <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
-                        </div>
-                    </div>
-                    <div class="homeP-task__avatar">
-                        <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
-                    </div>
-                    <div class="homeP-task__times">10:15 - 11:45</div>
-                    <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
-                </div>
-            </div>
-
-            <div class="homeP-task homeP-task3">
-                <div class="homeP-task__container">
-                    <div class="homeP-task__header">
-                        <div class="homeP-task__name">Họp Team</div>
-                        <div class="homeP-task__list-icon">
-                            <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
-                            <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
-                            <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
-                        </div>
-                    </div>
-                    <div class="homeP-task__avatar">
-                        <img src="https://www.svgrepo.com/show/492689/avatar-boy.svg" alt="">
-                        <img src="https://www.svgrepo.com/show/492688/avatar-boy.svg" alt="">
-                        <img src="https://www.svgrepo.com/show/492687/avatar-boy.svg" alt="">
-                    </div>
-                    <div class="homeP-task__times">7:30 - 10:30</div>
-                    <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
-                </div>
-            </div>
-
-            <div class="homeP-task homeP-task4">
-                <div class="homeP-task__container">
-                    <div class="homeP-task__header">
-                        <div class="homeP-task__name">Học Tiếng Nhật</div>
-                        <div class="homeP-task__list-icon">
-                            <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
-                            <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
-                            <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
-                        </div>
-                    </div>
-                    <div class="homeP-task__avatar">
-                        <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
-                    </div>
-                    <div class="homeP-task__times">19:30 - 22:30</div>
-                    <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
-                </div>
-            </div>
-
-            <div class="homeP-task homeP-task5">
-                <div class="homeP-task__container">
-                    <div class="homeP-task__header">
-                        <div class="homeP-task__name">Xem EPL</div>
-                        <div class="homeP-task__list-icon">
-                            <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
-                            <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
-                            <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
-                        </div>
-                    </div>
-                    <div class="homeP-task__avatar">
-                        <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
-                    </div>
-                    <div class="homeP-task__times">22:30 - 0:30</div>
-                    <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
-                </div>
-            </div>
-            
-            <div class="homeP-delete js-homeP-delete">
-                <div class="homeP-delete-container">
-                    <p>Xác nhận xóa công việc</p>
-                    <div class="homeP-delete-container-control">
-                        <div class="homeP-delete-button js-homeP-delete-button">Xác nhận</div>
-                    <div class="homeP-delete-button js-homeP-cancel-button">Hủy</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="homeP__wacht-detail js-homeP__wacht-detail">
-                <div class="homeP__wacht-detail-container">
-                    <h3>Chi tiết công việc</h3>
-                    <div class="homeP__wacht-detail-name">
-                        <span>Tên công việc:</span>
-                        <span class="js-homeP__wacht-detail-decs">Học OOP</span>
-                    </div>
-                    <div class="homeP__wacht-detail-time">
-                        <ul class="homeP__wacht-detail-list">
-                            <li class="homeP__wacht-detail-item">6/6/2023</li>
-                            <i class="fa-solid fa-arrow-right"></i>
-                            <li class="homeP__wacht-detail-item ">6/6/2023</li>
-                        </ul>
-                        <ul class="homeP__wacht-detail-list">
-                            <li class="homeP__wacht-detail-item">8:00</li>
-                            <i class="fa-solid fa-arrow-right"></i>
-                            <li class="homeP__wacht-detail-item ">10:30</li>
-                        </ul>
-                    </div>
-                    <input type="text" class="homeP__wacht-detail-content" placeholder="D9-401"></input>
-                    <div class="homeP__wacht-detail-control">
-                        <div class=" homeP__wacht-detail-btn js-detail-edit">Chỉnh sửa</div>
-                        <div class=" homeP__wacht-detail-btn js-detail-delete">Xóa</div>
-                        <div class=" homeP__wacht-detail-btn js-detail-exit">Thoát</div>
-                    </div>
-
-                   <div class="homeP__wacht-detail-chart">
-                        <canvas id="detail-canvas"></canvas>
-                        <div class="homeP__wacht-detail-percent">
-                            <p class="js-detail-canvas-percent">0%</p>
-                            <div class="homeP__wacht-percent-wrap">
-                                <i class="fa-solid fa-plus js-percentAdd"></i>
-                                <i class="fa-solid fa-minus js-percentMinus"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-
-            <div class="homeP__info-user js-homeP__info-user">
-                <div class="info-user__container">
-                    <div class="info-user__containe-wrap">
-                        <div class="info-user__content">
-                            <ul class="info-user__content-list">
-                                <li class="info-user__content-item">
-                                    <p>Họ và tên:</p>
-                                    <span>Lê Tuấn Ngọc Huy</span>
-                                </li>
-                                <li class="info-user__content-item">
-                                    <p>Ngày sinh:</p>
-                                    <span>01/01/2002</span>
-                                </li>
-                                <li class="info-user__content-item">
-                                    <p>Giới tính:</p>
-                                    <span>Nam</span>
-                                </li>
-                                <li class="info-user__content-item">
-                                    <p>Nghề nghiệp:</p>
-                                    <span>Sinh viên</span>
-                                </li>
-                                <li class="info-user__content-item">
-                                    <p>Email:</p>
-                                    <span>abc@gmail.com</span>
-                                </li>
-                                <li class="info-user__content-item">
-                                    <p>SĐT:</p>
-                                    <span>0123456789</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="info-user__avatar">
-                            <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="info-user-img">
-                            <div class="info-user-name">Huy Lê</div>
-                        </div>
-                    </div>
-                    <div class="info-user__control">
-                        <div class=" info-user__control-btn js-info-user__save">Lưu thay đổi</div>
-                        <div class=" info-user__control-btn js-info-user__cancel">Hủy</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="homeP__worksapce-form">
-                <div class="worksapce-form__container">
-                    <h3>Không gian làm việc mới</h3>
-                    <input type="text" placeholder="Tên không gian" class="worksapce-form__name">
-                    <div class="worksapce-form__color">
-                        <span>Chọn màu cho không gian làm việc</span>
-                        <input type="color">
-                    </div>
-                    <div class="worksapce-form__controll">
-                        <div class="worksapce-form__controll-btn ">Xác nhận</div>
-                        <div class="worksapce-form__controll-btn ">Hủy</div>
-                    </div>
-                </div>
-            </div>
-
-           <div id="toast"></div>
-            <!-- Success -->
-
-            <footer>
-                <div class="homeP-social">
-                    <!-- <div class="social___des">Theo dõi chúng tôi</div> -->
-                    <i class="social-icon ti-facebook"></i>
-                    <i class="social-icon ti-instagram"></i>
-                    <i class="social-icon ti-twitter-alt"></i>
-                    <i class="social-icon ti-youtube"></i>
-                    <i class="social-icon ti-linkedin"></i>
-                </div>
-                <div class="footer__text">Được hỗ trợ bởi Đại học Bách Khoa Hà Nội HI_17 2023</div>
-            </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="./main.js"></script>
-    </body>
-</html>
 
+        <div class="homeP-task homeP-task2">
+            <div class="homeP-task__container">
+                <div class="homeP-task__header">
+                    <div class="homeP-task__name">Học Tiếng Nhật</div>
+                    <div class="homeP-task__list-icon">
+                        <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
+                        <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
+                        <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
+                    </div>
+                </div>
+                <div class="homeP-task__avatar">
+                    <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
+                </div>
+                <div class="homeP-task__times">10:15 - 11:45</div>
+                <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
+            </div>
+        </div>
+
+        <div class="homeP-task homeP-task3">
+            <div class="homeP-task__container">
+                <div class="homeP-task__header">
+                    <div class="homeP-task__name">Họp Team</div>
+                    <div class="homeP-task__list-icon">
+                        <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
+                        <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
+                        <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
+                    </div>
+                </div>
+                <div class="homeP-task__avatar">
+                    <img src="https://www.svgrepo.com/show/492689/avatar-boy.svg" alt="">
+                    <img src="https://www.svgrepo.com/show/492688/avatar-boy.svg" alt="">
+                    <img src="https://www.svgrepo.com/show/492687/avatar-boy.svg" alt="">
+                </div>
+                <div class="homeP-task__times">7:30 - 10:30</div>
+                <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
+            </div>
+        </div>
+
+        <div class="homeP-task homeP-task4">
+            <div class="homeP-task__container">
+                <div class="homeP-task__header">
+                    <div class="homeP-task__name">Học Tiếng Nhật</div>
+                    <div class="homeP-task__list-icon">
+                        <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
+                        <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
+                        <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
+                    </div>
+                </div>
+                <div class="homeP-task__avatar">
+                    <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
+                </div>
+                <div class="homeP-task__times">19:30 - 22:30</div>
+                <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
+            </div>
+        </div>
+
+        <div class="homeP-task homeP-task5">
+            <div class="homeP-task__container">
+                <div class="homeP-task__header">
+                    <div class="homeP-task__name">Xem EPL</div>
+                    <div class="homeP-task__list-icon">
+                        <i class="fa-regular fa-eye homeP-task__icon js-watch-detail"></i>
+                        <!-- <i class="fa-solid fa-trash homeP-task__icon js-task-remove"></i> -->
+                        <i class="fa-solid fa-xmark homeP-task__icon homeP-task__icon-close"></i>
+                    </div>
+                </div>
+                <div class="homeP-task__avatar">
+                    <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="">
+                </div>
+                <div class="homeP-task__times">22:30 - 0:30</div>
+                <div class="homeP-task__remind-desc">Nhắc tôi trước 30 phút</div>
+            </div>
+        </div>
+
+        <div class="homeP-delete js-homeP-delete">
+            <div class="homeP-delete-container">
+                <p>Xác nhận xóa công việc</p>
+                <div class="homeP-delete-container-control">
+                    <div class="homeP-delete-button js-homeP-delete-button">Xác nhận</div>
+                    <div class="homeP-delete-button js-homeP-cancel-button">Hủy</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="homeP__wacht-detail js-homeP__wacht-detail">
+            <div class="homeP__wacht-detail-container">
+                <h3>Chi tiết công việc</h3>
+                <div class="homeP__wacht-detail-name">
+                    <span>Tên công việc:</span>
+                    <span class="js-homeP__wacht-detail-decs">Học OOP</span>
+                </div>
+                <div class="homeP__wacht-detail-time">
+                    <ul class="homeP__wacht-detail-list">
+                        <li class="homeP__wacht-detail-item">6/6/2023</li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <li class="homeP__wacht-detail-item ">6/6/2023</li>
+                    </ul>
+                    <ul class="homeP__wacht-detail-list">
+                        <li class="homeP__wacht-detail-item">8:00</li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <li class="homeP__wacht-detail-item ">10:30</li>
+                    </ul>
+                </div>
+                <input type="text" class="homeP__wacht-detail-content" placeholder="D9-401"></input>
+                <div class="homeP__wacht-detail-control">
+                    <div class=" homeP__wacht-detail-btn js-detail-edit">Chỉnh sửa</div>
+                    <div class=" homeP__wacht-detail-btn js-detail-delete">Xóa</div>
+                    <div class=" homeP__wacht-detail-btn js-detail-exit">Thoát</div>
+                </div>
+
+                <div class="homeP__wacht-detail-chart">
+                    <canvas id="detail-canvas"></canvas>
+                    <div class="homeP__wacht-detail-percent">
+                        <p class="js-detail-canvas-percent">0%</p>
+                        <div class="homeP__wacht-percent-wrap">
+                            <i class="fa-solid fa-plus js-percentAdd"></i>
+                            <i class="fa-solid fa-minus js-percentMinus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="homeP__info-user js-homeP__info-user">
+            <div class="info-user__container">
+                <div class="info-user__containe-wrap">
+                    <div class="info-user__content">
+                        <ul class="info-user__content-list">
+                            <li class="info-user__content-item">
+                                <p>Họ và tên:</p>
+                                <span>Lê Tuấn Ngọc Huy</span>
+                            </li>
+                            <li class="info-user__content-item">
+                                <p>Ngày sinh:</p>
+                                <span>01/01/2002</span>
+                            </li>
+                            <li class="info-user__content-item">
+                                <p>Giới tính:</p>
+                                <span>Nam</span>
+                            </li>
+                            <li class="info-user__content-item">
+                                <p>Nghề nghiệp:</p>
+                                <span>Sinh viên</span>
+                            </li>
+                            <li class="info-user__content-item">
+                                <p>Email:</p>
+                                <span>abc@gmail.com</span>
+                            </li>
+                            <li class="info-user__content-item">
+                                <p>SĐT:</p>
+                                <span>0123456789</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-user__avatar">
+                        <img src="https://www.svgrepo.com/show/16907/avatar.svg" alt="" class="info-user-img">
+                        <div class="info-user-name">Huy Lê</div>
+                    </div>
+                </div>
+                <div class="info-user__control">
+                    <div class=" info-user__control-btn js-info-user__save">Lưu thay đổi</div>
+                    <div class=" info-user__control-btn js-info-user__cancel">Hủy</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="homeP__worksapce-form">
+            <div class="worksapce-form__container">
+                <h3>Không gian làm việc mới</h3>
+                <input type="text" placeholder="Tên không gian" class="worksapce-form__name">
+                <div class="worksapce-form__color">
+                    <span>Chọn màu cho không gian làm việc</span>
+                    <input type="color">
+                </div>
+                <div class="worksapce-form__controll">
+                    <div class="worksapce-form__controll-btn ">Xác nhận</div>
+                    <div class="worksapce-form__controll-btn ">Hủy</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast"></div>
+        <!-- Success -->
+
+        <footer>
+            <div class="homeP-social">
+                <!-- <div class="social___des">Theo dõi chúng tôi</div> -->
+                <i class="social-icon ti-facebook"></i>
+                <i class="social-icon ti-instagram"></i>
+                <i class="social-icon ti-twitter-alt"></i>
+                <i class="social-icon ti-youtube"></i>
+                <i class="social-icon ti-linkedin"></i>
+            </div>
+            <div class="footer__text">Được hỗ trợ bởi Đại học Bách Khoa Hà Nội HI_17 2023</div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

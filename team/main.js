@@ -435,7 +435,7 @@ function showTaskOnCalendar7() {
 showTaskOnCalendar7();
 task7.innerHTML = content7;
 
-var task8 = Dayslist[2];
+var task8 = Dayslist[4];
 var content8 = task8.innerHTML;
 function themTask8( {time='', text='', time2='', text2=''}) {
     content8 += `

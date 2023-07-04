@@ -64,7 +64,7 @@
 .intro-header-slider {
     /* margin: 70px; */
     padding-top: 50%;/*chiều cao = 50% chiều ngang của chính ảnh*/
-    background: url('/assets/img/intro_background.jpg') top center / cover no-repeat;
+    background: url('/assets/img/introImg.jpg') top center / cover no-repeat;
 }
 
 
@@ -947,7 +947,7 @@
 }
 
 .schedule__dates li.active::before {
-    background-color:  #b7d4f0;
+    background-color:  #d0e3f6;
 }
 
 .schedule__dates li:not(.active):hover::before {
@@ -1555,7 +1555,7 @@
 .teamP-detail-task {
     position: absolute;
     top: calc(50% + 20px);
-    left: 240px;
+    left: -90px;
 }
 
 .homeP-detail-screen {

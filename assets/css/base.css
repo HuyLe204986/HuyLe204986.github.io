@@ -379,6 +379,12 @@ html {
     background-color: var(--work-color);
 }
 
+.homeP-task3-group {
+    font-size: 1.4rem;
+    margin: 6px 12px 12px;
+
+}
+
 
 .homeP-task4 .homeP-task__name {
     width: 60%;
@@ -417,7 +423,7 @@ html {
 .teamP-task2 {
     position: absolute;
     top: calc(72% + 16px);
-    left: calc(62% + 36px);
+    left: calc(82% + 46px);
     z-index: 2;
 }
 
@@ -426,7 +432,7 @@ html {
 .teamP-task3 {
     position: absolute;
     top: calc(50% + 12px);
-    left: calc(50% + 54px);
+    left: calc(71% + 56px);
     z-index: 2;
 }
 

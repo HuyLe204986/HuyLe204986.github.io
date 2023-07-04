@@ -165,7 +165,7 @@ var task1 = Dayslist[1];
 var content = task1.innerHTML;
 function themTask( {time='', text=''}) {
     content += `
-    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color); width: calc(300% + 4px);">
+    <div class="homeP-task__abbreviate workspace teamP__task uxui_gr" style="background-color: var(--study-color); width: calc(200% + 4px);">
         <div class="homeP-task__abbreviate-content" onclick = "showDetail()">
             <span class="homeP-task__abbreviate-time">${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
@@ -551,7 +551,7 @@ showTaskOnCalendar17();
 task17.innerHTML = content17;
 
 
-var task11 = Dayslist[1];
+var task11 = Dayslist[7];
 var content11 = task11.innerHTML;
 function themTask11( {time='', text=''}) {
     content11 += `

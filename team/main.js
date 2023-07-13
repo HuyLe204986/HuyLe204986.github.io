@@ -182,7 +182,7 @@ function showTaskOnCalendar() {
 showTaskOnCalendar();
 task1.innerHTML = content;
 
-var task2 = Dayslist[10];
+var task2 = Dayslist[9];
 var content2 = task2.innerHTML;
 function themTask2( {time='', text=''}) {
     content2 += `
@@ -203,7 +203,7 @@ function showTaskOnCalendar2() {
 showTaskOnCalendar2();
 task2.innerHTML = content2;
 
-var task12 = Dayslist[21];
+var task12 = Dayslist[24];
 var content12 = task12.innerHTML;
 function themTask12( {time='', text=''}) {
     content12 += `
@@ -281,7 +281,7 @@ document.querySelector('.teamP-task2 .js-teamP_watch-detail').onclick = function
     document.querySelector('.js-homeP-detail-screen__name').innerHTML = 'Họp Team';
 }
 
-var task4 = Dayslist[16];
+var task4 = Dayslist[21];
 var content4 = task4.innerHTML;
 function themTask4( {time='', text=''}) {
     content4 += `
@@ -342,7 +342,7 @@ document.querySelector('.teamP-task3 .js-teamP_watch-detail').onclick = function
     document.querySelector('.js-homeP-detail-screen__name').innerHTML = 'Phân Tích UC';
 }
 
-var task6 = Dayslist[14];
+var task6 = Dayslist[19];
 var content6 = task6.innerHTML;
 function themTask6( {time='', text=''}) {
     content6 += `
@@ -367,7 +367,7 @@ var task14 = Dayslist[9];
 var content14 = task14.innerHTML;
 function themTask14( {time='', text=''}) {
     content14 += `
-    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(400% + 4px);">
+    <div class="homeP-task__abbreviate workspace teamP__task oop_gr" style="background-color: var(--work-color); width: calc(200% + 4px);">
         <div class="homeP-task__abbreviate-content">
             <span class="homeP-task__abbreviate-time";>${time}</span>
             <span class="homeP-task__abbreviate-text">${text}</span>
@@ -384,7 +384,7 @@ function showTaskOnCalendar14() {
 showTaskOnCalendar14();
 task14.innerHTML = content14;
 
-var task15 = Dayslist[19];
+var task15 = Dayslist[22];
 var content15 = task15.innerHTML;
 function themTask15( {time='', text=''}) {
     content15 += `
@@ -466,7 +466,7 @@ showTaskOnCalendar8();
 task8.innerHTML = content8;
 
 
-var task9 = Dayslist[13];
+var task9 = Dayslist[11];
 var content9 = task9.innerHTML;
 function themTask9( {time='', text=''}) {
     content9 += `
@@ -487,7 +487,7 @@ function showTaskOnCalendar9() {
 showTaskOnCalendar9();
 task9.innerHTML = content9;
 
-var task10 = Dayslist[22];
+var task10 = Dayslist[19];
 var content10 = task10.innerHTML;
 function themTask10( {time='', text=''}) {
     content10 += `
@@ -508,7 +508,7 @@ function showTaskOnCalendar10() {
 showTaskOnCalendar10();
 task10.innerHTML = content10;
 
-var task16 = Dayslist[7];
+var task16 = Dayslist[1];
 var content16 = task16.innerHTML;
 function themTask16( {time='', text=''}) {
     content16 += `
@@ -529,7 +529,7 @@ function showTaskOnCalendar16() {
 showTaskOnCalendar16();
 task16.innerHTML = content16;
 
-var task17 = Dayslist[17];
+var task17 = Dayslist[24];
 var content17 = task17.innerHTML;
 function themTask17( {time='', text=''}) {
     content17 += `
@@ -551,7 +551,7 @@ showTaskOnCalendar17();
 task17.innerHTML = content17;
 
 
-var task11 = Dayslist[7];
+var task11 = Dayslist[5];
 var content11 = task11.innerHTML;
 function themTask11( {time='', text=''}) {
     content11 += `
